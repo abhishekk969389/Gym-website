@@ -18,8 +18,9 @@ const ICON_MAP: Record<string, IconType> = {
     FaTrophy
 };
 
+const data = gymData.homeHowItWorks;
+
 export default function HowItWorks() {
-    const data = gymData.homeHowItWorks;
 
     return (
         <section className="w-full mt-4 sm:mt-6 md:mt-8 lg:mt-10 bg-white text-[#0d1c2a] overflow-hidden">

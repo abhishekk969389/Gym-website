@@ -13,8 +13,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
     FaGlobe
 };
 
+const data = gymData.homeStats;
+
 export default function OurImpact() {
-    const data = gymData.homeStats;
 
     return (
         <section className="bg-black relative overflow-hidden mt-8 sm:mt-10 md:mt-12 lg:mt-14  py-8  border-y border-gray-900">

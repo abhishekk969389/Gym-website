@@ -14,8 +14,10 @@ interface SubBannerProps {
   bannerKey: SubBannerKey;
 }
 
+const subBannersData = gymData.subBanners;
+
 const SubBanner = ({ bannerKey }: SubBannerProps) => {
-  const data = gymData.subBanners[bannerKey];
+  const data = subBannersData[bannerKey];
 
   if (!data) return null;
 
@@ -45,7 +47,7 @@ const SubBanner = ({ bannerKey }: SubBannerProps) => {
         
         {/* Semi-Transparent Rectangle Box (Holding Content + Red Slash Inside) */}
         <motion.div 
-          className="relative w-full sm:w-[520px] md:w-[640px] bg-black/30 backdrop-blur-[1px] border py-10 sm:py-14 pl-8 sm:pl-12 pr-16 sm:pr-24 flex flex-col items-start justify-center text-left"
+          className="relative w-full sm:w-[580px] md:w-[720px] bg-black/30 backdrop-blur-[1px] border py-10 sm:py-14 pl-8 sm:pl-12 pr-16 sm:pr-24 flex flex-col items-start justify-center text-left"
           variants={itemVariantsLeft}
         >
           

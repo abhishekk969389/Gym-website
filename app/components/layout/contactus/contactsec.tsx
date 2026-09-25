@@ -18,8 +18,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
     FaRegClock
 };
 
+const data = gymData.contactPageSec;
+
 export default function ContactSec() {
-    const data = gymData.contactPageSec;
 
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 relative">

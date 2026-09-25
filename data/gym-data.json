@@ -1,861 +1,2420 @@
 {
-  "topbar": {
-    "tagline": "Train Harder. Live Healthier. Be Stronger.",
-    "taglineIcon": "FaDumbbell",
-    "phone": "+91 98765 43210",
-    "phoneLink": "tel:+919876543210",
-    "phoneIcon": "FaPhone",
-    "email": "info@golanfitness.com",
-    "emailLink": "mailto:info@golanfitness.com",
-    "emailIcon": "FaEnvelope",
-    "workingHours": "Mon - Sat: 6:00 AM - 9:00 PM",
-    "workingHoursIcon": "FaClock",
-    "socialLinks": [
-      {
-        "id": "facebook",
-        "platform": "Facebook",
-        "url": "https://facebook.com",
-        "icon": "FaFacebookF"
-      },
-      {
-        "id": "instagram",
-        "platform": "Instagram",
-        "url": "https://instagram.com",
-        "icon": "FaInstagram"
-      },
-      {
-        "id": "youtube",
-        "platform": "YouTube",
-        "url": "https://youtube.com",
-        "icon": "FaYoutube"
-      },
-      {
-        "id": "linkedin",
-        "platform": "LinkedIn",
-        "url": "https://linkedin.com",
-        "icon": "FaLinkedinIn"
-      }
-    ]
-  },
-  "navbar": {
-    "logoAlt": "Golan Fitness Logo",
-    "links": [
-      {
-        "id": "home",
-        "label": "Home",
-        "url": "/"
-      },
-      {
-        "id": "about",
-        "label": "About Us",
-        "url": "/about"
-      },
-      {
-        "id": "programs",
-        "label": "Programs",
-        "url": "/program"
-      },
-      {
-        "id": "gallery",
-        "label": "Our Gallery",
-        "url": "/gallery"
-      },
-      {
-        "id": "pricing",
-        "label": "Pricing",
-        "url": "/pricing"
-      },
-      {
-        "id": "blog",
-        "label": "Blog",
-        "url": "/blog"
-      },
-      {
-        "id": "contact",
-        "label": "Contact Us",
-        "url": "/contactus"
-      }
-    ],
-    "button": {
-      "label": "Free Consultation",
-      "url": "/consultation",
-      "icon": "FaArrowRight"
-    }
-  },
-  "homeBanner": {
-    "subtitle": "TRAIN HARDER | STAY STRONGER | BE A BETTER YOU",
-    "titleLine1": "DISCIPLINE",
-    "titleLine2": "BUILDS",
-    "titleLine3": "A STRONGER YOU",
-    "description": "Personalized training programs to help you get stronger, fitter and more confident — inside and out.",
-    "primaryButton": {
-      "label": "START YOUR JOURNEY",
-      "url": "/journey",
-      "icon": "FaArrowRight"
-    },
-    "secondaryButton": {
-      "label": "WATCH\nMY STORY",
-      "url": "/story",
-      "icon": "FaPlay"
-    },
-    "bottomFeatures": [
-      {
-        "icon": "IoBarbell",
-        "title": "STRONGER\nBODY"
-      },
-      {
-        "icon": "PiBrain",
-        "title": "HEALTHIER\nMIND"
-      },
-      {
-        "icon": "PiHeart",
-        "title": "HAPPIER\nYOU"
-      }
-    ],
-    "rightFeatures": [
-      {
-        "icon": "FaDumbbell",
-        "title": "PERSONALIZED\nTRAINING PLANS"
-      },
-      {
-        "icon": "FaAppleWhole",
-        "title": "NUTRITION\nGUIDANCE"
-      },
-      {
-        "icon": "FaHeartPulse",
-        "title": "STRENGTH\n& CONFIDENCE"
-      },
-      {
-        "icon": "FaChartLine",
-        "title": "REAL\nRESULTS"
-      }
-    ]
-  },
-  "footer": {
-    "logo": "/logo-main.png",
-    "description": "Your fitness journey starts here. Get expert guidance, personalized training and the support you need to be a stronger, healthier and happier you.",
-    "socialLinks": [
-      {
-        "id": "footer-fb",
-        "platform": "Facebook",
-        "icon": "FaFacebookF",
-        "url": "#"
-      },
-      {
-        "id": "footer-ig",
-        "platform": "Instagram",
-        "icon": "FaInstagram",
-        "url": "#"
-      },
-      {
-        "id": "footer-yt",
-        "platform": "Youtube",
-        "icon": "FaYoutube",
-        "url": "#"
-      },
-      {
-        "id": "footer-in",
-        "platform": "LinkedIn",
-        "icon": "FaLinkedinIn",
-        "url": "#"
-      }
-    ],
-    "quickLinks": {
-      "title": "Quick Links",
-      "links": [
-        {
-          "label": "Home",
-          "url": "/"
+  "GymFit": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Topbar": "GymTopbar1",
+          "Navbar": "GymNavbar1",
+          "Footer": "GymFooter1",
+          "SubBanners": "GymSubBanners1"
         },
-        {
-          "label": "About Us",
-          "url": "#"
-        },
-        {
-          "label": "Our Services",
-          "url": "#"
-        },
-        {
-          "label": "Our Trainers",
-          "url": "#"
-        },
-        {
-          "label": "Success Stories",
-          "url": "#"
-        },
-        {
-          "label": "Blog",
-          "url": "#"
-        },
-        {
-          "label": "Contact Us",
-          "url": "#"
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "HomeBanner",
+                "component": "GymHomeBanner1"
+              },
+              {
+                "key": "HomeAbout",
+                "component": "GymHomeAbout1"
+              },
+              {
+                "key": "HomePrograms",
+                "component": "GymHomePrograms1"
+              },
+              {
+                "key": "HomeJourney",
+                "component": "GymHomeJourney1"
+              },
+              {
+                "key": "HomeStats",
+                "component": "GymHomeStats1"
+              },
+              {
+                "key": "HomeTestimonials",
+                "component": "GymHomeTestimonials1"
+              },
+              {
+                "key": "HomeCta",
+                "component": "GymHomeCta1"
+              },
+              {
+                "key": "HomeBlog",
+                "component": "GymHomeBlog1"
+              },
+              {
+                "key": "HomeHowItWorks",
+                "component": "GymHomeHowItWorks1"
+              }
+            ]
+          },
+          "about": {
+            "components": [
+              {
+                "key": "AboutPageAbout",
+                "component": "GymAboutPageAbout1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "GymWhyChooseUs1"
+              }
+            ]
+          },
+          "contact": {
+            "components": [
+              {
+                "key": "ContactPageSec",
+                "component": "GymContactPageSec1"
+              },
+              {
+                "key": "MapSec",
+                "component": "GymMapSec1"
+              }
+            ]
+          },
+          "gallery": {
+            "components": [
+              {
+                "key": "GallerySec",
+                "component": "GymGallery1"
+              },
+              {
+                "key": "VideoGallerySec",
+                "component": "GymVideoGallery1"
+              }
+            ]
+          },
+          "pricing": {
+            "components": [
+              {
+                "key": "PricingSec",
+                "component": "GymPricingSec1"
+              }
+            ]
+          },
+          "consultation": {
+            "components": [
+              {
+                "key": "ConsultationSec",
+                "component": "GymConsultationSec1"
+              }
+            ]
+          }
         }
-      ]
-    },
-    "ourServices": {
-      "title": "Our Services",
-      "links": [
-        {
-          "label": "Personal Training",
-          "url": "#"
-        },
-        {
-          "label": "Strength Training",
-          "url": "#"
-        },
-        {
-          "label": "Weight Loss Programs",
-          "url": "#"
-        },
-        {
-          "label": "Muscle Building",
-          "url": "#"
-        },
-        {
-          "label": "Nutrition Guidance",
-          "url": "#"
-        },
-        {
-          "label": "Group Training",
-          "url": "#"
-        },
-        {
-          "label": "Online Coaching",
-          "url": "#"
-        }
-      ]
-    },
-    "contactInfo": {
-      "title": "Contact Info",
-      "items": [
-        {
-          "icon": "FaPhoneAlt",
-          "text": "+1 12345678920"
-        },
-        {
-          "icon": "FaEnvelope",
-          "text": "info@golanfitness.com"
-        },
-        {
-          "icon": "FaMapMarkerAlt",
-          "text": "123 Fitness Street,\nNew York, USA"
-        }
-      ]
-    },
-    "openingHours": {
-      "title": "Opening Hours",
-      "icon": "FaRegClock",
-      "schedule": [
-        {
-          "day": "Monday - Friday",
-          "time": "6:00 AM - 10:00 PM"
-        },
-        {
-          "day": "Saturday",
-          "time": "7:00 AM - 8:00 PM"
-        },
-        {
-          "day": "Sunday",
-          "time": "8:00 AM - 6:00 PM"
-        }
-      ]
-    },
-    "bottomBar": {
-      "copyright": "© 2024 GolanFitness. All Rights Reserved.",
-      "links": [
-        {
-          "label": "Privacy Policy",
-          "url": "#"
-        },
-        {
-          "label": "Terms & Conditions",
-          "url": "#"
-        },
-        {
-          "label": "Sitemap",
-          "url": "#"
-        }
-      ]
-    }
-  },
-  "homeAbout": {
-    "tag": "FITNESS FOR A BETTER YOU",
-    "titleLine1": "Stronger Today",
-    "titleLine2": "Healthier Tomorrow",
-    "subtitle": "Your Goals. My Guidance. Real Results.",
-    "description": "As a certified fitness trainer, I help you achieve your fitness goals with personalized training, expert guidance and continuous support. Whether you want to lose weight, build muscle, improve strength or simply live a healthier lifestyle - I'm here to guide you at every step.",
-    "bulletPoints": [
-      "Weight Loss Training",
-      "Muscle Building",
-      "Strength Training",
-      "Personal Training",
-      "Functional Training",
-      "HIIT Workouts",
-      "Nutrition Guidance",
-      "Online Coaching"
-    ],
-    "button": {
-      "label": "Get Started",
-      "url": "#",
-      "icon": "FaArrowRight"
-    },
-    "image1": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=1000",
-    "image2": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000",
-    "badge": {
-      "number": "8+",
-      "text": "YEARS EXPERIENCE"
-    }
-  },
-  "homePrograms": {
-    "tag": "OUR PROGRAMS",
-    "titleLine1": "OUR TRAINING",
-    "titleLine2": "PROGRAMS",
-    "learnMoreText": "Learn More",
-    "subtitle": "Personalized training programs designed to help you achieve your fitness goals, whatever your starting point.",
-    "button": {
-      "label": "START YOUR JOURNEY",
-      "url": "#",
-      "icon": "FaArrowRight"
-    },
-    "programs": [
-      {
-        "number": "01",
-        "icon": "FaDumbbell",
-        "title": "Personal Training",
-        "description": "One-on-one coaching with customized workout plans to help you achieve your unique goals.",
-        "url": "#",
-        "bgImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800"
-      },
-      {
-        "number": "02",
-        "icon": "FaFire",
-        "title": "Weight Loss Training",
-        "description": "Effective and sustainable weight loss programs to help you burn fat, boost energy and feel great.",
-        "url": "#",
-        "bgImage": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800"
-      },
-      {
-        "number": "03",
-        "icon": "FaDumbbell",
-        "title": "Muscle Building",
-        "description": "Structured strength training to help you build lean muscle mass, improve endurance .",
-        "url": "#",
-        "bgImage": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=800"
-      },
-      {
-        "number": "04",
-        "icon": "FaPersonRunning",
-        "title": "Cardio Training",
-        "description": "High-energy cardio workouts to improve heart health, increase stamina and keep you active and fit.",
-        "url": "#",
-        "bgImage": "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&q=80&w=800"
-      },
-      {
-        "number": "05",
-        "icon": "FaWeightHanging",
-        "title": "Functional Training",
-        "description": "Real-life strength and mobility training to improve balance, flexibility and overall.",
-        "url": "#",
-        "bgImage": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800"
-      },
-      {
-        "number": "06",
-        "icon": "FaUsers",
-        "title": "Group Training",
-        "description": "Stay motivated with high-energy group sessions designed for all fitness levels.",
-        "url": "#",
-        "bgImage": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=800"
       }
-    ]
-  },
-  "homeJourney": {
-    "tag": "HOW IT WORKS",
-    "title": "YOUR JOURNEY TO A STRONGER YOU",
-    "description": "Follow our proven process to transform your body and achieve your fitness goals. We provide step-by-step guidance to ensure you reach your maximum potential.",
-    "button": {
-      "label": "START YOUR JOURNEY",
-      "url": "#",
-      "icon": "FaArrowRight"
     },
-    "steps": [
-      {
-        "number": "01",
-        "icon": "FaChartLine",
-        "title": "Fitness Assessment",
-        "description": "We analyze your current fitness level and set realistic goals.",
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=400"
-      },
-      {
-        "number": "02",
-        "icon": "FaAppleAlt",
-        "title": "Personalized Plan",
-        "description": "Get a customized workout and nutrition plan tailored for you.",
-        "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&q=80&w=400"
-      },
-      {
-        "number": "03",
-        "icon": "IoBarbell",
-        "title": "Train & Track",
-        "description": "Follow your plan, train hard, and track your progress daily.",
-        "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=400"
-      },
-      {
-        "number": "04",
-        "icon": "PiHeart",
-        "title": "Achieve Results",
-        "description": "Reach your goals, build confidence, and become a stronger you.",
-        "image": "https://images.unsplash.com/photo-1526506159807-60d19dece0e5?auto=format&fit=crop&q=80&w=400"
-      }
-    ]
-  },
-  "homeStats": {
-    "tag": "OUR IMPACT",
-    "titleLine1": "RESULTS THAT",
-    "titleLine2": "INSPIRE",
-    "subtitle": "Real people. Real progress. Real change.",
-    "image": "/impact.png",
-    "stats": [
-      {
-        "icon": "FaUsers",
-        "value": "500+",
-        "label": "HAPPY CLIENTS"
-      },
-      {
-        "icon": "FaDumbbell",
-        "value": "1,200+",
-        "label": "WORKOUT PLANS"
-      },
-      {
-        "icon": "FaTrophy",
-        "value": "95%",
-        "label": "SUCCESS RATE"
-      },
-      {
-        "icon": "FaGlobe",
-        "value": "25+",
-        "label": "COUNTRIES"
-      }
-    ]
-  },
-  "homeTestimonials": {
-    "tag": "TESTIMONIALS",
-    "titleLine1": "WHAT OUR",
-    "titleLine2": "STUDENTS SAY",
-    "subtitle": "Real Stories. Real Progress. Real People.",
-    "testimonials": [
-      {
-        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
-        "name": "Rahul Mehta",
-        "role": "Working Professional, Delhi",
-        "rating": 5,
-        "text": "The online coaching program completely changed my routine. The personalized workout plan and constant support helped me stay consistent and achieve my goals."
-      },
-      {
-        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
-        "name": "Neha Sharma",
-        "role": "Student, Mumbai",
-        "rating": 5,
-        "text": "I love the flexibility of online coaching. The trainers are very supportive and the nutrition guidance really made a difference in my fitness journey."
-      },
-      {
-        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
-        "name": "Amit Verma",
-        "role": "Business Owner, Bangalore",
-        "rating": 5,
-        "text": "Professional guidance, easy-to-follow plans and regular check-ins kept me motivated. I've never felt fitter and more energetic in my life!"
-      }
-    ]
-  },
-  "homeCta": {
-    "tag": "PERSONAL TRAINING",
-    "titleLine1": "Are You Looking for a",
-    "titleLine2": "Personal Trainer",
-    "titleLine3": " ?",
-    "button": {
-      "label": "Get Started",
-      "url": "#",
-      "icon": "FaArrowRight"
-    },
-    "bgImage": "/training.png"
-  },
-  "homeBlog": {
-    "tag": "LATEST BLOG",
-    "titleLine1": "Check Our Latest",
-    "titleLine2": "News & Articles",
-    "subtitle": "Stay updated with expert tips, fitness guides and healthy lifestyle insights.",
-    "readMoreText": "Read More",
-    "button": {
-      "label": "View All Blogs",
-      "url": "#",
-      "icon": "FaArrowRight"
-    },
-    "posts": [
-      {
-        "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800",
-        "category": "Fitness",
-        "date": "20 Sep, 2024",
-        "title": "10 Simple Fitness Habits to Build a Healthier You",
-        "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
-        "category": "Gym",
-        "date": "12 Sep, 2024",
-        "title": "Personal Training vs Online Coaching: Which is Right for You?",
-        "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
-        "category": "Training",
-        "date": "10 Sep, 2024",
-        "title": "Top 7 Nutrition Tips for Better Workout Results",
-        "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800",
-        "category": "Fitness",
-        "date": "20 Sep, 2024",
-        "title": "10 Simple Fitness Habits to Build a Healthier You (Part 2)",
-        "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
-        "category": "Gym",
-        "date": "12 Sep, 2024",
-        "title": "Personal Training vs Online Coaching: Which is Right for You? (Part 2)",
-        "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
-        "category": "Training",
-        "date": "10 Sep, 2024",
-        "title": "Top 7 Nutrition Tips for Better Workout Results (Part 2)",
-        "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800",
-        "category": "Fitness",
-        "date": "20 Sep, 2024",
-        "title": "10 Simple Fitness Habits to Build a Healthier You (Part 3)",
-        "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
-        "category": "Gym",
-        "date": "12 Sep, 2024",
-        "title": "Personal Training vs Online Coaching: Which is Right for You? (Part 4)",
-        "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
-        "category": "Training",
-        "date": "10 Sep, 2024",
-        "title": "Top 7 Nutrition Tips for Better Workout Results (Part 5)",
-        "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800",
-        "category": "Fitness",
-        "date": "20 Sep, 2024",
-        "title": "10 Simple Fitness Habits to Build a Healthier You (Part 6)",
-        "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
-        "category": "Gym",
-        "date": "12 Sep, 2024",
-        "title": "Personal Training vs Online Coaching: Which is Right for You? (Part 7)",
-        "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
-        "url": "#"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
-        "category": "Training",
-        "date": "10 Sep, 2024",
-        "title": "Top 7 Nutrition Tips for Better Workout Results (Part 8)",
-        "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
-        "url": "#"
-      }
-    ]
-  },
-  "homeHowItWorks": {
-    "tag": "How It Works",
-    "titleLine1": "YOUR JOURNEY TO A",
-    "titleLine2": "STRONGER YOU",
-    "description": "We make fitness simple and effective. From understanding your goals to helping you achieve real results, our process is designed to keep you motivated, consistent and on the right track.",
-    "button": {
-      "label": "Start Your Journey",
-      "url": "#start",
-      "icon": "FaArrowRight"
-    },
-    "centerTextLine1": "HOW IT",
-    "centerTextLine2": "WORKS",
-    "steps": [
-      {
-        "id": "1",
-        "number": "01",
-        "title": "Fitness Assessment",
-        "description": "We analyze your fitness level and goals to create the perfect starting point.",
-        "side": "left",
-        "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Trainer discussing fitness goals with a client",
-        "icon": "FaClipboardList"
-      },
-      {
-        "id": "2",
-        "number": "02",
-        "title": "Personalized Plan",
-        "description": "We design a customized workout and nutrition plan tailored just for you.",
-        "side": "right",
-        "image": "https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Hand holding a workout plan checklist",
-        "icon": "FaListCheck"
-      },
-      {
-        "id": "3",
-        "number": "03",
-        "title": "Train & Track",
-        "description": "Start training with expert guidance while we track your progress daily.",
-        "side": "left",
-        "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Athlete training with battle ropes",
-        "icon": "FaChartLine"
-      },
-      {
-        "id": "4",
-        "number": "04",
-        "title": "Achieve Results",
-        "description": "See real progress, build strength, and achieve a healthier, stronger you.",
-        "side": "right",
-        "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Fit man smiling after a workout",
-        "icon": "FaTrophy"
-      }
-    ]
-  },
-  "subBanners": {
-    "about": {
-      "titlePart1": "About",
-      "titlePart2": "Us",
-      "breadcrumbs": [
-        {
-          "id": "b-home",
-          "label": "Home",
-          "url": "/"
-        },
-        {
-          "id": "b-about",
-          "label": "About Us",
-          "url": "/about"
+    "sections": {
+      "Topbar": {
+        "variants": {
+          "GymTopbar1": {
+            "tagline": "Train Harder. Live Healthier. Be Stronger.",
+            "taglineIcon": "FaDumbbell",
+            "phone": "+91 98765 43210",
+            "phoneLink": "tel:+919876543210",
+            "phoneIcon": "FaPhone",
+            "email": "info@golanfitness.com",
+            "emailLink": "mailto:info@golanfitness.com",
+            "emailIcon": "FaEnvelope",
+            "workingHours": "Mon - Sat: 6:00 AM - 9:00 PM",
+            "workingHoursIcon": "FaClock",
+            "socialLinks": [
+              {
+                "id": "facebook",
+                "platform": "Facebook",
+                "url": "https://facebook.com",
+                "icon": "FaFacebookF"
+              },
+              {
+                "id": "instagram",
+                "platform": "Instagram",
+                "url": "https://instagram.com",
+                "icon": "FaInstagram"
+              },
+              {
+                "id": "youtube",
+                "platform": "YouTube",
+                "url": "https://youtube.com",
+                "icon": "FaYoutube"
+              },
+              {
+                "id": "linkedin",
+                "platform": "LinkedIn",
+                "url": "https://linkedin.com",
+                "icon": "FaLinkedinIn"
+              }
+            ]
+          }
         }
-      ],
-      "backgroundImage": "/subbanner.png"
-    },
-    "programs": {
-      "titlePart1": "Training",
-      "titlePart2": "Programs",
-      "breadcrumbs": [
-        {
-          "id": "b-home",
-          "label": "Home",
-          "url": "/"
-        },
-        {
-          "id": "b-programs",
-          "label": "Training Programs",
-          "url": "/program"
-        }
-      ],
-      "backgroundImage": "/subbanner.png"
-    },
-    "blog": {
-      "titlePart1": "Our",
-      "titlePart2": "Blogs",
-      "breadcrumbs": [
-        {
-          "id": "b-home",
-          "label": "Home",
-          "url": "/"
-        },
-        {
-          "id": "b-blog",
-          "label": "Our Blogs",
-          "url": "/blog"
-        }
-      ],
-      "backgroundImage": "/subbanner.png"
-    },
-    "contact": {
-      "titlePart1": "Contact",
-      "titlePart2": "Us",
-      "breadcrumbs": [
-        {
-          "id": "b-home",
-          "label": "Home",
-          "url": "/"
-        },
-        {
-          "id": "b-contact",
-          "label": "Contact Us",
-          "url": "/contactus"
-        }
-      ],
-      "backgroundImage": "/subbanner.png"
-    }
-  },
-  "aboutPageAbout": {
-    "image1": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=1000",
-    "image2": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000",
-    "badge": {
-      "number": "8+",
-      "text": "YEARS EXPERIENCE"
-    },
-    "tagline": "TRAIN HARDER. LIVE HEALTHIER.",
-    "titlePart1": "About",
-    "titlePart2": "Us",
-    "paragraphs": [
-      "At Golan Fitness, we believe fitness is not just about looking good — it's about feeling stronger, healthier and more confident in every aspect of life. Our journey began with a simple goal: to make professional fitness guidance accessible to everyone, no matter where they are in their fitness journey.",
-      "With over 8+ years of experience in the fitness industry, we have helped hundreds of individuals transform their lives through personalized training programs, practical nutrition advice and continuous support. Whether you want to lose weight, build lean muscle, improve endurance or simply adopt a healthier lives through personalized training programs, practical nutrition advice and continuous support. Whether you want to lose weight, build lean muscle, improve endurance or simply adopt a healthier   .",
-      "Let's build a fitter, stronger and happier you — together."
-    ]
-  },
-  "whyChooseUs": {
-    "tag": "WHY CHOOSE US",
-    "titleLine1": "Stronger Today",
-    "titleLine2": "Healthier Tomorrow",
-    "description": "At Golan Fitness, we are committed to helping you achieve your fitness goals with expert training, personalized plans and unwavering support.",
-    "centerImage": {
-      "src": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000",
-      "alt": "Fitness Girl",
-      "textLine1": "DISCIPLINE",
-      "textLine2": "BUILDS",
-      "textLine3": "RESULTS"
-    },
-    "leftCards": [
-      {
-        "id": "wc-1",
-        "icon": "FaUserTie",
-        "title": "EXPERT TRAINERS",
-        "description": "Learn from certified and experienced trainers who are passionate about your success."
       },
-      {
-        "id": "wc-2",
-        "icon": "FaStopwatch",
-        "title": "FAST RESULTS",
-        "description": "Get visible progress with our structured training programs designed for real and lasting results."
+      "Navbar": {
+        "variants": {
+          "GymNavbar1": {
+            "logoAlt": "Golan Fitness Logo",
+            "links": [
+              {
+                "id": "home",
+                "label": "Home",
+                "url": "/"
+              },
+              {
+                "id": "about",
+                "label": "About Us",
+                "url": "/about",
+                "subLinks": [
+                  {
+                    "id": "about-us",
+                    "label": "About Us",
+                    "url": "/about"
+                  },
+                  {
+                    "id": "why-choose-us",
+                    "label": "Why Choose Us",
+                    "url": "/whychooseus"
+                  },
+                  {
+                    "id": "mission-vision",
+                    "label": "Mission & Vision",
+                    "url": "/mission"
+                  },
+                  {
+                    "id": "our-team",
+                    "label": "Our Team",
+                    "url": "/team"
+                  }
+                ]
+              },
+              {
+                "id": "programs",
+                "label": "Programs",
+                "url": "/program"
+              },
+              {
+                "id": "gallery",
+                "label": "Our Gallery",
+                "url": "/gallery"
+              },
+              {
+                "id": "pricing",
+                "label": "Pricing",
+                "url": "/pricing"
+              },
+              {
+                "id": "blog",
+                "label": "Blog",
+                "url": "/blog"
+              },
+              {
+                "id": "contact",
+                "label": "Contact Us",
+                "url": "/contactus"
+              }
+            ],
+            "button": {
+              "label": "Free Consultation",
+              "url": "/consultation",
+              "icon": "FaArrowRight"
+            }
+          }
+        }
+      },
+      "HomeBanner": {
+        "variants": {
+          "GymHomeBanner1": {
+            "subtitle": "TRAIN HARDER | STAY STRONGER | BE A BETTER YOU",
+            "titleLine1": "DISCIPLINE",
+            "titleLine2": "BUILDS",
+            "titleLine3": "A STRONGER YOU",
+            "description": "Personalized training programs to help you get stronger, fitter and more confident — inside and out.",
+            "primaryButton": {
+              "label": "START YOUR JOURNEY",
+              "url": "/journey",
+              "icon": "FaArrowRight"
+            },
+            "secondaryButton": {
+              "label": "WATCH\nMY STORY",
+              "url": "/story",
+              "icon": "FaPlay"
+            },
+            "bottomFeatures": [
+              {
+                "icon": "IoBarbell",
+                "title": "STRONGER\nBODY"
+              },
+              {
+                "icon": "PiBrain",
+                "title": "HEALTHIER\nMIND"
+              },
+              {
+                "icon": "PiHeart",
+                "title": "HAPPIER\nYOU"
+              }
+            ],
+            "rightFeatures": [
+              {
+                "icon": "FaDumbbell",
+                "title": "PERSONALIZED\nTRAINING PLANS"
+              },
+              {
+                "icon": "FaAppleWhole",
+                "title": "NUTRITION\nGUIDANCE"
+              },
+              {
+                "icon": "FaHeartPulse",
+                "title": "STRENGTH\n& CONFIDENCE"
+              },
+              {
+                "icon": "FaChartLine",
+                "title": "REAL\nRESULTS"
+              }
+            ]
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "GymFooter1": {
+            "logo": "/logo-main.png",
+            "description": "Your fitness journey starts here. Get expert guidance, personalized training and the support you need to be a stronger, healthier and happier you.",
+            "socialLinks": [
+              {
+                "id": "footer-fb",
+                "platform": "Facebook",
+                "icon": "FaFacebookF",
+                "url": "#"
+              },
+              {
+                "id": "footer-ig",
+                "platform": "Instagram",
+                "icon": "FaInstagram",
+                "url": "#"
+              },
+              {
+                "id": "footer-yt",
+                "platform": "Youtube",
+                "icon": "FaYoutube",
+                "url": "#"
+              },
+              {
+                "id": "footer-in",
+                "platform": "LinkedIn",
+                "icon": "FaLinkedinIn",
+                "url": "#"
+              }
+            ],
+            "quickLinks": {
+              "title": "Quick Links",
+              "links": [
+                {
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "label": "About Us",
+                  "url": "/about"
+                },
+                {
+                  "label": "Certificate & Award",
+                  "url": "/award"
+                },
+                {
+                  "label": "Our Trainers",
+                  "url": "#"
+                },
+                {
+                  "label": "Faq's",
+                  "url": "/faq"
+                },
+                {
+                  "label": "Testimonials",
+                  "url": "/testimonials"
+                },
+                {
+                  "label": "Contact Us",
+                  "url": "#"
+                }
+              ]
+            },
+            "ourServices": {
+              "title": "Our Services",
+              "links": [
+                {
+                  "label": "Personal Training",
+                  "url": "#"
+                },
+                {
+                  "label": "Strength Training",
+                  "url": "#"
+                },
+                {
+                  "label": "Weight Loss Programs",
+                  "url": "#"
+                },
+                {
+                  "label": "Muscle Building",
+                  "url": "#"
+                },
+                {
+                  "label": "Nutrition Guidance",
+                  "url": "#"
+                },
+                {
+                  "label": "Group Training",
+                  "url": "#"
+                },
+                {
+                  "label": "Online Coaching",
+                  "url": "#"
+                }
+              ]
+            },
+            "contactInfo": {
+              "title": "Contact Info",
+              "items": [
+                {
+                  "icon": "FaPhoneAlt",
+                  "text": "+1 12345678920"
+                },
+                {
+                  "icon": "FaEnvelope",
+                  "text": "info@golanfitness.com"
+                },
+                {
+                  "icon": "FaMapMarkerAlt",
+                  "text": "123 Fitness Street,\nNew York, USA"
+                }
+              ]
+            },
+            "openingHours": {
+              "title": "Opening Hours",
+              "icon": "FaRegClock",
+              "schedule": [
+                {
+                  "day": "Monday - Friday",
+                  "time": "6:00 AM - 10:00 PM"
+                },
+                {
+                  "day": "Saturday",
+                  "time": "7:00 AM - 8:00 PM"
+                },
+                {
+                  "day": "Sunday",
+                  "time": "8:00 AM - 6:00 PM"
+                }
+              ]
+            },
+            "bottomBar": {
+              "copyright": "© 2024 GolanFitness. All Rights Reserved.",
+              "links": [
+                {
+                  "label": "Privacy Policy",
+                  "url": "/privacypolicy"
+                },
+                {
+                  "label": "Refund Policy",
+                  "url": "/refundpolicy"
+                },
+                {
+                  "label": "Terms & Conditions",
+                  "url": "/termscondition"
+                },
+                {
+                  "label": "Sitemap",
+                  "url": "/sitemap"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "HomeAbout": {
+        "variants": {
+          "GymHomeAbout1": {
+            "tag": "FITNESS FOR A BETTER YOU",
+            "titleLine1": "Stronger Today",
+            "titleLine2": "Healthier Tomorrow",
+            "subtitle": "Your Goals. My Guidance. Real Results.",
+            "description": "As a certified fitness trainer, I help you achieve your fitness goals with personalized training, expert guidance and continuous support. Whether you want to lose weight, build muscle, improve strength or simply live a healthier lifestyle - I'm here to guide you at every step.",
+            "bulletPoints": [
+              "Weight Loss Training",
+              "Muscle Building",
+              "Strength Training",
+              "Personal Training",
+              "Functional Training",
+              "HIIT Workouts",
+              "Nutrition Guidance",
+              "Online Coaching"
+            ],
+            "button": {
+              "label": "Get Started",
+              "url": "#",
+              "icon": "FaArrowRight"
+            },
+            "image1": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=1000",
+            "image2": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000",
+            "badge": {
+              "number": "8+",
+              "text": "YEARS EXPERIENCE"
+            }
+          }
+        }
+      },
+      "HomePrograms": {
+        "variants": {
+          "GymHomePrograms1": {
+            "tag": "OUR PROGRAMS",
+            "titleLine1": "OUR TRAINING",
+            "titleLine2": "PROGRAMS",
+            "learnMoreText": "Learn More",
+            "subtitle": "Personalized training programs designed to help you achieve your fitness goals, whatever your starting point.",
+            "button": {
+              "label": "START YOUR JOURNEY",
+              "url": "#",
+              "icon": "FaArrowRight"
+            },
+            "programs": [
+              {
+                "number": "01",
+                "icon": "FaDumbbell",
+                "title": "Personal Training",
+                "description": "One-on-one coaching with customized workout plans to help you achieve your unique goals.",
+                "url": "#",
+                "bgImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800"
+              },
+              {
+                "number": "02",
+                "icon": "FaFire",
+                "title": "Weight Loss Training",
+                "description": "Effective and sustainable weight loss programs to help you burn fat, boost energy and feel great.",
+                "url": "#",
+                "bgImage": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800"
+              },
+              {
+                "number": "03",
+                "icon": "FaDumbbell",
+                "title": "Muscle Building",
+                "description": "Structured strength training to help you build lean muscle mass, improve endurance .",
+                "url": "#",
+                "bgImage": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=800"
+              },
+              {
+                "number": "04",
+                "icon": "FaPersonRunning",
+                "title": "Cardio Training",
+                "description": "High-energy cardio workouts to improve heart health, increase stamina and keep you active and fit.",
+                "url": "#",
+                "bgImage": "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&q=80&w=800"
+              },
+              {
+                "number": "05",
+                "icon": "FaWeightHanging",
+                "title": "Functional Training",
+                "description": "Real-life strength and mobility training to improve balance, flexibility and overall.",
+                "url": "#",
+                "bgImage": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800"
+              },
+              {
+                "number": "06",
+                "icon": "FaUsers",
+                "title": "Group Training",
+                "description": "Stay motivated with high-energy group sessions designed for all fitness levels.",
+                "url": "#",
+                "bgImage": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=800"
+              }
+            ]
+          }
+        }
+      },
+      "HomeJourney": {
+        "variants": {
+          "GymHomeJourney1": {
+            "tag": "HOW IT WORKS",
+            "title": "YOUR JOURNEY TO A STRONGER YOU",
+            "description": "Follow our proven process to transform your body and achieve your fitness goals. We provide step-by-step guidance to ensure you reach your maximum potential.",
+            "button": {
+              "label": "START YOUR JOURNEY",
+              "url": "#",
+              "icon": "FaArrowRight"
+            },
+            "steps": [
+              {
+                "number": "01",
+                "icon": "FaChartLine",
+                "title": "Fitness Assessment",
+                "description": "We analyze your current fitness level and set realistic goals.",
+                "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=400"
+              },
+              {
+                "number": "02",
+                "icon": "FaAppleAlt",
+                "title": "Personalized Plan",
+                "description": "Get a customized workout and nutrition plan tailored for you.",
+                "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&q=80&w=400"
+              },
+              {
+                "number": "03",
+                "icon": "IoBarbell",
+                "title": "Train & Track",
+                "description": "Follow your plan, train hard, and track your progress daily.",
+                "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=400"
+              },
+              {
+                "number": "04",
+                "icon": "PiHeart",
+                "title": "Achieve Results",
+                "description": "Reach your goals, build confidence, and become a stronger you.",
+                "image": "https://images.unsplash.com/photo-1526506159807-60d19dece0e5?auto=format&fit=crop&q=80&w=400"
+              }
+            ]
+          }
+        }
+      },
+      "HomeStats": {
+        "variants": {
+          "GymHomeStats1": {
+            "tag": "OUR IMPACT",
+            "titleLine1": "RESULTS THAT",
+            "titleLine2": "INSPIRE",
+            "subtitle": "Real people. Real progress. Real change.",
+            "image": "/impact.png",
+            "stats": [
+              {
+                "icon": "FaUsers",
+                "value": "500+",
+                "label": "HAPPY CLIENTS"
+              },
+              {
+                "icon": "FaDumbbell",
+                "value": "1,200+",
+                "label": "WORKOUT PLANS"
+              },
+              {
+                "icon": "FaTrophy",
+                "value": "95%",
+                "label": "SUCCESS RATE"
+              },
+              {
+                "icon": "FaGlobe",
+                "value": "25+",
+                "label": "COUNTRIES"
+              }
+            ]
+          }
+        }
+      },
+      "HomeTestimonials": {
+        "variants": {
+          "GymHomeTestimonials1": {
+            "tag": "TESTIMONIALS",
+            "titleLine1": "WHAT OUR",
+            "titleLine2": "STUDENTS SAY",
+            "subtitle": "Real Stories. Real Progress. Real People.",
+            "testimonials": [
+              {
+                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+                "name": "Rahul Mehta",
+                "role": "Working Professional, Delhi",
+                "rating": 5,
+                "text": "The online coaching program completely changed my routine. The personalized workout plan and constant support helped me stay consistent and achieve my goals."
+              },
+              {
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
+                "name": "Neha Sharma",
+                "role": "Student, Mumbai",
+                "rating": 5,
+                "text": "I love the flexibility of online coaching. The trainers are very supportive and the nutrition guidance really made a difference in my fitness journey."
+              },
+              {
+                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+                "name": "Amit Verma",
+                "role": "Business Owner, Bangalore",
+                "rating": 5,
+                "text": "Professional guidance, easy-to-follow plans and regular check-ins kept me motivated. I've never felt fitter and more energetic in my life!"
+              },
+              {
+                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+                "name": "Rohit Kapoor",
+                "role": "IT Professional, Pune",
+                "rating": 5,
+                "text": "The best investment I've made for my health. Knowledgeable trainers, modern equipment and a great community."
+              },
+              {
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
+                "name": "Sneha Iyer",
+                "role": "Homemaker, Chennai",
+                "rating": 5,
+                "text": "The personal training sessions are very effective and the trainers really care about your progress. I feel stronger and healthier now."
+              },
+              {
+                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+                "name": "Karan Malhotra",
+                "role": "Entrepreneur, Gurgaon",
+                "rating": 5,
+                "text": "Friendly staff, clean facilities and well-structured programs. I've gained strength, improved my stamina and built confidence."
+              },
+              {
+                "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+                "name": "Vikram Singh",
+                "role": "Software Engineer, Hyderabad",
+                "rating": 5,
+                "text": "The atmosphere is energetic and motivating. The trainers push you to do your best and I have seen amazing results."
+              },
+              {
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
+                "name": "Priya Das",
+                "role": "Designer, Kolkata",
+                "rating": 5,
+                "text": "Excellent equipment and a highly supportive community. It feels great to come here every day and work on myself."
+              },
+              {
+                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+                "name": "Suresh Raina",
+                "role": "Teacher, Noida",
+                "rating": 5,
+                "text": "Affordable pricing with top-notch services. The personalized workout routines have been exactly what I needed to stay on track."
+              }
+            ]
+          }
+        }
+      },
+      "HomeCta": {
+        "variants": {
+          "GymHomeCta1": {
+            "tag": "PERSONAL TRAINING",
+            "titleLine1": "Are You Looking for a",
+            "titleLine2": "Personal Trainer",
+            "titleLine3": " ?",
+            "button": {
+              "label": "Get Started",
+              "url": "#",
+              "icon": "FaArrowRight"
+            },
+            "bgImage": "/training.png"
+          }
+        }
+      },
+      "HomeBlog": {
+        "variants": {
+          "GymHomeBlog1": {
+            "tag": "LATEST BLOG",
+            "titleLine1": "Check Our Latest",
+            "titleLine2": "News & Articles",
+            "subtitle": "Stay updated with expert tips, fitness guides and healthy lifestyle insights.",
+            "readMoreText": "Read More",
+            "button": {
+              "label": "View All Blogs",
+              "url": "#",
+              "icon": "FaArrowRight"
+            },
+            "posts": [
+              {
+                "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800",
+                "category": "Fitness",
+                "date": "20 Sep, 2024",
+                "title": "10 Simple Fitness Habits to Build a Healthier You",
+                "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
+                "category": "Gym",
+                "date": "12 Sep, 2024",
+                "title": "Personal Training vs Online Coaching: Which is Right for You?",
+                "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+                "category": "Training",
+                "date": "10 Sep, 2024",
+                "title": "Top 7 Nutrition Tips for Better Workout Results",
+                "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800",
+                "category": "Fitness",
+                "date": "20 Sep, 2024",
+                "title": "10 Simple Fitness Habits to Build a Healthier You (Part 2)",
+                "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
+                "category": "Gym",
+                "date": "12 Sep, 2024",
+                "title": "Personal Training vs Online Coaching: Which is Right for You? (Part 2)",
+                "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+                "category": "Training",
+                "date": "10 Sep, 2024",
+                "title": "Top 7 Nutrition Tips for Better Workout Results (Part 2)",
+                "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800",
+                "category": "Fitness",
+                "date": "20 Sep, 2024",
+                "title": "10 Simple Fitness Habits to Build a Healthier You (Part 3)",
+                "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
+                "category": "Gym",
+                "date": "12 Sep, 2024",
+                "title": "Personal Training vs Online Coaching: Which is Right for You? (Part 4)",
+                "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+                "category": "Training",
+                "date": "10 Sep, 2024",
+                "title": "Top 7 Nutrition Tips for Better Workout Results (Part 5)",
+                "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=800",
+                "category": "Fitness",
+                "date": "20 Sep, 2024",
+                "title": "10 Simple Fitness Habits to Build a Healthier You (Part 6)",
+                "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
+                "category": "Gym",
+                "date": "12 Sep, 2024",
+                "title": "Personal Training vs Online Coaching: Which is Right for You? (Part 7)",
+                "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
+                "url": "#"
+              },
+              {
+                "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=800",
+                "category": "Training",
+                "date": "10 Sep, 2024",
+                "title": "Top 7 Nutrition Tips for Better Workout Results (Part 8)",
+                "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
+                "url": "#"
+              }
+            ]
+          }
+        }
+      },
+      "HomeHowItWorks": {
+        "variants": {
+          "GymHomeHowItWorks1": {
+            "tag": "How It Works",
+            "titleLine1": "YOUR JOURNEY TO A",
+            "titleLine2": "STRONGER YOU",
+            "description": "We make fitness simple and effective. From understanding your goals to helping you achieve real results, our process is designed to keep you motivated, consistent and on the right track.",
+            "button": {
+              "label": "Start Your Journey",
+              "url": "#start",
+              "icon": "FaArrowRight"
+            },
+            "centerTextLine1": "HOW IT",
+            "centerTextLine2": "WORKS",
+            "steps": [
+              {
+                "id": "1",
+                "number": "01",
+                "title": "Fitness Assessment",
+                "description": "We analyze your fitness level and goals to create the perfect starting point.",
+                "side": "left",
+                "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=400&q=80",
+                "imageAlt": "Trainer discussing fitness goals with a client",
+                "icon": "FaClipboardList"
+              },
+              {
+                "id": "2",
+                "number": "02",
+                "title": "Personalized Plan",
+                "description": "We design a customized workout and nutrition plan tailored just for you.",
+                "side": "right",
+                "image": "https://images.unsplash.com/photo-1434682881908-b43d0467b798?auto=format&fit=crop&w=400&q=80",
+                "imageAlt": "Hand holding a workout plan checklist",
+                "icon": "FaListCheck"
+              },
+              {
+                "id": "3",
+                "number": "03",
+                "title": "Train & Track",
+                "description": "Start training with expert guidance while we track your progress daily.",
+                "side": "left",
+                "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=400&q=80",
+                "imageAlt": "Athlete training with battle ropes",
+                "icon": "FaChartLine"
+              },
+              {
+                "id": "4",
+                "number": "04",
+                "title": "Achieve Results",
+                "description": "See real progress, build strength, and achieve a healthier, stronger you.",
+                "side": "right",
+                "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=400&q=80",
+                "imageAlt": "Fit man smiling after a workout",
+                "icon": "FaTrophy"
+              }
+            ]
+          }
+        }
+      },
+      "SubBanners": {
+        "variants": {
+          "GymSubBanners1": {
+            "about": {
+              "titlePart1": "About",
+              "titlePart2": "Us",
+              "breadcrumbs": [
+                {
+                  "id": "b-home",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-about",
+                  "label": "About Us",
+                  "url": "/about"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "programs": {
+              "titlePart1": "Training",
+              "titlePart2": "Programs",
+              "breadcrumbs": [
+                {
+                  "id": "b-home",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-programs",
+                  "label": "Training Programs",
+                  "url": "/program"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "testimonials": {
+              "titlePart1": "Our",
+              "titlePart2": "Testimonials",
+              "breadcrumbs": [
+                {
+                  "id": "b-home",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-testimonials",
+                  "label": "Our Testimonials",
+                  "url": "/testimonials"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "award": {
+              "titlePart1": "Award &",
+              "titlePart2": "Certifications",
+              "breadcrumbs": [
+                {
+                  "id": "b-home",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-award",
+                  "label": "Award & Certifications",
+                  "url": "/program"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "team": {
+              "titlePart1": "Our",
+              "titlePart2": "Teams",
+              "breadcrumbs": [
+                {
+                  "id": "b-team",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-team",
+                  "label": "Our Teams",
+                  "url": "/team"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "blog": {
+              "titlePart1": "Our",
+              "titlePart2": "Blogs",
+              "breadcrumbs": [
+                {
+                  "id": "b-home",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-blog",
+                  "label": "Our Blogs",
+                  "url": "/blog"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "mission": {
+              "titlePart1": "Mission &",
+              "titlePart2": "Vision",
+              "breadcrumbs": [
+                {
+                  "id": "b-mission",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-mission",
+                  "label": "Mission & Vision",
+                  "url": "/blog"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "contact": {
+              "titlePart1": "Contact",
+              "titlePart2": "Us",
+              "breadcrumbs": [
+                {
+                  "id": "b-home",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-contact",
+                  "label": "Contact Us",
+                  "url": "/contactus"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "gallery": {
+              "titlePart1": "Our ",
+              "titlePart2": "Gallery",
+              "breadcrumbs": [
+                {
+                  "id": "b-gallery",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-gallery",
+                  "label": "Our Gallery",
+                  "url": "/gallery"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "pricing": {
+              "titlePart1": "Pricing",
+              "titlePart2": "Plans",
+              "breadcrumbs": [
+                {
+                  "id": "b-pricing",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-pricing",
+                  "label": "Pricing Plans",
+                  "url": "/pricing"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "consultation": {
+              "titlePart1": "Free",
+              "titlePart2": "Consultation",
+              "breadcrumbs": [
+                {
+                  "id": "b-consultation",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-consultation",
+                  "label": "Free Consultation",
+                  "url": "/consultation"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "whychooseus": {
+              "titlePart1": "Why Choose",
+              "titlePart2": "Us",
+              "breadcrumbs": [
+                {
+                  "id": "b-whychooseus",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "b-whychooseus",
+                  "label": "Why Choose Us",
+                  "url": "/whychooseus"
+                }
+              ],
+              "backgroundImage": "/subbanner.png"
+            },
+            "privacypolicy": {
+              "backgroundImage": "/subbanner.png",
+              "titlePart1": "Privacy",
+              "titlePart2": "Policy",
+              "breadcrumbs": [
+                {
+                  "id": "crumb-1",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "crumb-2",
+                  "label": "Privacy Policy",
+                  "url": "/privacypolicy"
+                }
+              ]
+            },
+            "refundpolicy": {
+              "backgroundImage": "/subbanner.png",
+              "titlePart1": "Refund",
+              "titlePart2": "Policy",
+              "breadcrumbs": [
+                {
+                  "id": "crumb-1",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "crumb-2",
+                  "label": "Refund Policy",
+                  "url": "/refundpolicy"
+                }
+              ]
+            },
+            "termscondition": {
+              "backgroundImage": "/subbanner.png",
+              "titlePart1": "Terms &",
+              "titlePart2": "Conditions",
+              "breadcrumbs": [
+                {
+                  "id": "crumb-1",
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": "crumb-2",
+                  "label": "Terms & Conditions",
+                  "url": "/termscondition"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "AboutPageAbout": {
+        "variants": {
+          "GymAboutPageAbout1": {
+            "image1": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=1000",
+            "image2": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000",
+            "badge": {
+              "number": "8+",
+              "text": "YEARS EXPERIENCE"
+            },
+            "tagline": "TRAIN HARDER. LIVE HEALTHIER.",
+            "titlePart1": "About",
+            "titlePart2": "Us",
+            "paragraphs": [
+              "At Golan Fitness, we believe fitness is not just about looking good — it's about feeling stronger, healthier and more confident in every aspect of life. Our journey began with a simple goal: to make professional fitness guidance accessible to everyone, no matter where they are in their fitness journey.",
+              "With over 8+ years of experience in the fitness industry, we have helped hundreds of individuals transform their lives through personalized training programs, practical nutrition advice and continuous support. Whether you want to lose weight, build lean muscle, improve endurance or simply adopt a healthier lives through personalized training programs, practical nutrition advice and continuous support. Whether you want to lose weight, build lean muscle, improve endurance or simply adopt a healthier   .",
+              "Let's build a fitter, stronger and happier you — together."
+            ]
+          }
+        }
+      },
+      "WhyChooseUs": {
+        "variants": {
+          "GymWhyChooseUs1": {
+            "tag": "WHY CHOOSE US",
+            "titleLine1": "Stronger Today",
+            "titleLine2": "Healthier Tomorrow",
+            "description": "At Golan Fitness, we are committed to helping you achieve your fitness goals with expert training, personalized plans and unwavering support.",
+            "centerImage": {
+              "src": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=1000",
+              "alt": "Fitness Girl",
+              "textLine1": "DISCIPLINE",
+              "textLine2": "BUILDS",
+              "textLine3": "RESULTS"
+            },
+            "leftCards": [
+              {
+                "id": "wc-1",
+                "icon": "FaUserTie",
+                "title": "EXPERT TRAINERS",
+                "description": "Learn from certified and experienced trainers who are passionate about your success."
+              },
+              {
+                "id": "wc-2",
+                "icon": "FaStopwatch",
+                "title": "FAST RESULTS",
+                "description": "Get visible progress with our structured training programs designed for real and lasting results."
+              }
+            ],
+            "rightCards": [
+              {
+                "id": "wc-3",
+                "icon": "FaCoins",
+                "title": "AFFORDABLE PLANS",
+                "description": "High-quality training at flexible plans you can afford. No hidden fees, just honest and transparent pricing."
+              },
+              {
+                "id": "wc-4",
+                "icon": "FaHeartbeat",
+                "title": "COMPLETE SUPPORT",
+                "description": "From workout guidance to nutrition advice, we provide end-to-end support to keep you on track."
+              }
+            ]
+          }
+        }
+      },
+      "ContactPageSec": {
+        "variants": {
+          "GymContactPageSec1": {
+            "tag": "GET IN TOUCH",
+            "titleLine1": "Contact",
+            "titleLine2": "Us",
+            "description": "We'd love to hear from you! Whether you have a question, want to join our fitness community, or need more information — our team is here to help.",
+            "contactInfo": [
+              {
+                "id": "phone",
+                "icon": "FaPhoneAlt",
+                "title": "Call Us",
+                "details": "+91 98765 43210"
+              },
+              {
+                "id": "email",
+                "icon": "FaEnvelope",
+                "title": "Email Us",
+                "details": "info@golanfitness.com"
+              },
+              {
+                "id": "location",
+                "icon": "FaMapMarkerAlt",
+                "title": "Visit Us",
+                "details": "123 Fitness Street,\nAndheri West, Mumbai,\nMaharashtra 400053"
+              },
+              {
+                "id": "hours",
+                "icon": "FaRegClock",
+                "title": "Our Working Hours",
+                "details": "Mon - Sat: 6:00 AM - 10:00 PM\nSunday: 6:00 AM - 6:00 PM"
+              }
+            ],
+            "centerImage": {
+              "src": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
+              "topTextLine1": "STRONGER",
+              "topTextLine2": "PEOPLE",
+              "topTextLine3": "BRIGHTER",
+              "topTextLine4": "TOMORROW",
+              "bottomText": "Let's\nBuild a\nHealthier\nYou"
+            },
+            "form": {
+              "tag": "SEND A MESSAGE",
+              "titleLine1": "We're Here to",
+              "titleLine2": "Help",
+              "description": "Fill out the form below and we'll get back to you as soon as possible.",
+              "fields": {
+                "namePlaceholder": "Your Name *",
+                "emailPlaceholder": "Your Email *",
+                "phonePlaceholder": "Your Phone *",
+                "subjectPlaceholder": "Subject *",
+                "messagePlaceholder": "Your Message *",
+                "subjectOptions": [
+                  "Personal Training",
+                  "Membership",
+                  "Other"
+                ]
+              },
+              "buttonText": "Send Message",
+              "bottomScriptText": "Fitness\nStarts with\na Conversation"
+            }
+          }
+        }
+      },
+      "MapSec": {
+        "variants": {
+          "GymMapSec1": {
+            "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin",
+            "infoCard": {
+              "bgImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop",
+              "tag": "VISIT OUR GYM",
+              "titleLine1": "Come Experience",
+              "titleLine2": "the Difference",
+              "description": "We'd be happy to welcome you at our fitness center. Take a tour, meet our trainers and start your fitness journey today.",
+              "features": [
+                {
+                  "id": "f1",
+                  "icon": "FaDumbbell",
+                  "title": "Modern Equipment"
+                },
+                {
+                  "id": "f2",
+                  "icon": "FaUsers",
+                  "title": "Expert Trainers"
+                },
+                {
+                  "id": "f3",
+                  "icon": "FaShower",
+                  "title": "Premium Facilities"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "Gallery": {
+        "variants": {
+          "GymGallery1": {
+            "badge": "OUR GALLERY",
+            "title": {
+              "normal": "Moments That ",
+              "highlighted": "Inspire"
+            },
+            "desc": "Take a look at our gym, training sessions, member transformations and community events. Real people. Real workouts. Real results.",
+            "header": {
+              "title": "Photo Gallery",
+              "subtitle": "Explore our fitness journey through powerful images."
+            },
+            "categories": [
+              {
+                "id": "all",
+                "label": "All"
+              },
+              {
+                "id": "gym",
+                "label": "Gym"
+              },
+              {
+                "id": "training",
+                "label": "Training"
+              },
+              {
+                "id": "members",
+                "label": "Members"
+              },
+              {
+                "id": "events",
+                "label": "Events"
+              },
+              {
+                "id": "facilities",
+                "label": "Facilities"
+              }
+            ],
+            "images": [
+              {
+                "id": 1,
+                "src": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+                "category": "training",
+                "alt": "Woman training with dumbbell"
+              },
+              {
+                "id": 2,
+                "src": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80",
+                "category": "members",
+                "alt": "Man training with dumbbells"
+              },
+              {
+                "id": 3,
+                "src": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80",
+                "category": "facilities",
+                "alt": "Kettlebell and dumbbells"
+              },
+              {
+                "id": 4,
+                "src": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80",
+                "category": "training",
+                "alt": "Man doing pushups"
+              },
+              {
+                "id": 5,
+                "src": "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=800&q=80",
+                "category": "members",
+                "alt": "Woman posing at gym"
+              },
+              {
+                "id": 6,
+                "src": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80",
+                "category": "gym",
+                "alt": "Gym interior empty"
+              },
+              {
+                "id": 7,
+                "src": "https://images.unsplash.com/photo-1526506190296-414777d1217e?auto=format&fit=crop&w=800&q=80",
+                "category": "training",
+                "alt": "People training together"
+              },
+              {
+                "id": 8,
+                "src": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80",
+                "category": "events",
+                "alt": "Group class events"
+              },
+              {
+                "id": 9,
+                "src": "https://images.unsplash.com/photo-1599058917212-597145ae713b?auto=format&fit=crop&w=800&q=80",
+                "category": "facilities",
+                "alt": "Dumbbells rack"
+              },
+              {
+                "id": 10,
+                "src": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
+                "category": "training",
+                "alt": "Woman jumping training"
+              },
+              {
+                "id": 11,
+                "src": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
+                "category": "training",
+                "alt": "Trainer assisting member"
+              },
+              {
+                "id": 12,
+                "src": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80",
+                "category": "gym",
+                "alt": "Empty gym machines"
+              },
+              {
+                "id": 13,
+                "src": "https://images.unsplash.com/photo-1576678927484-fa9ab28608e6?auto=format&fit=crop&w=800&q=80",
+                "category": "members",
+                "alt": "Woman with medicine ball"
+              }
+            ],
+            "loadMoreText": "Load More Photos"
+          }
+        }
+      },
+      "VideoGallery": {
+        "variants": {
+          "GymVideoGallery1": {
+            "header": {
+              "titlePart1": "Video ",
+              "titlePart2": "Gallery",
+              "subtitle": "Watch our workout clips, training tips, member stories and gym highlights."
+            },
+            "categories": [
+              {
+                "id": "all",
+                "label": "All"
+              },
+              {
+                "id": "workout",
+                "label": "Workout"
+              },
+              {
+                "id": "tips",
+                "label": "Tips"
+              },
+              {
+                "id": "member_stories",
+                "label": "Member Stories"
+              },
+              {
+                "id": "events",
+                "label": "Events"
+              }
+            ],
+            "videos": [
+              {
+                "id": 1,
+                "title": "Full Body Workout Routine",
+                "desc": "Get fit with this 20-minute full body workout.",
+                "duration": "01:24",
+                "category": "workout",
+                "thumbnail": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
+                "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o"
+              },
+              {
+                "id": 2,
+                "title": "Fitness Tips for Beginners",
+                "desc": "Simple tips to start your fitness journey.",
+                "duration": "02:36",
+                "category": "tips",
+                "thumbnail": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80",
+                "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o"
+              },
+              {
+                "id": 3,
+                "title": "Pre-Workout Warmup",
+                "desc": "Essential warmup exercises before training.",
+                "duration": "01:50",
+                "category": "workout",
+                "thumbnail": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
+                "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o"
+              },
+              {
+                "id": 4,
+                "title": "Our Gym Tour",
+                "desc": "Take a tour of our state-of-the-art facility.",
+                "duration": "03:12",
+                "category": "events",
+                "thumbnail": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80",
+                "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o"
+              },
+              {
+                "id": 5,
+                "title": "Healthy Meal Ideas",
+                "desc": "Quick and easy post-workout meals.",
+                "duration": "02:08",
+                "category": "tips",
+                "thumbnail": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80",
+                "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o"
+              },
+              {
+                "id": 6,
+                "title": "Group Training Session",
+                "desc": "Stronger together.",
+                "duration": "01:45",
+                "category": "workout",
+                "thumbnail": "https://images.unsplash.com/photo-1526506190296-414777d1217e?auto=format&fit=crop&w=800&q=80",
+                "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o"
+              },
+              {
+                "id": 7,
+                "title": "Member Transformation",
+                "desc": "Inspiring stories from our members.",
+                "duration": "02:20",
+                "category": "member_stories",
+                "thumbnail": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80",
+                "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o"
+              },
+              {
+                "id": 8,
+                "title": "HIIT Workout",
+                "desc": "High intensity workout for faster results.",
+                "duration": "01:58",
+                "category": "workout",
+                "thumbnail": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
+                "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o"
+              },
+              {
+                "id": 9,
+                "title": "Advanced Deadlifts",
+                "desc": "Perfecting your deadlift form.",
+                "duration": "03:45",
+                "category": "workout",
+                "thumbnail": "https://images.unsplash.com/photo-1599058917212-597145ae713b?auto=format&fit=crop&w=800&q=80",
+                "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o"
+              },
+              {
+                "id": 10,
+                "title": "Community Event Highlights",
+                "desc": "Fun moments from our latest gym gathering.",
+                "duration": "04:10",
+                "category": "events",
+                "thumbnail": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=800&q=80",
+                "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o"
+              }
+            ],
+            "loadMoreText": "Load More Videos"
+          }
+        }
+      },
+      "PricingSec": {
+        "variants": {
+          "GymPricingSec1": {
+            "header": {
+              "badge": "PRICING PLAN",
+              "titlePart1": "Flexible Plans ",
+              "titlePart2": "For A Healthier You",
+              "subtitle": "Choose a membership plan that fits your goals, lifestyle and budget. Start your fitness journey today!"
+            },
+            "plans": [
+              {
+                "id": "basic",
+                "icon": "FiUser",
+                "title": "BASIC PLAN",
+                "subtitle": "Start Your Fitness Journey",
+                "price": "29",
+                "period": "/ month",
+                "isPopular": false,
+                "features": [
+                  {
+                    "text": "Gym Access (General Area)",
+                    "included": true
+                  },
+                  {
+                    "text": "Basic Equipment Usage",
+                    "included": true
+                  },
+                  {
+                    "text": "Locker Room Access",
+                    "included": true
+                  },
+                  {
+                    "text": "1 Fitness Assessment",
+                    "included": true
+                  },
+                  {
+                    "text": "Personal Trainer Support",
+                    "included": false
+                  }
+                ],
+                "buttonText": "Get Started"
+              },
+              {
+                "id": "standard",
+                "icon": "CgGym",
+                "title": "STANDARD PLAN",
+                "subtitle": "For Regular Fitness Enthusiasts",
+                "price": "49",
+                "period": "/ month",
+                "isPopular": true,
+                "popularText": "MOST POPULAR",
+                "features": [
+                  {
+                    "text": "Full Gym Access",
+                    "included": true
+                  },
+                  {
+                    "text": "All Equipment Usage",
+                    "included": true
+                  },
+                  {
+                    "text": "Locker Room & Shower",
+                    "included": true
+                  },
+                  {
+                    "text": "2 Personal Training Sessions",
+                    "included": true
+                  },
+                  {
+                    "text": "Nutrition Guidance",
+                    "included": true
+                  },
+                  {
+                    "text": "Custom Workout Plan",
+                    "included": false
+                  }
+                ],
+                "buttonText": "Get Started"
+              },
+              {
+                "id": "premium",
+                "icon": "FaCrown",
+                "title": "PREMIUM PLAN",
+                "subtitle": "For Serious Transformation",
+                "price": "79",
+                "period": "/ month",
+                "isPopular": false,
+                "features": [
+                  {
+                    "text": "Full Gym Access",
+                    "included": true
+                  },
+                  {
+                    "text": "All Equipment Usage",
+                    "included": true
+                  },
+                  {
+                    "text": "Locker Room & Shower",
+                    "included": true
+                  },
+                  {
+                    "text": "4 Personal Training Sessions",
+                    "included": true
+                  },
+                  {
+                    "text": "Custom Workout Plan",
+                    "included": true
+                  },
+                  {
+                    "text": "Nutrition & Diet Plan",
+                    "included": true
+                  },
+                  {
+                    "text": "Progress Tracking",
+                    "included": true
+                  }
+                ],
+                "buttonText": "Get Started"
+              },
+              {
+                "id": "elite",
+                "icon": "IoDiamondOutline",
+                "title": "ELITE PLAN",
+                "subtitle": "Complete Fitness Solution",
+                "price": "129",
+                "period": "/ month",
+                "isPopular": false,
+                "features": [
+                  {
+                    "text": "VIP Gym Access",
+                    "included": true
+                  },
+                  {
+                    "text": "All Equipment & Premium Area",
+                    "included": true
+                  },
+                  {
+                    "text": "Locker Room, Shower & Amenities",
+                    "included": true
+                  },
+                  {
+                    "text": "Unlimited Personal Training",
+                    "included": true
+                  },
+                  {
+                    "text": "Custom Workout & Diet Plan",
+                    "included": true
+                  },
+                  {
+                    "text": "Monthly Body Analysis",
+                    "included": true
+                  },
+                  {
+                    "text": "Priority Support",
+                    "included": true
+                  }
+                ],
+                "buttonText": "Get Started"
+              }
+            ],
+            "compare": {
+              "badge": "PLAN COMPARISON",
+              "titlePart1": "Compare ",
+              "titlePart2": "Plans & Features",
+              "subtitle": "See what's included in each plan and find the perfect membership for your fitness goals.",
+              "headers": [
+                "Features",
+                "Basic",
+                "Standard",
+                "Premium",
+                "Elite"
+              ],
+              "rows": [
+                {
+                  "feature": "Gym Access",
+                  "values": [
+                    "General Area",
+                    "Full Access",
+                    "Full Access",
+                    "VIP Access"
+                  ]
+                },
+                {
+                  "feature": "Equipment Usage",
+                  "values": [
+                    "Basic",
+                    "All Equipment",
+                    "All Equipment",
+                    "All + Premium"
+                  ]
+                },
+                {
+                  "feature": "Locker Room",
+                  "values": [
+                    "check",
+                    "check",
+                    "check",
+                    "check"
+                  ]
+                },
+                {
+                  "feature": "Shower Facilities",
+                  "values": [
+                    "-",
+                    "check",
+                    "check",
+                    "check"
+                  ]
+                },
+                {
+                  "feature": "Personal Training Sessions",
+                  "values": [
+                    "1",
+                    "2",
+                    "4",
+                    "Unlimited"
+                  ]
+                },
+                {
+                  "feature": "Custom Workout Plan",
+                  "values": [
+                    "-",
+                    "-",
+                    "check",
+                    "check"
+                  ]
+                },
+                {
+                  "feature": "Nutrition & Diet Plan",
+                  "values": [
+                    "-",
+                    "check",
+                    "check",
+                    "check"
+                  ]
+                },
+                {
+                  "feature": "Monthly Body Analysis",
+                  "values": [
+                    "-",
+                    "-",
+                    "check",
+                    "check"
+                  ]
+                },
+                {
+                  "feature": "Priority Support",
+                  "values": [
+                    "-",
+                    "-",
+                    "-",
+                    "check"
+                  ]
+                }
+              ],
+              "priceRow": {
+                "feature": "Price",
+                "values": [
+                  "$29/month",
+                  "$49/month",
+                  "$79/month",
+                  "$129/month"
+                ]
+              }
+            },
+            "cta": {
+              "left": {
+                "badge": "READY TO GET STARTED?",
+                "titlePart1": "Transform ",
+                "titlePart2": "Your Life Today",
+                "subtitle": "Join our fitness community and take the first step towards a stronger, healthier you.",
+                "buttonText": "Join Now",
+                "bgImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80"
+              },
+              "features": [
+                {
+                  "icon": "BiTargetLock",
+                  "title": "No Long-Term Contracts",
+                  "desc": "Flexible membership options"
+                },
+                {
+                  "icon": "FiShield",
+                  "title": "100% Satisfaction",
+                  "desc": "Your fitness goals are our priority"
+                },
+                {
+                  "icon": "FiUserCheck",
+                  "title": "Our Expert Trainers",
+                  "desc": "Guidance from certified professionals"
+                },
+                {
+                  "icon": "MdOutlineFitnessCenter",
+                  "title": "Modern Facilities",
+                  "desc": "State-of-the-art equipment"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "ConsultationSec": {
+        "variants": {
+          "GymConsultationSec1": {
+            "left": {
+              "badge": "FREE CONSULTATION",
+              "titlePart1": "Let's Build a ",
+              "titlePart2": "Healthier",
+              "titlePart3": " You",
+              "subtitle": "Get expert guidance from our certified fitness trainers. Book your free consultation today and take the first step towards your goals.",
+              "features": [
+                {
+                  "icon": "FiUser",
+                  "title": "Expert\nGuidance"
+                },
+                {
+                  "icon": "LuClipboardList",
+                  "title": "Personalized\nPlan"
+                },
+                {
+                  "icon": "CgGym",
+                  "title": "No\nObligation"
+                },
+                {
+                  "icon": "FiHeart",
+                  "title": "Start Your\nJourney"
+                }
+              ],
+              "imageCard": {
+                "image": "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=800&q=80",
+                "overlayTitle1": "YOUR FITNESS GOALS\nOUR ",
+                "overlayTitle2": "EXPERTISE",
+                "list": [
+                  "Lose Weight",
+                  "Build Muscle",
+                  "Improve Endurance",
+                  "Get Expert Advice"
+                ],
+                "signature": "Stronger\nHealthier\nHappier You!"
+              }
+            },
+            "right": {
+              "badge": "FREE CONSULTATION",
+              "titlePart1": "Book Your ",
+              "titlePart2": "Free Consultation",
+              "subtitle": "Fill in your details and our fitness expert will get in touch with you shortly.",
+              "form": {
+                "name": {
+                  "placeholder": "Full Name *",
+                  "icon": "FiUser"
+                },
+                "email": {
+                  "placeholder": "Email Address *",
+                  "icon": "FiMail"
+                },
+                "phone": {
+                  "placeholder": "Phone Number *",
+                  "icon": "FiPhone"
+                },
+                "goal": {
+                  "placeholder": "Your Fitness Goal *",
+                  "icon": "BiTargetLock",
+                  "options": [
+                    "Weight Loss",
+                    "Muscle Building",
+                    "General Fitness",
+                    "Endurance"
+                  ]
+                },
+                "date": {
+                  "placeholder": "Preferred Date *",
+                  "icon": "FiCalendar"
+                },
+                "time": {
+                  "placeholder": "Preferred Time *",
+                  "icon": "FiClock"
+                },
+                "message": {
+                  "placeholder": "Additional Message (Optional)",
+                  "icon": "LuFileText"
+                },
+                "checkboxText": "I agree to be contacted by the team regarding my consultation.",
+                "buttonText": "Book Free Consultation",
+                "secureText": "Your information is 100% secure with us."
+              }
+            }
+          }
+        }
+      },
+      "TeamSec": {
+        "variants": {
+          "GymTeamSec1": {
+            "badge": "OUR TEAM",
+            "titlePart1": "Meet Our ",
+            "titlePart2": "Expert Team",
+            "subtitle": "Passionate professionals dedicated to helping you become a stronger, healthier and happier you.",
+            "members": [
+              {
+                "id": 1,
+                "name": "Rahul Sharma",
+                "role": "Head Trainer",
+                "description": "Specializes in strength training, muscle building and functional fitness.",
+                "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 2,
+                "name": "Priya Mehta",
+                "role": "Fitness Trainer",
+                "description": "Expert in weight loss, HIIT and personal training for all fitness levels.",
+                "image": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 3,
+                "name": "Amit Verma",
+                "role": "Strength & Conditioning Coach",
+                "description": "Focuses on athletic performance, endurance and conditioning.",
+                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 4,
+                "name": "Sneha Kapoor",
+                "role": "Nutrition Expert",
+                "description": "Helps you achieve your goals with customized diet and nutrition plans.",
+                "image": "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 5,
+                "name": "Vikram Singh",
+                "role": "Functional Training Coach",
+                "description": "Specializes in functional training, mobility and injury prevention.",
+                "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 6,
+                "name": "Neha Rathi",
+                "role": "Group Class Instructor",
+                "description": "Leads energizing group sessions like Zumba, HIIT and circuit training.",
+                "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 7,
+                "name": "Karan Malhotra",
+                "role": "Member Support",
+                "description": "Ensures a smooth and motivating fitness experience for all members.",
+                "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 8,
+                "name": "Pooja Desai",
+                "role": "Client Relationship Manager",
+                "description": "Dedicated to understanding your needs and helping you stay on track.",
+                "image": "https://images.unsplash.com/photo-1609899517236-77a34cd50daf?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 9,
+                "name": "Rohan Joshi",
+                "role": "Yoga Instructor",
+                "description": "Brings balance and flexibility through mindful yoga practices.",
+                "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 10,
+                "name": "Simran Kaur",
+                "role": "Pilates Coach",
+                "description": "Focuses on core strength, posture and full-body alignment.",
+                "image": "https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 11,
+                "name": "Arjun Nair",
+                "role": "CrossFit Expert",
+                "description": "Pushes you to your limits with high-intensity CrossFit workouts.",
+                "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              },
+              {
+                "id": 12,
+                "name": "Divya Patel",
+                "role": "Zumba Instructor",
+                "description": "Makes fitness fun and exciting with energetic dance routines.",
+                "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80",
+                "socials": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "youtube": "#"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "MissionSec": {
+        "variants": {
+          "GymMissionSec1": {
+            "mission": {
+              "badge": "OUR MISSION",
+              "titlePart1": "Empowering",
+              "titlePart2": "Healthier Lives",
+              "paragraphs": [
+                "Our mission is to empower individuals to live healthier, happier and stronger lives through expert guidance, personalized training and unwavering support.",
+                "We aim to make fitness simple, accessible and enjoyable for everyone, regardless of their age, fitness level or starting point.",
+                "At Golan Fitness, we are committed to educating, motivating and guiding you with the right tools, knowledge and mindset so you can achieve your goals and become the best version of yourself Our vision is to become a trusted global fitness brand that inspires and transforms lives. Our vision is to become a trusted global fitness brand that inspires and transforms lives."
+              ],
+              "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+              "overlayTextTop": "STRONGER\nTHAN\nYESTERDAY",
+              "overlayTextBottom": "Discipline\nBuilds\nResults"
+            },
+            "vision": {
+              "badge": "OUR VISION",
+              "titlePart1": "A Fitter",
+              "titlePart2": "Brighter Tomorrow",
+              "paragraphs": [
+                "Our vision is to become a trusted global fitness brand that inspires and transforms lives Our vision is to become a trusted global fitness brand that inspires and transforms lives..",
+                "We strive to build a healthier, stronger and more confident community, where fitness is not just a goal but a lifelong lifestyle.",
+                "At Golan Fitness, we envision a future where everyone has the knowledge, support and motivation to take control of their health, unlock their potential and live a more energetic and fulfilling life Our vision is to become a trusted global fitness brand that inspires and transforms lives. Our vision is to become a trusted global fitness brand that inspires and transforms lives."
+              ],
+              "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
+              "overlayText": "BUILD\nA HEALTHIER\nSTRONGER\nTOMORROW"
+            }
+          }
+        }
+      },
+      "AwardSec": {
+        "variants": {
+          "GymAwardSec1": {
+            "topSection": {
+              "badge": "OUR RECOGNITION",
+              "titlePart1": "Certifications &",
+              "titlePart2": "Awards",
+              "description": "Our commitment to excellence is validated by industry-recognized certifications and prestigious awards.",
+              "features": [
+                {
+                  "icon": "FaShieldAlt",
+                  "title": "Industry Recognized",
+                  "desc": "Certified by leading fitness organizations"
+                },
+                {
+                  "icon": "FaUsers",
+                  "title": "Trusted Expertise",
+                  "desc": "Backed by qualified professionals"
+                },
+                {
+                  "icon": "FaStar",
+                  "title": "Award Winning",
+                  "desc": "Recognized for our outstanding services"
+                },
+                {
+                  "icon": "FaTrophy",
+                  "title": "Commitment to Quality",
+                  "desc": "Continuously raising standards"
+                }
+              ]
+            },
+            "bottomSection": {
+              "bgImage": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=1600&q=80",
+              "badge": "OUR",
+              "title": "Awards",
+              "description": "Our dedication to fitness, community wellness and client success has earned us several awards and recognitions over the years.",
+              "buttonText": "View Our Journey",
+              "buttonLink": "#",
+              "awards": [
+                {
+                  "image": "/award/awd1.png",
+                  "title": "Fitness Excellence Award",
+                  "year": "2023",
+                  "desc": "For Outstanding Contribution to Health & Fitness"
+                },
+                {
+                  "image": "/award/awd2.png",
+                  "title": "Best Gym of the Year",
+                  "year": "2022",
+                  "desc": "Recognized for Exceptional Training Programs"
+                },
+                {
+                  "image": "/award/awd3.png",
+                  "title": "Community Health Champion",
+                  "year": "2021",
+                  "desc": "For Promoting a Healthier Community"
+                },
+                {
+                  "image": "/award/awd1.png",
+                  "title": "Client Satisfaction Award",
+                  "year": "2020",
+                  "desc": "For Excellence in Customer Experience"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "CerSec": {
+        "variants": {
+          "GymCerSec1": {
+            "leftSection": {
+              "bgImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80",
+              "badge": "OUR",
+              "title": "Certifications",
+              "description": "We are certified by internationally recognized fitness and wellness organizations, ensuring that our training programs follow the highest standards of safety, knowledge and professionalism.",
+              "buttonText": "Our Training Standards",
+              "buttonLink": "#"
+            },
+            "rightSection": {
+              "certificates": [
+                {
+                  "image": "/certificate/c1.png",
+                  "title": "NASM Certified",
+                  "desc": "National Academy of Sports Medicine"
+                },
+                {
+                  "image": "/certificate/c2.png",
+                  "title": "ACE Certified",
+                  "desc": "American Council on Exercise"
+                },
+                {
+                  "image": "/certificate/c3.png",
+                  "title": "ISSA Certified",
+                  "desc": "International Sports Sciences Association"
+                },
+                {
+                  "image": "/certificate/c4.png",
+                  "title": "NSCA Certified",
+                  "desc": "National Strength and Conditioning Association"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "PrivacyPolicySec": {
+        "variants": {
+          "GymPrivacyPolicySec1": {
+            "tag": "YOUR PRIVACY MATTERS",
+            "titleLine1": "Privacy",
+            "titleLine2": "Policy",
+            "description": "At Golan Fitness, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose and safeguard your information when you visit our website or use our services.",
+            "items": [
+              {
+                "icon": "FaRegUser",
+                "title": "1. Information We Collect",
+                "text": "We may collect personal information such as your name, email address, phone number, and other details you provide when you contact us, book a session, subscribe to our updates, or fill out a form on our website. We may also collect non-personal information such as browser type, device information and pages visited to improve your experience."
+              },
+              {
+                "icon": "FaCog",
+                "title": "2. How We Use Your Information",
+                "text": "We use the information we collect to provide and improve our services, respond to your inquiries, schedule appointments, personalize your fitness experience, send important updates and promotional content (only with your consent), and ensure the smooth functioning of our website."
+              },
+              {
+                "icon": "FaShareAlt",
+                "title": "3. Information Sharing",
+                "text": "We do not sell, trade or rent your personal information to third parties. We may share your information only with trusted service providers who assist us in operating our website, managing bookings or delivering services, under strict confidentiality agreements. We may also disclose information if required by law."
+              },
+              {
+                "icon": "FaShieldAlt",
+                "title": "4. Data Security",
+                "text": "We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, alteration, disclosure or destruction. While we strive to keep your data secure, no method of transmission over the internet is 100% secure."
+              },
+              {
+                "icon": "FaCookieBite",
+                "title": "5. Cookies",
+                "text": "Our website uses cookies to enhance your browsing experience, analyze website traffic and understand user preferences. You can choose to disable cookies through your browser settings, but this may affect certain features of our website."
+              },
+              {
+                "icon": "FaFileAlt",
+                "title": "6. Your Rights",
+                "text": "You have the right to access, update or request the deletion of your personal information. If you have any questions or requests regarding your data, please contact us using the details provided below."
+              },
+              {
+                "icon": "FaSyncAlt",
+                "title": "7. Changes To This Policy",
+                "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this page periodically to stay informed."
+              },
+              {
+                "icon": "FaEnvelope",
+                "title": "8. Contact Us",
+                "text": "If you have any questions, concerns or requests regarding this Privacy Policy or how we handle your information, please reach out to us at:",
+                "contacts": [
+                  {
+                    "icon": "FaPhoneAlt",
+                    "text": "+91 98765 43210"
+                  },
+                  {
+                    "icon": "FaEnvelope",
+                    "text": "info@golanfitness.com"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "RefundPolicySec": {
+        "variants": {
+          "GymRefundPolicySec1": {
+            "tag": "FAIR AND TRANSPARENT",
+            "titleLine1": "Refund",
+            "titleLine2": "Policy",
+            "description": "We believe in a fair and transparent refund policy. Please read the following terms regarding cancellations and refunds for our memberships and services.",
+            "items": [
+              {
+                "icon": "FaRegUser",
+                "title": "1. Information We Collect",
+                "text": "We may collect personal information such as your name, email address, phone number, and other details you provide when you contact us, book a session, subscribe to our updates, or fill out a form on our website. We may also collect non-personal information such as browser type, device information and pages visited to improve your experience."
+              },
+              {
+                "icon": "FaCog",
+                "title": "2. How We Use Your Information",
+                "text": "We use the information we collect to provide and improve our services, respond to your inquiries, schedule appointments, personalize your fitness experience, send important updates and promotional content (only with your consent), and ensure the smooth functioning of our website."
+              },
+              {
+                "icon": "FaShareAlt",
+                "title": "3. Information Sharing",
+                "text": "We do not sell, trade or rent your personal information to third parties. We may share your information only with trusted service providers who assist us in operating our website, managing bookings or delivering services, under strict confidentiality agreements. We may also disclose information if required by law."
+              },
+              {
+                "icon": "FaShieldAlt",
+                "title": "4. Data Security",
+                "text": "We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, alteration, disclosure or destruction. While we strive to keep your data secure, no method of transmission over the internet is 100% secure."
+              },
+              {
+                "icon": "FaCookieBite",
+                "title": "5. Cookies",
+                "text": "Our website uses cookies to enhance your browsing experience, analyze website traffic and understand user preferences. You can choose to disable cookies through your browser settings, but this may affect certain features of our website."
+              },
+              {
+                "icon": "FaFileAlt",
+                "title": "6. Your Rights",
+                "text": "You have the right to access, update or request the deletion of your personal information. If you have any questions or requests regarding your data, please contact us using the details provided below."
+              },
+              {
+                "icon": "FaSyncAlt",
+                "title": "7. Changes To This Policy",
+                "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this page periodically to stay informed."
+              },
+              {
+                "icon": "FaEnvelope",
+                "title": "8. Contact Us",
+                "text": "If you have any questions, concerns or requests regarding this Privacy Policy or how we handle your information, please reach out to us at:",
+                "contacts": [
+                  {
+                    "icon": "FaPhoneAlt",
+                    "text": "+91 98765 43210"
+                  },
+                  {
+                    "icon": "FaEnvelope",
+                    "text": "info@golanfitness.com"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "TermsConditionSec": {
+        "variants": {
+          "GymTermsConditionSec1": {
+            "tag": "OUR RULES & GUIDELINES",
+            "titleLine1": "Terms &",
+            "titleLine2": "Conditions",
+            "description": "Please read these terms and conditions carefully before using our service. By accessing or using the service, you agree to be bound by these terms.",
+            "items": [
+              {
+                "icon": "FaRegUser",
+                "title": "1. Information We Collect",
+                "text": "We may collect personal information such as your name, email address, phone number, and other details you provide when you contact us, book a session, subscribe to our updates, or fill out a form on our website. We may also collect non-personal information such as browser type, device information and pages visited to improve your experience."
+              },
+              {
+                "icon": "FaCog",
+                "title": "2. How We Use Your Information",
+                "text": "We use the information we collect to provide and improve our services, respond to your inquiries, schedule appointments, personalize your fitness experience, send important updates and promotional content (only with your consent), and ensure the smooth functioning of our website."
+              },
+              {
+                "icon": "FaShareAlt",
+                "title": "3. Information Sharing",
+                "text": "We do not sell, trade or rent your personal information to third parties. We may share your information only with trusted service providers who assist us in operating our website, managing bookings or delivering services, under strict confidentiality agreements. We may also disclose information if required by law."
+              },
+              {
+                "icon": "FaShieldAlt",
+                "title": "4. Data Security",
+                "text": "We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, alteration, disclosure or destruction. While we strive to keep your data secure, no method of transmission over the internet is 100% secure."
+              },
+              {
+                "icon": "FaCookieBite",
+                "title": "5. Cookies",
+                "text": "Our website uses cookies to enhance your browsing experience, analyze website traffic and understand user preferences. You can choose to disable cookies through your browser settings, but this may affect certain features of our website."
+              },
+              {
+                "icon": "FaFileAlt",
+                "title": "6. Your Rights",
+                "text": "You have the right to access, update or request the deletion of your personal information. If you have any questions or requests regarding your data, please contact us using the details provided below."
+              },
+              {
+                "icon": "FaSyncAlt",
+                "title": "7. Changes To This Policy",
+                "text": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this page periodically to stay informed."
+              },
+              {
+                "icon": "FaEnvelope",
+                "title": "8. Contact Us",
+                "text": "If you have any questions, concerns or requests regarding this Privacy Policy or how we handle your information, please reach out to us at:",
+                "contacts": [
+                  {
+                    "icon": "FaPhoneAlt",
+                    "text": "+91 98765 43210"
+                  },
+                  {
+                    "icon": "FaEnvelope",
+                    "text": "info@golanfitness.com"
+                  }
+                ]
+              }
+            ]
+          }
+        }
       }
-    ],
-    "rightCards": [
-      {
-        "id": "wc-3",
-        "icon": "FaCoins",
-        "title": "AFFORDABLE PLANS",
-        "description": "High-quality training at flexible plans you can afford. No hidden fees, just honest and transparent pricing."
-      },
-      {
-        "id": "wc-4",
-        "icon": "FaHeartbeat",
-        "title": "COMPLETE SUPPORT",
-        "description": "From workout guidance to nutrition advice, we provide end-to-end support to keep you on track."
-      }
-    ]
-  },
-  "contactPageSec": {
-    "tag": "GET IN TOUCH",
-    "titleLine1": "Contact",
-    "titleLine2": "Us",
-    "description": "We'd love to hear from you! Whether you have a question, want to join our fitness community, or need more information — our team is here to help.",
-    "contactInfo": [
-      {
-        "id": "phone",
-        "icon": "FaPhoneAlt",
-        "title": "Call Us",
-        "details": "+91 98765 43210"
-      },
-      {
-        "id": "email",
-        "icon": "FaEnvelope",
-        "title": "Email Us",
-        "details": "info@golanfitness.com"
-      },
-      {
-        "id": "location",
-        "icon": "FaMapMarkerAlt",
-        "title": "Visit Us",
-        "details": "123 Fitness Street,\nAndheri West, Mumbai,\nMaharashtra 400053"
-      },
-      {
-        "id": "hours",
-        "icon": "FaRegClock",
-        "title": "Our Working Hours",
-        "details": "Mon - Sat: 6:00 AM - 10:00 PM\nSunday: 6:00 AM - 6:00 PM"
-      }
-    ],
-    "centerImage": {
-      "src": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
-      "topTextLine1": "STRONGER",
-      "topTextLine2": "PEOPLE",
-      "topTextLine3": "BRIGHTER",
-      "topTextLine4": "TOMORROW",
-      "bottomText": "Let's\nBuild a\nHealthier\nYou"
-    },
-    "form": {
-      "tag": "SEND A MESSAGE",
-      "titleLine1": "We're Here to",
-      "titleLine2": "Help",
-      "description": "Fill out the form below and we'll get back to you as soon as possible.",
-      "fields": {
-        "namePlaceholder": "Your Name *",
-        "emailPlaceholder": "Your Email *",
-        "phonePlaceholder": "Your Phone *",
-        "subjectPlaceholder": "Subject *",
-        "messagePlaceholder": "Your Message *",
-        "subjectOptions": [
-          "Personal Training",
-          "Membership",
-          "Other"
-        ]
-      },
-      "buttonText": "Send Message",
-      "bottomScriptText": "Fitness\nStarts with\na Conversation"
-    }
-  },
-  "mapSec": {
-    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224356.85923192592!2d77.23701088488971!3d28.522404036526275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a43173357b%3A0x37ffce30c87cc03f!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1786345160037!5m2!1sen!2sin",
-    "infoCard": {
-      "bgImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop",
-      "tag": "VISIT OUR GYM",
-      "titleLine1": "Come Experience",
-      "titleLine2": "the Difference",
-      "description": "We'd be happy to welcome you at our fitness center. Take a tour, meet our trainers and start your fitness journey today.",
-      "features": [
-        {
-          "id": "f1",
-          "icon": "FaDumbbell",
-          "title": "Modern\\nEquipment"
-        },
-        {
-          "id": "f2",
-          "icon": "FaUsers",
-          "title": "Expert\\nTrainers"
-        },
-        {
-          "id": "f3",
-          "icon": "FaShower",
-          "title": "Premium\\nFacilities"
-        }
-      ]
     }
   }
 }

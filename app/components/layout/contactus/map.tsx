@@ -13,8 +13,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
     FaShower
 };
 
+const data = gymData.mapSec;
+
 export default function MapSec() {
-    const data = gymData.mapSec;
 
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 relative">
@@ -67,13 +68,13 @@ export default function MapSec() {
                                 </div>
 
                                 {/* Title */}
-                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black italic uppercase tracking-tight mb-4 leading-none">
+                                <h2 className="text-3xl sm:text-3xl md:text-4xl font-black italic uppercase tracking-tight mb-4 leading-none">
                                     <span className="text-white block">{data.infoCard.titleLine1}</span>
                                     <span className="text-[#E5192C] block">{data.infoCard.titleLine2}</span>
                                 </h2>
 
                                 {/* Description */}
-                                <p className="text-gray-300 text-sm sm:text-base max-w-md leading-relaxed mb-8">
+                                <p className="text-gray-300 text-sm sm:text-sm md:text-base max-w-sm leading-relaxed mb-8">
                                     {data.infoCard.description}
                                 </p>
                             </div>
@@ -85,7 +86,7 @@ export default function MapSec() {
                                     return (
                                         <React.Fragment key={feature.id}>
                                             <div className="flex flex-col items-center text-center flex-1">
-                                                {Icon && <Icon className="text-3xl sm:text-4xl text-[#E5192C] mb-3" />}
+                                                {Icon && <Icon className="text-3xl sm:text-5xl text-[#E5192C] mb-3" />}
                                                 <span className="text-white text-xs sm:text-sm font-medium whitespace-pre-line leading-tight">
                                                     {feature.title}
                                                 </span>

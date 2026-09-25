@@ -29,8 +29,9 @@ interface HomeProgramsProps {
     isProgramPage?: boolean;
 }
 
+const data = gymData.homePrograms;
+
 export default function HomePrograms({ isProgramPage = false }: HomeProgramsProps) {
-    const data = gymData.homePrograms;
 
     return (
         <section className={`${isProgramPage ? "bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14" : "bg-[#0a0e14] mt-8 sm:mt-10 md:mt-12 lg:mt-14"} relative overflow-hidden`}>

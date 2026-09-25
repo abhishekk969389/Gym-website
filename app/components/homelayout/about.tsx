@@ -8,10 +8,12 @@ import { containerVariants, itemVariantsLeft, itemVariantsRight } from "@/app/ut
 import { FaCheck } from "react-icons/fa6";
 import { gymData } from "@/data";
 
+const homeData = gymData.homeAbout;
+const aboutData = gymData.aboutPageAbout;
+
 export default function HomeAbout({ isAboutPage = false }: { isAboutPage?: boolean }) {
-    const homeData = gymData.homeAbout;
-    const aboutData = gymData.aboutPageAbout;
-    
+
+
     const image1 = isAboutPage ? aboutData.image1 : homeData.image1;
     const image2 = isAboutPage ? aboutData.image2 : homeData.image2;
     const badge = isAboutPage ? aboutData.badge : homeData.badge;

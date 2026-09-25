@@ -24,15 +24,13 @@ const ICON_MAP: Record<string, IconType> = {
   FaLinkedinIn,
 };
 
-interface TopbarProps {
-  data?: TopbarData;
-}
+const topbarData: TopbarData = gymData.topbar;
 
-export default function Topbar({ data = gymData.topbar }: TopbarProps) {
-  const TaglineIcon = ICON_MAP[data.taglineIcon] || FaDumbbell;
-  const PhoneIcon = ICON_MAP[data.phoneIcon] || FaPhone;
-  const EmailIcon = ICON_MAP[data.emailIcon] || FaEnvelope;
-  const ClockIcon = ICON_MAP[data.workingHoursIcon] || FaClock;
+export default function Topbar() {
+  const TaglineIcon = ICON_MAP[topbarData.taglineIcon] || FaDumbbell;
+  const PhoneIcon = ICON_MAP[topbarData.phoneIcon] || FaPhone;
+  const EmailIcon = ICON_MAP[topbarData.emailIcon] || FaEnvelope;
+  const ClockIcon = ICON_MAP[topbarData.workingHoursIcon] || FaClock;
 
   return (
     <header className="w-full bg-[#0d1217] text-white text-xs sm:text-sm border-b border-gray-800/40 select-none overflow-hidden">
@@ -43,7 +41,7 @@ export default function Topbar({ data = gymData.topbar }: TopbarProps) {
             <TaglineIcon className="text-white text-lg sm:text-xl lg:text-lg xl:text-xl shrink-0 h-6 w-6 transform" />
           )}
           <span className="whitespace-nowrap font-sans text-white tracking-tight text-xs sm:text-sm lg:text-xs xl:text-sm">
-            {data.tagline}
+            {topbarData.tagline}
           </span>
         </div>
 
@@ -51,14 +49,14 @@ export default function Topbar({ data = gymData.topbar }: TopbarProps) {
         <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 sm:gap-4 lg:gap-3 xl:gap-6 py-2 sm:py-0 text-gray-200">
           {/* Phone */}
           <a
-            href={data.phoneLink}
+            href={topbarData.phoneLink}
             className="flex items-center gap-1.5 sm:gap-2 hover:text-red-500 transition-colors group shrink-0"
           >
             {PhoneIcon && (
               <PhoneIcon className="text-[#c40d2e] text-lg sm:text-xl lg:text-lg xl:text-xl shrink-0 group-hover:scale-110 transition-transform" />
             )}
             <span className="whitespace-nowrap text-xs sm:text-sm lg:text-xs xl:text-sm tracking-wide font-medium">
-              {data.phone}
+              {topbarData.phone}
             </span>
           </a>
 
@@ -67,14 +65,14 @@ export default function Topbar({ data = gymData.topbar }: TopbarProps) {
 
           {/* Email */}
           <a
-            href={data.emailLink}
+            href={topbarData.emailLink}
             className="flex items-center gap-1.5 sm:gap-2 hover:text-red-500 transition-colors group shrink-0"
           >
             {EmailIcon && (
               <EmailIcon className="text-[#c40d2e] text-lg sm:text-xl lg:text-lg xl:text-xl shrink-0 group-hover:scale-110 transition-transform" />
             )}
             <span className="whitespace-nowrap text-xs sm:text-sm lg:text-xs xl:text-sm font-medium">
-              {data.email}
+              {topbarData.email}
             </span>
           </a>
 
@@ -87,7 +85,7 @@ export default function Topbar({ data = gymData.topbar }: TopbarProps) {
               <ClockIcon className="text-[#c40d2e] text-lg sm:text-xl lg:text-lg xl:text-xl shrink-0" />
             )}
             <span className="whitespace-nowrap text-xs sm:text-sm lg:text-xs xl:text-sm font-medium">
-              {data.workingHours}
+              {topbarData.workingHours}
             </span>
           </div>
 
@@ -96,7 +94,7 @@ export default function Topbar({ data = gymData.topbar }: TopbarProps) {
 
           {/* Social Links */}
           <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
-            {data.socialLinks.map((social) => {
+            {topbarData.socialLinks.map((social) => {
               const SocialIcon = ICON_MAP[social.icon];
               return (
                 <a

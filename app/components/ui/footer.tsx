@@ -29,8 +29,9 @@ const ICON_MAP: Record<string, IconType> = {
     FaRegClock
 };
 
+const data = gymData.footer;
+
 export default function Footer() {
-    const data = gymData.footer;
 
     return (
         <footer className="relative bg-[#0a0e14] mt-8 sm:mt-10 md:mt-12 lg:mt-14 text-white overflow-hidden pt-16">
@@ -64,7 +65,7 @@ export default function Footer() {
                                 const Icon = ICON_MAP[social.icon];
                                 return (
                                     <Link key={idx} href={social.url} className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white hover:text-white hover:bg-[#E5192C] hover:border-[#E5192C] transition-all">
-                                        {Icon && <Icon className="text-sm" />}
+                                        {Icon && <Icon className="text-xl" />}
                                     </Link>
                                 );
                             })}

@@ -14,8 +14,10 @@ interface HomeBlogProps {
     isBlogPage?: boolean;
 }
 
+const data = gymData.homeBlog;
+
 export default function HomeBlog({ isBlogPage = false }: HomeBlogProps) {
-    const data = gymData.homeBlog;
+
     const [currentPage, setCurrentPage] = useState(1);
     
     const postsPerPage = 6;
@@ -69,7 +71,7 @@ export default function HomeBlog({ isBlogPage = false }: HomeBlogProps) {
                     </h2>
 
                     {/* Subtitle */}
-                    <p className="text-gray-600 text-sm sm:text-base">
+                    <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
                         {data.subtitle}
                     </p>
                 </motion.div>

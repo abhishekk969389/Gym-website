@@ -14,8 +14,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
   FaHeartbeat,
 };
 
+const data = gymData.whyChooseUs;
+
 export default function WhyChooseUs() {
-    const data = gymData.whyChooseUs;
 
     return (
         <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-[#f8f9fa] relative overflow-hidden">

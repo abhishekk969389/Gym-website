@@ -8,8 +8,9 @@ import { containerVariants, itemVariantsLeft } from "@/app/utils/animations";
 import { gymData } from "@/data";
 import { FaArrowRight } from "react-icons/fa6";
 
+const data = gymData.homeCta;
+
 export default function HomeTraining() {
-    const data = gymData.homeCta;
 
     return (
         <section className="relative w-full h-90 overflow-hidden flex items-center mt-8 sm:mt-12 lg:mt-16">
