@@ -86,7 +86,7 @@ export default function Banner() {
                     <motion.div variants={itemVariantsLeft} className="flex flex-wrap items-center gap-6 sm:gap-8 mb-8">
                         <Link
                             href={homeBannerData.primaryButton.url}
-                            className="flex items-center gap-4 bg-[#E5192C] hover:bg-red-700 text-white pl-6 pr-3 py-2.5 rounded-full transition-all font-semibold text-sm tracking-wide"
+                            className="flex items-center gap-3 bg-[#E5192C] hover:bg-red-700 text-white pl-4 pr-3 py-2.5 rounded-full transition-all font-semibold text-sm tracking-wide"
                         >
                             <span>{homeBannerData.primaryButton.label}</span>
                             <div className="w-6 h-6 bg-[#0a0e14] rounded-full flex items-center justify-center shrink-0">
