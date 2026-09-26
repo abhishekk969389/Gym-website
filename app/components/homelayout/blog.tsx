@@ -109,7 +109,7 @@ export default function HomeBlog({ isBlogPage = false }: HomeBlogProps) {
                                 </div>
 
                                 {/* Title */}
-                                <Link href={`/blogdetails?id=${post.id}`}>
+                                <Link href={`/blogdetails?name=${post.title.replace(/\s+/g, '-').toLowerCase()}`}>
                                     <h3 className="text-xl font-bold text-gray-900 leading-snug mb-2 hover:text-[#E5192C] transition-colors line-clamp-2">
                                         {post.title}
                                     </h3>
@@ -122,7 +122,7 @@ export default function HomeBlog({ isBlogPage = false }: HomeBlogProps) {
 
                                 {/* Read More */}
                                 <Link 
-                                    href={`/blogdetails?id=${post.id}`} 
+                                    href={`/blogdetails?name=${post.title.replace(/\s+/g, '-').toLowerCase()}`} 
                                     className="flex items-center gap-2 text-[#E5192C] font-bold text-[13px] sm:text-sm uppercase tracking-wide group/link w-fit"
                                 >
                                     <span className="w-8 h-[2px] bg-[#E5192C] transition-all group-hover/link:w-12"></span>

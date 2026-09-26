@@ -41,7 +41,7 @@ export default function BlogSidebar() {
                         
                         return (
                             <Link 
-                                href={`/blogdetails?id=${categoryPost.id}`}
+                                href={`/blogdetails?name=${categoryPost.title.replace(/\s+/g, '-').toLowerCase()}`}
                                 key={idx} 
                                 className={`flex items-center gap-3 pb-4 group ${idx !== layout.categories.length - 1 ? 'border-b border-gray-200' : ''}`}
                             >
@@ -69,7 +69,7 @@ export default function BlogSidebar() {
                             transition={{ delay: 0.3 + (idx * 0.1), duration: 0.4 }}
                             viewport={{ once: true }}
                         >
-                            <Link href={`/blogdetails?id=${post.id}`} className="flex gap-4 group cursor-pointer">
+                            <Link href={`/blogdetails?name=${post.title.replace(/\s+/g, '-').toLowerCase()}`} className="flex gap-4 group cursor-pointer">
                                 <div className="w-[80px] h-[80px] shrink-0 relative overflow-hidden rounded">
                                 <Image 
                                     src={post.image}

@@ -4,17 +4,17 @@ import BlogSidebar from "@/app/components/layout/blogdetails/sidebar";
 import BlogContent from "@/app/components/layout/blogdetails/content";
 import { gymData } from "@/data";
 
-export default async function BlogDetailsPage({ searchParams }: { searchParams: Promise<{ id?: string }> }) {
+export default async function BlogDetailsPage({ searchParams }: { searchParams: Promise<{ name?: string }> }) {
     // Await searchParams before accessing properties (Next.js 15+ requirement)
     const resolvedParams = await searchParams;
     
     const posts = gymData.homeBlog.posts;
     
-    // Determine the post based on the 'id' query parameter
-    const postId = resolvedParams.id ? parseInt(resolvedParams.id, 10) : 1;
+    // Determine the post based on the 'name' query parameter
+    const postName = resolvedParams.name ? resolvedParams.name.replace(/-/g, ' ').toLowerCase() : '';
     
-    // Find the post by matching id, fallback to the first one if not found
-    const post = posts.find(p => p.id === postId) || posts[0];
+    // Find the post by matching title (case-insensitive), fallback to the first one if not found
+    const post = posts.find(p => p.title.toLowerCase() === postName) || posts[0];
 
     return (
         <main className="bg-white">
