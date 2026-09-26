@@ -7,11 +7,13 @@ export type NavbarData = typeof sec.Navbar.variants.GymNavbar1;
 export type HomeBannerData = typeof sec.HomeBanner.variants.GymHomeBanner1;
 export type HomeAboutData = typeof sec.HomeAbout.variants.GymHomeAbout1;
 export type HomeProgramsData = typeof sec.HomePrograms.variants.GymHomePrograms1;
+export type Program = HomeProgramsData["programs"][0];
 export type HomeJourneyData = typeof sec.HomeJourney.variants.GymHomeJourney1;
 export type HomeStatsData = typeof sec.HomeStats.variants.GymHomeStats1;
 export type HomeTestimonialsData = typeof sec.HomeTestimonials.variants.GymHomeTestimonials1;
 export type HomeCtaData = typeof sec.HomeCta.variants.GymHomeCta1;
 export type HomeBlogData = typeof sec.HomeBlog.variants.GymHomeBlog1;
+export type BlogPost = HomeBlogData["posts"][0];
 export type HomeHowItWorksData = typeof sec.HomeHowItWorks.variants.GymHomeHowItWorks1;
 export type FooterData = typeof sec.Footer.variants.GymFooter1;
 export type SubBannerData = typeof sec.SubBanners.variants.GymSubBanners1.about;
@@ -24,6 +26,7 @@ export type VideoGalleryData = typeof sec.VideoGallery.variants.GymVideoGallery1
 export type PricingSecData = typeof sec.PricingSec.variants.GymPricingSec1;
 export type ConsultationSecData = typeof sec.ConsultationSec.variants.GymConsultationSec1;
 export type TeamSecData = typeof sec.TeamSec.variants.GymTeamSec1;
+export type TeamMember = TeamSecData["members"][0];
 export type MissionSecData = typeof sec.MissionSec.variants.GymMissionSec1;
 // @ts-ignore
 export type AwardSecData = typeof sec.AwardSec.variants.GymAwardSec1;
@@ -33,6 +36,8 @@ export type CerSecData = typeof sec.CerSec.variants.GymCerSec1;
 export type PrivacyPolicySecData = typeof sec.PrivacyPolicySec.variants.GymPrivacyPolicySec1;
 export type RefundPolicySecData = typeof sec.RefundPolicySec.variants.GymRefundPolicySec1;
 export type TermsConditionSecData = typeof sec.TermsConditionSec.variants.GymTermsConditionSec1;
+export type FaqSecData = typeof sec.FaqSec.variants.GymFaqSec1;
+export type FaqQuestion = FaqSecData["categories"][0]["questions"][0];
 
 export const gymData = {
   topbar: sec.Topbar.variants.GymTopbar1,
@@ -65,4 +70,5 @@ export const gymData = {
   privacyPolicySec: sec.PrivacyPolicySec.variants.GymPrivacyPolicySec1,
   refundPolicySec: sec.RefundPolicySec.variants.GymRefundPolicySec1,
   termsConditionSec: sec.TermsConditionSec.variants.GymTermsConditionSec1,
+  faqSec: sec.FaqSec.variants.GymFaqSec1,
 };

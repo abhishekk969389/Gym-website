@@ -228,7 +228,7 @@
             "description": "Personalized training programs to help you get stronger, fitter and more confident — inside and out.",
             "primaryButton": {
               "label": "START YOUR JOURNEY",
-              "url": "/journey",
+              "url": "/program",
               "icon": "FaArrowRight"
             },
             "secondaryButton": {
@@ -447,7 +447,7 @@
             ],
             "button": {
               "label": "Get Started",
-              "url": "#",
+              "url": "/about",
               "icon": "FaArrowRight"
             },
             "image1": "/about/about2.jpg",
@@ -469,7 +469,7 @@
             "subtitle": "Personalized training programs designed to help you achieve your fitness goals, whatever your starting point.",
             "button": {
               "label": "START YOUR JOURNEY",
-              "url": "#",
+              "url": "/program",
               "icon": "FaArrowRight"
             },
             "programs": [
@@ -479,7 +479,127 @@
                 "title": "Personal Training",
                 "description": "One-on-one coaching with customized workout plans to help you achieve your unique goals.",
                 "url": "#",
-                "bgImage": "/program/pg1.jpg"
+                "bgImage": "/program/pg1.jpg",
+                "details": {
+                  "sidebar": {
+                    "image": "/program/pg1.jpg",
+                    "textPart1": "STRONGER",
+                    "textPart2": "EVERY DAY",
+                    "subText": "TRAIN SMART. LIVE BETTER."
+                  },
+                  "infoCards": [
+                    {
+                      "icon": "FaRunning",
+                      "label": "Level",
+                      "value": "All Levels"
+                    },
+                    {
+                      "icon": "FaClock",
+                      "label": "Duration",
+                      "value": "Flexible"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "label": "Sessions",
+                      "value": "1-on-1 Training"
+                    },
+                    {
+                      "icon": "FaMapMarkerAlt",
+                      "label": "Location",
+                      "value": "In-Gym / Online"
+                    }
+                  ],
+                  "overview": {
+                    "text": "Our Personal Training program is designed for individuals who want focused attention, expert guidance and a customized plan to achieve their fitness goals. Whether you want to lose weight, build muscle, improve endurance or just get healthier, our certified trainers will create a plan tailored to your needs.",
+                    "list": [
+                      {
+                        "icon": "FaClipboardList",
+                        "text": "Customized Workout Plan"
+                      },
+                      {
+                        "icon": "FaChartLine",
+                        "text": "Continuous Progress Tracking"
+                      },
+                      {
+                        "icon": "FaUserFriends",
+                        "text": "One-on-One Guidance"
+                      },
+                      {
+                        "icon": "FaHeartbeat",
+                        "text": "Motivation & Support"
+                      },
+                      {
+                        "icon": "FaBullseye",
+                        "text": "Goal-Oriented Training"
+                      },
+                      {
+                        "icon": "FaCalendarCheck",
+                        "text": "Flexible Scheduling"
+                      }
+                    ]
+                  },
+                  "keyBenefits": [
+                    "Personalized training plans",
+                    "Proper form and technique guidance",
+                    "Faster and safer results",
+                    "Injury prevention",
+                    "Accountability and motivation",
+                    "Nutrition and lifestyle advice",
+                    "Suitable for all fitness levels"
+                  ],
+                  "targetAudience": [
+                    {
+                      "icon": "FaUser",
+                      "text": "Beginners who need guidance"
+                    },
+                    {
+                      "icon": "FaWeightHanging",
+                      "text": "Individuals looking to lose weight"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Those aiming to build muscle"
+                    },
+                    {
+                      "icon": "FaRunning",
+                      "text": "People preparing for sports events"
+                    },
+                    {
+                      "icon": "FaBriefcase",
+                      "text": "Busy professionals with specific goals"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "text": "Anyone who wants a healthier lifestyle"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    {
+                      "icon": "FaClipboardCheck",
+                      "text": "Initial Fitness Assessment"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Customized Workout Plan"
+                    },
+                    {
+                      "icon": "FaAppleAlt",
+                      "text": "Nutrition Guidance"
+                    },
+                    {
+                      "icon": "FaChartBar",
+                      "text": "Regular Progress Tracking"
+                    },
+                    {
+                      "icon": "FaHeadset",
+                      "text": "Ongoing Trainer Support"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "text": "Flexible Scheduling"
+                    }
+                  ]
+                }
               },
               {
                 "number": "02",
@@ -487,7 +607,127 @@
                 "title": "Weight Loss Training",
                 "description": "Effective and sustainable weight loss programs to help you burn fat, boost energy and feel great.",
                 "url": "#",
-                "bgImage": "/program/pg2.jpg"
+                "bgImage": "/program/pg2.jpg",
+                "details": {
+                  "sidebar": {
+                    "image": "/program/pg2.jpg",
+                    "textPart1": "STRONGER",
+                    "textPart2": "EVERY DAY",
+                    "subText": "TRAIN SMART. LIVE BETTER."
+                  },
+                  "infoCards": [
+                    {
+                      "icon": "FaRunning",
+                      "label": "Level",
+                      "value": "All Levels"
+                    },
+                    {
+                      "icon": "FaClock",
+                      "label": "Duration",
+                      "value": "Flexible"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "label": "Sessions",
+                      "value": "1-on-1 Training"
+                    },
+                    {
+                      "icon": "FaMapMarkerAlt",
+                      "label": "Location",
+                      "value": "In-Gym / Online"
+                    }
+                  ],
+                  "overview": {
+                    "text": "Our Weight Loss Training program is designed for individuals who want focused attention, expert guidance and a customized plan to achieve their fitness goals. Whether you want to lose weight, build muscle, improve endurance or just get healthier, our certified trainers will create a plan tailored to your needs.",
+                    "list": [
+                      {
+                        "icon": "FaClipboardList",
+                        "text": "Customized Workout Plan"
+                      },
+                      {
+                        "icon": "FaChartLine",
+                        "text": "Continuous Progress Tracking"
+                      },
+                      {
+                        "icon": "FaUserFriends",
+                        "text": "One-on-One Guidance"
+                      },
+                      {
+                        "icon": "FaHeartbeat",
+                        "text": "Motivation & Support"
+                      },
+                      {
+                        "icon": "FaBullseye",
+                        "text": "Goal-Oriented Training"
+                      },
+                      {
+                        "icon": "FaCalendarCheck",
+                        "text": "Flexible Scheduling"
+                      }
+                    ]
+                  },
+                  "keyBenefits": [
+                    "Personalized training plans",
+                    "Proper form and technique guidance",
+                    "Faster and safer results",
+                    "Injury prevention",
+                    "Accountability and motivation",
+                    "Nutrition and lifestyle advice",
+                    "Suitable for all fitness levels"
+                  ],
+                  "targetAudience": [
+                    {
+                      "icon": "FaUser",
+                      "text": "Beginners who need guidance"
+                    },
+                    {
+                      "icon": "FaWeightHanging",
+                      "text": "Individuals looking to lose weight"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Those aiming to build muscle"
+                    },
+                    {
+                      "icon": "FaRunning",
+                      "text": "People preparing for sports events"
+                    },
+                    {
+                      "icon": "FaBriefcase",
+                      "text": "Busy professionals with specific goals"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "text": "Anyone who wants a healthier lifestyle"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    {
+                      "icon": "FaClipboardCheck",
+                      "text": "Initial Fitness Assessment"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Customized Workout Plan"
+                    },
+                    {
+                      "icon": "FaAppleAlt",
+                      "text": "Nutrition Guidance"
+                    },
+                    {
+                      "icon": "FaChartBar",
+                      "text": "Regular Progress Tracking"
+                    },
+                    {
+                      "icon": "FaHeadset",
+                      "text": "Ongoing Trainer Support"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "text": "Flexible Scheduling"
+                    }
+                  ]
+                }
               },
               {
                 "number": "03",
@@ -495,7 +735,127 @@
                 "title": "Muscle Building",
                 "description": "Structured strength training to help you build lean muscle mass, improve endurance .",
                 "url": "#",
-                "bgImage": "/program/pg3.jpg"
+                "bgImage": "/program/pg3.jpg",
+                "details": {
+                  "sidebar": {
+                    "image": "/program/pg3.jpg",
+                    "textPart1": "STRONGER",
+                    "textPart2": "EVERY DAY",
+                    "subText": "TRAIN SMART. LIVE BETTER."
+                  },
+                  "infoCards": [
+                    {
+                      "icon": "FaRunning",
+                      "label": "Level",
+                      "value": "All Levels"
+                    },
+                    {
+                      "icon": "FaClock",
+                      "label": "Duration",
+                      "value": "Flexible"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "label": "Sessions",
+                      "value": "1-on-1 Training"
+                    },
+                    {
+                      "icon": "FaMapMarkerAlt",
+                      "label": "Location",
+                      "value": "In-Gym / Online"
+                    }
+                  ],
+                  "overview": {
+                    "text": "Our Muscle Building program is designed for individuals who want focused attention, expert guidance and a customized plan to achieve their fitness goals. Whether you want to lose weight, build muscle, improve endurance or just get healthier, our certified trainers will create a plan tailored to your needs.",
+                    "list": [
+                      {
+                        "icon": "FaClipboardList",
+                        "text": "Customized Workout Plan"
+                      },
+                      {
+                        "icon": "FaChartLine",
+                        "text": "Continuous Progress Tracking"
+                      },
+                      {
+                        "icon": "FaUserFriends",
+                        "text": "One-on-One Guidance"
+                      },
+                      {
+                        "icon": "FaHeartbeat",
+                        "text": "Motivation & Support"
+                      },
+                      {
+                        "icon": "FaBullseye",
+                        "text": "Goal-Oriented Training"
+                      },
+                      {
+                        "icon": "FaCalendarCheck",
+                        "text": "Flexible Scheduling"
+                      }
+                    ]
+                  },
+                  "keyBenefits": [
+                    "Personalized training plans",
+                    "Proper form and technique guidance",
+                    "Faster and safer results",
+                    "Injury prevention",
+                    "Accountability and motivation",
+                    "Nutrition and lifestyle advice",
+                    "Suitable for all fitness levels"
+                  ],
+                  "targetAudience": [
+                    {
+                      "icon": "FaUser",
+                      "text": "Beginners who need guidance"
+                    },
+                    {
+                      "icon": "FaWeightHanging",
+                      "text": "Individuals looking to lose weight"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Those aiming to build muscle"
+                    },
+                    {
+                      "icon": "FaRunning",
+                      "text": "People preparing for sports events"
+                    },
+                    {
+                      "icon": "FaBriefcase",
+                      "text": "Busy professionals with specific goals"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "text": "Anyone who wants a healthier lifestyle"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    {
+                      "icon": "FaClipboardCheck",
+                      "text": "Initial Fitness Assessment"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Customized Workout Plan"
+                    },
+                    {
+                      "icon": "FaAppleAlt",
+                      "text": "Nutrition Guidance"
+                    },
+                    {
+                      "icon": "FaChartBar",
+                      "text": "Regular Progress Tracking"
+                    },
+                    {
+                      "icon": "FaHeadset",
+                      "text": "Ongoing Trainer Support"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "text": "Flexible Scheduling"
+                    }
+                  ]
+                }
               },
               {
                 "number": "04",
@@ -503,7 +863,127 @@
                 "title": "Cardio Training",
                 "description": "High-energy cardio workouts to improve heart health, increase stamina and keep you active and fit.",
                 "url": "#",
-                "bgImage": "/program/pg4.jpg"
+                "bgImage": "/program/pg4.jpg",
+                "details": {
+                  "sidebar": {
+                    "image": "/program/pg4.jpg",
+                    "textPart1": "STRONGER",
+                    "textPart2": "EVERY DAY",
+                    "subText": "TRAIN SMART. LIVE BETTER."
+                  },
+                  "infoCards": [
+                    {
+                      "icon": "FaRunning",
+                      "label": "Level",
+                      "value": "All Levels"
+                    },
+                    {
+                      "icon": "FaClock",
+                      "label": "Duration",
+                      "value": "Flexible"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "label": "Sessions",
+                      "value": "1-on-1 Training"
+                    },
+                    {
+                      "icon": "FaMapMarkerAlt",
+                      "label": "Location",
+                      "value": "In-Gym / Online"
+                    }
+                  ],
+                  "overview": {
+                    "text": "Our Cardio Training program is designed for individuals who want focused attention, expert guidance and a customized plan to achieve their fitness goals. Whether you want to lose weight, build muscle, improve endurance or just get healthier, our certified trainers will create a plan tailored to your needs.",
+                    "list": [
+                      {
+                        "icon": "FaClipboardList",
+                        "text": "Customized Workout Plan"
+                      },
+                      {
+                        "icon": "FaChartLine",
+                        "text": "Continuous Progress Tracking"
+                      },
+                      {
+                        "icon": "FaUserFriends",
+                        "text": "One-on-One Guidance"
+                      },
+                      {
+                        "icon": "FaHeartbeat",
+                        "text": "Motivation & Support"
+                      },
+                      {
+                        "icon": "FaBullseye",
+                        "text": "Goal-Oriented Training"
+                      },
+                      {
+                        "icon": "FaCalendarCheck",
+                        "text": "Flexible Scheduling"
+                      }
+                    ]
+                  },
+                  "keyBenefits": [
+                    "Personalized training plans",
+                    "Proper form and technique guidance",
+                    "Faster and safer results",
+                    "Injury prevention",
+                    "Accountability and motivation",
+                    "Nutrition and lifestyle advice",
+                    "Suitable for all fitness levels"
+                  ],
+                  "targetAudience": [
+                    {
+                      "icon": "FaUser",
+                      "text": "Beginners who need guidance"
+                    },
+                    {
+                      "icon": "FaWeightHanging",
+                      "text": "Individuals looking to lose weight"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Those aiming to build muscle"
+                    },
+                    {
+                      "icon": "FaRunning",
+                      "text": "People preparing for sports events"
+                    },
+                    {
+                      "icon": "FaBriefcase",
+                      "text": "Busy professionals with specific goals"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "text": "Anyone who wants a healthier lifestyle"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    {
+                      "icon": "FaClipboardCheck",
+                      "text": "Initial Fitness Assessment"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Customized Workout Plan"
+                    },
+                    {
+                      "icon": "FaAppleAlt",
+                      "text": "Nutrition Guidance"
+                    },
+                    {
+                      "icon": "FaChartBar",
+                      "text": "Regular Progress Tracking"
+                    },
+                    {
+                      "icon": "FaHeadset",
+                      "text": "Ongoing Trainer Support"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "text": "Flexible Scheduling"
+                    }
+                  ]
+                }
               },
               {
                 "number": "05",
@@ -511,7 +991,127 @@
                 "title": "Functional Training",
                 "description": "Real-life strength and mobility training to improve balance, flexibility and overall.",
                 "url": "#",
-                "bgImage": "/program/pg5.jpg"
+                "bgImage": "/program/pg5.jpg",
+                "details": {
+                  "sidebar": {
+                    "image": "/program/pg5.jpg",
+                    "textPart1": "STRONGER",
+                    "textPart2": "EVERY DAY",
+                    "subText": "TRAIN SMART. LIVE BETTER."
+                  },
+                  "infoCards": [
+                    {
+                      "icon": "FaRunning",
+                      "label": "Level",
+                      "value": "All Levels"
+                    },
+                    {
+                      "icon": "FaClock",
+                      "label": "Duration",
+                      "value": "Flexible"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "label": "Sessions",
+                      "value": "1-on-1 Training"
+                    },
+                    {
+                      "icon": "FaMapMarkerAlt",
+                      "label": "Location",
+                      "value": "In-Gym / Online"
+                    }
+                  ],
+                  "overview": {
+                    "text": "Our Functional Training program is designed for individuals who want focused attention, expert guidance and a customized plan to achieve their fitness goals. Whether you want to lose weight, build muscle, improve endurance or just get healthier, our certified trainers will create a plan tailored to your needs.",
+                    "list": [
+                      {
+                        "icon": "FaClipboardList",
+                        "text": "Customized Workout Plan"
+                      },
+                      {
+                        "icon": "FaChartLine",
+                        "text": "Continuous Progress Tracking"
+                      },
+                      {
+                        "icon": "FaUserFriends",
+                        "text": "One-on-One Guidance"
+                      },
+                      {
+                        "icon": "FaHeartbeat",
+                        "text": "Motivation & Support"
+                      },
+                      {
+                        "icon": "FaBullseye",
+                        "text": "Goal-Oriented Training"
+                      },
+                      {
+                        "icon": "FaCalendarCheck",
+                        "text": "Flexible Scheduling"
+                      }
+                    ]
+                  },
+                  "keyBenefits": [
+                    "Personalized training plans",
+                    "Proper form and technique guidance",
+                    "Faster and safer results",
+                    "Injury prevention",
+                    "Accountability and motivation",
+                    "Nutrition and lifestyle advice",
+                    "Suitable for all fitness levels"
+                  ],
+                  "targetAudience": [
+                    {
+                      "icon": "FaUser",
+                      "text": "Beginners who need guidance"
+                    },
+                    {
+                      "icon": "FaWeightHanging",
+                      "text": "Individuals looking to lose weight"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Those aiming to build muscle"
+                    },
+                    {
+                      "icon": "FaRunning",
+                      "text": "People preparing for sports events"
+                    },
+                    {
+                      "icon": "FaBriefcase",
+                      "text": "Busy professionals with specific goals"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "text": "Anyone who wants a healthier lifestyle"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    {
+                      "icon": "FaClipboardCheck",
+                      "text": "Initial Fitness Assessment"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Customized Workout Plan"
+                    },
+                    {
+                      "icon": "FaAppleAlt",
+                      "text": "Nutrition Guidance"
+                    },
+                    {
+                      "icon": "FaChartBar",
+                      "text": "Regular Progress Tracking"
+                    },
+                    {
+                      "icon": "FaHeadset",
+                      "text": "Ongoing Trainer Support"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "text": "Flexible Scheduling"
+                    }
+                  ]
+                }
               },
               {
                 "number": "06",
@@ -519,9 +1119,142 @@
                 "title": "Group Training",
                 "description": "Stay motivated with high-energy group sessions designed for all fitness levels.",
                 "url": "#",
-                "bgImage": "/program/pg6.jpg"
+                "bgImage": "/program/pg6.jpg",
+                "details": {
+                  "sidebar": {
+                    "image": "/program/pg6.jpg",
+                    "textPart1": "STRONGER",
+                    "textPart2": "EVERY DAY",
+                    "subText": "TRAIN SMART. LIVE BETTER."
+                  },
+                  "infoCards": [
+                    {
+                      "icon": "FaRunning",
+                      "label": "Level",
+                      "value": "All Levels"
+                    },
+                    {
+                      "icon": "FaClock",
+                      "label": "Duration",
+                      "value": "Flexible"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "label": "Sessions",
+                      "value": "1-on-1 Training"
+                    },
+                    {
+                      "icon": "FaMapMarkerAlt",
+                      "label": "Location",
+                      "value": "In-Gym / Online"
+                    }
+                  ],
+                  "overview": {
+                    "text": "Our Group Training program is designed for individuals who want focused attention, expert guidance and a customized plan to achieve their fitness goals. Whether you want to lose weight, build muscle, improve endurance or just get healthier, our certified trainers will create a plan tailored to your needs.",
+                    "list": [
+                      {
+                        "icon": "FaClipboardList",
+                        "text": "Customized Workout Plan"
+                      },
+                      {
+                        "icon": "FaChartLine",
+                        "text": "Continuous Progress Tracking"
+                      },
+                      {
+                        "icon": "FaUserFriends",
+                        "text": "One-on-One Guidance"
+                      },
+                      {
+                        "icon": "FaHeartbeat",
+                        "text": "Motivation & Support"
+                      },
+                      {
+                        "icon": "FaBullseye",
+                        "text": "Goal-Oriented Training"
+                      },
+                      {
+                        "icon": "FaCalendarCheck",
+                        "text": "Flexible Scheduling"
+                      }
+                    ]
+                  },
+                  "keyBenefits": [
+                    "Personalized training plans",
+                    "Proper form and technique guidance",
+                    "Faster and safer results",
+                    "Injury prevention",
+                    "Accountability and motivation",
+                    "Nutrition and lifestyle advice",
+                    "Suitable for all fitness levels"
+                  ],
+                  "targetAudience": [
+                    {
+                      "icon": "FaUser",
+                      "text": "Beginners who need guidance"
+                    },
+                    {
+                      "icon": "FaWeightHanging",
+                      "text": "Individuals looking to lose weight"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Those aiming to build muscle"
+                    },
+                    {
+                      "icon": "FaRunning",
+                      "text": "People preparing for sports events"
+                    },
+                    {
+                      "icon": "FaBriefcase",
+                      "text": "Busy professionals with specific goals"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "text": "Anyone who wants a healthier lifestyle"
+                    }
+                  ],
+                  "whatsIncluded": [
+                    {
+                      "icon": "FaClipboardCheck",
+                      "text": "Initial Fitness Assessment"
+                    },
+                    {
+                      "icon": "FaDumbbell",
+                      "text": "Customized Workout Plan"
+                    },
+                    {
+                      "icon": "FaAppleAlt",
+                      "text": "Nutrition Guidance"
+                    },
+                    {
+                      "icon": "FaChartBar",
+                      "text": "Regular Progress Tracking"
+                    },
+                    {
+                      "icon": "FaHeadset",
+                      "text": "Ongoing Trainer Support"
+                    },
+                    {
+                      "icon": "FaCalendarAlt",
+                      "text": "Flexible Scheduling"
+                    }
+                  ]
+                }
               }
-            ]
+            ],
+            "programDetailsLayout": {
+              "headerTitle": "Program Details",
+              "overviewTitle": "Program Overview",
+              "benefitsTitle": "Key Benefits",
+              "audienceTitle": "Who Is This Program For?",
+              "includedTitle": "What's Included?",
+              "cta": {
+                "title": "Ready to Get Started?",
+                "description": "Book a personal training session today and take the first step towards a stronger, healthier you.",
+                "buttonText": "Book a Session",
+                "buttonLink": "/contactus"
+              }
+            }
           }
         }
       },
@@ -686,7 +1419,7 @@
             "titleLine3": " ?",
             "button": {
               "label": "Get Started",
-              "url": "#",
+              "url": "/consultation",
               "icon": "FaArrowRight"
             },
             "bgImage": "/training.png"
@@ -703,107 +1436,428 @@
             "readMoreText": "Read More",
             "button": {
               "label": "View All Blogs",
-              "url": "#",
+              "url": "/blog",
               "icon": "FaArrowRight"
             },
             "posts": [
               {
                 "image": "/blog/blog1.jpg",
-                "category": "Fitness",
+                "category": "Fitness Facts",
                 "date": "20 Sep, 2024",
                 "title": "10 Simple Fitness Habits to Build a Healthier You",
                 "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
-                "url": "#"
+                "url": "#",
+                "id": 1,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog2.jpg",
-                "category": "Gym",
+                "category": "Group Exercise",
                 "date": "12 Sep, 2024",
                 "title": "Personal Training vs Online Coaching: Which is Right for You?",
                 "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
-                "url": "#"
+                "url": "#",
+                "id": 2,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog3.jpg",
-                "category": "Training",
+                "category": "Lifestyle Medicine",
                 "date": "10 Sep, 2024",
                 "title": "Top 7 Nutrition Tips for Better Workout Results",
                 "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
-                "url": "#"
+                "url": "#",
+                "id": 3,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog4.jpg",
-                "category": "Fitness",
+                "category": "Nutrition Stretching",
                 "date": "20 Sep, 2024",
-                "title": "10 Simple Fitness Habits to Build a Healthier You (Part 2)",
+                "title": "10 Simple Fitness Habits to Build a Healthier You",
                 "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
-                "url": "#"
+                "url": "#",
+                "id": 4,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog5.jpg",
-                "category": "Gym",
+                "category": "Strength Training",
                 "date": "12 Sep, 2024",
                 "title": "Personal Training vs Online Coaching: Which is Right for You? (Part 2)",
                 "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
-                "url": "#"
+                "url": "#",
+                "id": 5,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog6.jpg",
-                "category": "Training",
+                "category": "Muscle Stretching",
                 "date": "10 Sep, 2024",
                 "title": "Top 7 Nutrition Tips for Better Workout Results (Part 2)",
                 "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
-                "url": "#"
+                "url": "#",
+                "id": 6,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog1.jpg",
-                "category": "Fitness",
+                "category": "Fitness Facts",
                 "date": "20 Sep, 2024",
                 "title": "10 Simple Fitness Habits to Build a Healthier You (Part 3)",
                 "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
-                "url": "#"
+                "url": "#",
+                "id": 7,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog2.jpg",
-                "category": "Gym",
+                "category": "Group Exercise",
                 "date": "12 Sep, 2024",
                 "title": "Personal Training vs Online Coaching: Which is Right for You? (Part 4)",
                 "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
-                "url": "#"
+                "url": "#",
+                "id": 8,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog4.jpg",
-                "category": "Training",
+                "category": "Lifestyle Medicine",
                 "date": "10 Sep, 2024",
                 "title": "Top 7 Nutrition Tips for Better Workout Results (Part 5)",
                 "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
-                "url": "#"
+                "url": "#",
+                "id": 9,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog6.jpg",
-                "category": "Fitness",
+                "category": "Nutrition Stretching",
                 "date": "20 Sep, 2024",
                 "title": "10 Simple Fitness Habits to Build a Healthier You (Part 6)",
                 "description": "Discover easy and effective fitness habits that can help you stay consistent and achieve your goals faster.",
-                "url": "#"
+                "url": "#",
+                "id": 10,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog5.jpg",
-                "category": "Gym",
+                "category": "Strength Training",
                 "date": "12 Sep, 2024",
                 "title": "Personal Training vs Online Coaching: Which is Right for You? (Part 7)",
                 "description": "Compare the benefits of personal training and online coaching to find the best fit for your fitness journey.",
-                "url": "#"
+                "url": "#",
+                "id": 11,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               },
               {
                 "image": "/blog/blog1.jpg",
-                "category": "Training",
+                "category": "Muscle Stretching",
                 "date": "10 Sep, 2024",
                 "title": "Top 7 Nutrition Tips for Better Workout Results (Part 8)",
                 "description": "Fuel your body the right way with these expert nutrition tips and take your performance to the next level.",
-                "url": "#"
+                "url": "#",
+                "id": 12,
+                "author": "Alicia Davis",
+                "details": {
+                  "paragraphs1": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in sed quia non numquam eius modi tempora incidunt ut labore et dolore.",
+                    "Sed do eiusmod tempor incididunt ut labore et dolore, magna aliqua. Ut enim ad minim, incididunt ut labore et dolore magnam aliquam quaerat voluptatem."
+                  ],
+                  "quote": "A healthier you isn't about perfection, it's about making small, consistent choices that add up to big results.",
+                  "paragraphs2": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  ],
+                  "listSection": {
+                    "title": "Why You Need a Personal Dietary Approach",
+                    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+                    "items": [
+                      "Duis quis odio quis dui sagittis laoreet.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      "Suspendisse tempus felis a libero mollis ultrices.",
+                      "Proin sit amet diam et elit dictum sodales."
+                    ],
+                    "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  }
+                }
               }
-            ]
+            ],
+            "blogDetailsLayout": {
+              "sidebar": {
+                "categoriesTitle": "Popular Categories",
+                "categories": [
+                  {
+                    "name": "Fitness Facts",
+                    "count": "(12)"
+                  },
+                  {
+                    "name": "Group Exercise",
+                    "count": "(08)"
+                  },
+                  {
+                    "name": "Lifestyle Medicine",
+                    "count": "(15)"
+                  },
+                  {
+                    "name": "Nutrition Stretching",
+                    "count": "(10)"
+                  },
+                  {
+                    "name": "Strength Training",
+                    "count": "(18)"
+                  },
+                  {
+                    "name": "Muscle Stretching",
+                    "count": "(09)"
+                  }
+                ],
+                "recentPostsTitle": "Recent Posts"
+              },
+              "authorPrefix": "By "
+            }
           }
         }
       },
@@ -903,7 +1957,7 @@
               ],
               "backgroundImage": "/subbanner.png"
             },
-                 "faq": {
+            "faq": {
               "titlePart1": "Frequently Asked",
               "titlePart2": "Question",
               "breadcrumbs": [
@@ -1138,6 +2192,72 @@
                   "id": "crumb-2",
                   "label": "Terms & Conditions",
                   "url": "/termscondition"
+                }
+              ]
+            },
+            "teamDetails": {
+              "backgroundImage": "/subbanner.png",
+              "titlePart1": "Team",
+              "titlePart2": "Details",
+              "breadcrumbs": [
+                {
+                  "id": 1,
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": 2,
+                  "label": "Team",
+                  "url": "/team"
+                },
+                {
+                  "id": 3,
+                  "label": "Team Details",
+                  "url": "#"
+                }
+              ]
+            },
+            "programDetails": {
+              "backgroundImage": "/subbanner.png",
+              "titlePart1": "Program",
+              "titlePart2": "Details",
+              "breadcrumbs": [
+                {
+                  "id": 1,
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": 2,
+                  "label": "Programs",
+                  "url": "/program"
+                },
+                {
+                  "id": 3,
+                  "label": "Program Details",
+                  "url": "#"
+                }
+              ]
+            },
+            "blogDetails": {
+              "backgroundImage": "/subbanner.png",
+              "titlePart1": "Blog",
+              "titlePart2": "Details",
+              "breadcrumbs": [
+                {
+                  "id": 1,
+                  "label": "Home",
+                  "url": "/"
+                },
+                {
+                  "id": 2,
+                  "label": "Blog",
+                  "url": "/blog"
+                },
+                {
+                  "id": 3,
+                  "label": "Blog Details",
+                  "url": "#"
                 }
               ]
             }
@@ -1960,6 +3080,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Fitness is not just about a better body, it's about a better you.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "rahul@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Strength Training",
+                    "Muscle Building",
+                    "Functional Fitness",
+                    "Weight Loss",
+                    "Personal Training",
+                    "Nutrition Guidance"
+                  ],
+                  "about": "Rahul believes that fitness is a lifestyle, not a short-term goal. He combines scientific training methods with practical nutrition advice to create sustainable results. His training sessions are engaging, goal-oriented and suitable for all fitness levels, from beginners to advanced athletes.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -1973,6 +3156,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "priya@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -1986,6 +3232,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "amit@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -1999,6 +3308,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "sneha@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -2012,6 +3384,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "vikram@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -2025,6 +3460,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "neha@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -2038,6 +3536,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "karan@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -2051,6 +3612,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "pooja@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -2064,6 +3688,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "rohan@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -2077,6 +3764,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "simran@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -2090,6 +3840,69 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "arjun@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               },
               {
@@ -2103,9 +3916,84 @@
                   "instagram": "https://www.instagram.com/",
                   "linkedin": "https://www.linkedin.com/",
                   "youtube": "https://www.youtube.com/"
+                },
+                "details": {
+                  "quote": "Discipline builds results. Train harder, live healthier.",
+                  "contact": {
+                    "phone": "+1 12345678920",
+                    "email": "divya@gymexpress.com",
+                    "location": "New York, USA"
+                  },
+                  "specialization": [
+                    "Cardio",
+                    "Weight Loss",
+                    "Flexibility",
+                    "Yoga",
+                    "HIIT",
+                    "Crossfit"
+                  ],
+                  "about": "Passionate about helping people achieve their best selves through customized training programs and consistent motivation. Believes in holistic approaches to fitness and well-being.",
+                  "stats": [
+                    {
+                      "icon": "FaUsers",
+                      "value": "500+",
+                      "label": "Clients Trained"
+                    },
+                    {
+                      "icon": "FaTrophy",
+                      "value": "8+",
+                      "label": "Years Experience"
+                    },
+                    {
+                      "icon": "FaStar",
+                      "value": "4.9",
+                      "label": "Client Rating"
+                    },
+                    {
+                      "icon": "FaHeart",
+                      "value": "100%",
+                      "label": "Dedication"
+                    }
+                  ],
+                  "experience": [
+                    {
+                      "period": "2020 - Present",
+                      "role": "Head Trainer at GymExpress",
+                      "description": "Leading training programs and client transformations."
+                    },
+                    {
+                      "period": "2018 - 2020",
+                      "role": "Senior Fitness Coach at FitLife",
+                      "description": "Worked with diverse clients and designed personalized plans."
+                    },
+                    {
+                      "period": "2016 - 2018",
+                      "role": "Fitness Trainer at BodyZone Gym",
+                      "description": "Guided members in strength training and functional fitness."
+                    },
+                    {
+                      "period": "2014 - 2016",
+                      "role": "Certified Personal Trainer",
+                      "description": "Started my fitness journey and worked with individual clients."
+                    }
+                  ],
+                  "availability": "Mon - Sat",
+                  "experienceYears": "8+ Years"
                 }
               }
-            ]
+            ],
+            "detailsLayout": {
+              "quickInfoTitle": "Quick Info",
+              "labels": {
+                "name": "Name",
+                "role": "Role",
+                "experience": "Experience",
+                "specialization": "Specialization",
+                "availability": "Availability"
+              },
+              "aboutPrefix": "About",
+              "experienceJourneyTitle": "Experience & Journey"
+            }
           }
         }
       },
@@ -2425,6 +4313,175 @@
                   {
                     "icon": "FaEnvelope",
                     "text": "info@golanfitness.com"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "FaqSec": {
+        "variants": {
+          "GymFaqSec1": {
+            "tag": "FREQUENTLY ASKED QUESTIONS",
+            "titlePart1": "How Can We ",
+            "titlePart2": "Help You?",
+            "subtitle": "Find quick answers to common questions about our fitness programs, membership, training, billing and more. If you still need help, feel free to contact our support team.",
+            "sidebar": {
+              "title": "STILL HAVE\nQUESTIONS?",
+              "description": "We're here to help! Get in touch with our friendly support team.",
+              "contacts": [
+                {
+                  "icon": "FaPhoneAlt",
+                  "text": "+91 98765 43210"
+                },
+                {
+                  "icon": "FaEnvelope",
+                  "text": "info@golanfitness.com"
+                },
+                {
+                  "icon": "FaMapMarkerAlt",
+                  "text": "123 Fitness Street, Andheri West, Mumbai, Maharashtra 400053"
+                }
+              ],
+              "button": {
+                "label": "Contact Us",
+                "url": "/contactus"
+              },
+              "bgImage": "/img1.jpg"
+            },
+            "categories": [
+              {
+                "id": "general",
+                "title": "General Questions",
+                "icon": "FaRegQuestionCircle",
+                "questions": [
+                  {
+                    "q": "How do I find the right fitness program for me?",
+                    "a": "Our expert trainers can help assess your goals and fitness level to recommend the best program for you."
+                  },
+                  {
+                    "q": "What are your gym timings?",
+                    "a": "Our gym is open from 6:00 AM to 10:00 PM, Monday to Sunday. You can choose a time that fits your schedule and start your fitness journey with us."
+                  },
+                  {
+                    "q": "Do you offer a free trial session?",
+                    "a": "Yes, we offer a complimentary trial session for new members to experience our facility and services."
+                  },
+                  {
+                    "q": "What should I bring for my first workout?",
+                    "a": "Please bring comfortable workout attire, training shoes, a water bottle, and a towel."
+                  },
+                  {
+                    "q": "Is personal training available?",
+                    "a": "Absolutely! We have certified personal trainers available to help you reach your goals faster."
+                  }
+                ]
+              },
+              {
+                "id": "membership",
+                "title": "Membership & Plans",
+                "icon": "FaRegIdCard",
+                "questions": [
+                  {
+                    "q": "What membership plans do you offer?",
+                    "a": "We offer monthly, quarterly, and annual memberships with various perks depending on the tier."
+                  },
+                  {
+                    "q": "Can I upgrade or change my plan later?",
+                    "a": "Yes, you can upgrade your membership plan at any time by speaking with our front desk team."
+                  },
+                  {
+                    "q": "Do you offer family or group memberships?",
+                    "a": "Yes, we have special discounted rates for families and corporate groups."
+                  },
+                  {
+                    "q": "Are there any long-term contract requirements?",
+                    "a": "We offer both contract and no-contract options to suit your flexibility needs."
+                  }
+                ]
+              },
+              {
+                "id": "booking",
+                "title": "Booking & Scheduling",
+                "icon": "FaRegCalendarAlt",
+                "questions": [
+                  {
+                    "q": "How do I book a personal training session?",
+                    "a": "You can book sessions through our mobile app or directly at the reception."
+                  },
+                  {
+                    "q": "Can I reschedule or cancel my session?",
+                    "a": "Yes, please provide at least 24 hours notice to reschedule or cancel without penalty."
+                  },
+                  {
+                    "q": "Do I need to book classes in advance?",
+                    "a": "We recommend booking in advance as our popular classes tend to fill up quickly."
+                  },
+                  {
+                    "q": "How many people are allowed in a group class?",
+                    "a": "To ensure personalized attention, our group classes are capped at 15-20 participants."
+                  }
+                ]
+              },
+              {
+                "id": "payments",
+                "title": "Payments & Billing",
+                "icon": "FaRegCreditCard",
+                "questions": [
+                  {
+                    "q": "What payment methods do you accept?",
+                    "a": "We accept credit/debit cards, UPI, and online bank transfers."
+                  },
+                  {
+                    "q": "Is online payment secure?",
+                    "a": "Yes, all our online transactions are processed through encrypted and secure payment gateways."
+                  },
+                  {
+                    "q": "Do you charge any additional fees?",
+                    "a": "There are no hidden fees. Any enrollment or maintenance fees will be clearly explained during sign-up."
+                  },
+                  {
+                    "q": "Can I get a refund if I don't continue?",
+                    "a": "Refund policies vary by plan. Please refer to your membership agreement for specific details."
+                  }
+                ]
+              },
+              {
+                "id": "facilities",
+                "title": "Facilities & Amenities",
+                "icon": "FaDumbbell",
+                "questions": [
+                  {
+                    "q": "Do you have locker rooms and showers?",
+                    "a": "Yes, we provide fully equipped locker rooms and clean shower facilities."
+                  },
+                  {
+                    "q": "Is parking available at the gym?",
+                    "a": "Yes, we offer free parking for our members while they are using the facility."
+                  }
+                ]
+              },
+              {
+                "id": "support",
+                "title": "Support & Contact",
+                "icon": "FaHeadset",
+                "questions": [
+                  {
+                    "q": "How can I contact customer support?",
+                    "a": "You can reach us via email, phone, or by visiting the front desk during operational hours."
+                  },
+                  {
+                    "q": "What are your support hours?",
+                    "a": "Our support team is available from 8:00 AM to 8:00 PM every day."
+                  },
+                  {
+                    "q": "Do you provide guidance on diet and nutrition?",
+                    "a": "Yes, our certified nutritionists can create a customized diet plan for you."
+                  },
+                  {
+                    "q": "Where can I give feedback about my experience?",
+                    "a": "We welcome your feedback! You can fill out a feedback form at the gym or email us."
                   }
                 ]
               }

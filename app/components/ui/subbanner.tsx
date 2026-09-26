@@ -12,14 +12,21 @@ type SubBannerKey = keyof typeof gymData.subBanners;
 
 interface SubBannerProps {
   bannerKey: SubBannerKey;
+  customTitlePart1?: string;
+  customTitlePart2?: string;
+  customBreadcrumbs?: { id: number; label: string; url: string }[];
 }
 
 const subBannersData = gymData.subBanners;
 
-const SubBanner = ({ bannerKey }: SubBannerProps) => {
+const SubBanner = ({ bannerKey, customTitlePart1, customTitlePart2, customBreadcrumbs }: SubBannerProps) => {
   const data = subBannersData[bannerKey];
 
   if (!data) return null;
+
+  const titlePart1 = customTitlePart1 || data.titlePart1;
+  const titlePart2 = customTitlePart2 || data.titlePart2;
+  const breadcrumbs = customBreadcrumbs || data.breadcrumbs;
 
   return (
     <section className="relative w-full h-[260px] sm:h-[300px] md:h-[340px] flex items-center bg-[#0d1117] overflow-hidden">
@@ -27,7 +34,7 @@ const SubBanner = ({ bannerKey }: SubBannerProps) => {
       <div className="absolute inset-0 w-full h-full z-0">
         <Image
           src={data.backgroundImage}
-          alt={`${data.titlePart1} ${data.titlePart2}`}
+          alt={`${titlePart1} ${titlePart2}`}
           fill
           className="object-cover"
           priority
@@ -53,25 +60,25 @@ const SubBanner = ({ bannerKey }: SubBannerProps) => {
           
           {/* Title */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-black text-white tracking-tight leading-none mb-4">
-            {data.titlePart1} <span className="text-[#E5192C]">{data.titlePart2}</span>
+            {titlePart1} <span className="text-[#E5192C]">{titlePart2}</span>
           </h1>
 
           {/* Breadcrumb Links */}
           <div className="flex items-center gap-2 text-[15px] sm:text-[17px] font-semibold tracking-wide">
             <FaHome className="text-[#E5192C] text-[20px] mb-[2px]" />
-            {data.breadcrumbs.map((crumb, index) => (
+            {breadcrumbs.map((crumb, index) => (
               <React.Fragment key={crumb.id}>
                 <Link
                   href={crumb.url}
                   className={`transition-colors duration-200 ${
-                    index === data.breadcrumbs.length - 1
+                    index === breadcrumbs.length - 1
                       ? 'text-[#E5192C]'
                       : 'text-white/90 hover:text-[#E5192C]'
                   }`}
                 >
                   {crumb.label}
                 </Link>
-                {index < data.breadcrumbs.length - 1 && (
+                {index < breadcrumbs.length - 1 && (
                   <FaAngleRight className="text-gray-400 text-[16px] mx-0.5" />
                 )}
               </React.Fragment>

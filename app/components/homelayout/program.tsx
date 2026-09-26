@@ -122,7 +122,7 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
 
                                             {/* Link */}
                                             <Link 
-                                                href={program.url} 
+                                                href={`/programdetails?name=${program.title.replace(/ /g, '-').toLowerCase()}`} 
                                                 className={`inline-flex items-center gap-2 ${isProgramPage ? "text-[#E5192C] hover:text-black" : "text-white hover:text-gray-300"} text-[13px] font-bold group/link transition-colors mt-auto`}
                                             >
                                                 {data.learnMoreText}

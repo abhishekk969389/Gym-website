@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { gymData, TeamSecData } from "@/data";
@@ -55,10 +56,11 @@ export default function TeamSec() {
                         {currentMembers.map((member: any) => (
                             <div 
                                 key={member.id} 
-                                className="bg-white rounded-xl overflow-hidden shadow-[0_5px_20px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col hover:shadow-xl transition-shadow duration-300"
+                                className="bg-white rounded-xl overflow-hidden shadow-[0_5px_20px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col hover:shadow-xl transition-shadow duration-300 relative group"
                             >
+                                <Link href={`/teamdetails?name=${member.name.replace(/ /g, '-').toLowerCase()}`} className="absolute inset-0 z-0" aria-label={`View ${member.name} details`}></Link>
                                 {/* Image Container */}
-                                <div className="relative w-full h-64 sm:h-72">
+                                <div className="relative w-full h-64 sm:h-72 pointer-events-none">
                                     <Image
                                         src={member.image}
                                         alt={member.name}
@@ -68,8 +70,8 @@ export default function TeamSec() {
                                 </div>
 
                                 {/* Content */}
-                                <div className="p-5 flex flex-col flex-grow">
-                                    <h3 className="font-bold text-gray-900 text-lg md:text-xl tracking-tight leading-tight">
+                                <div className="p-5 flex flex-col flex-grow pointer-events-none z-10">
+                                    <h3 className="font-bold text-gray-900 text-lg md:text-xl tracking-tight leading-tight group-hover:text-[#E5192C] transition-colors">
                                         {member.name}
                                     </h3>
                                     <span className="text-[#E5192C] font-semibold text-xs sm:text-sm mb-2">
@@ -80,22 +82,22 @@ export default function TeamSec() {
                                     <p className="text-gray-600 text-sm sm:text-sm md:text-[14px] leading-relaxed mb-6 flex-grow">
                                         {member.description}
                                     </p>
+                                </div>
 
-                                    {/* Social Icons */}
-                                    <div className="flex items-center gap-2.5 mt-auto">
-                                        <a href={member.socials.facebook} className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center text-white hover:bg-[#E5192C] transition-colors" aria-label="Facebook">
-                                            <FaFacebookF className="w-3.5 h-3.5" />
-                                        </a>
-                                        <a href={member.socials.instagram} className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center text-white hover:bg-[#E5192C] transition-colors" aria-label="Instagram">
-                                            <FaInstagram className="w-3.5 h-3.5" />
-                                        </a>
-                                        <a href={member.socials.linkedin} className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center text-white hover:bg-[#E5192C] transition-colors" aria-label="LinkedIn">
-                                            <FaLinkedinIn className="w-3.5 h-3.5" />
-                                        </a>
-                                        <a href={member.socials.youtube} className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center text-white hover:bg-[#E5192C] transition-colors" aria-label="YouTube">
-                                            <FaYoutube className="w-3.5 h-3.5" />
-                                        </a>
-                                    </div>
+                                {/* Social Icons */}
+                                <div className="flex items-center gap-2.5 p-5 pt-0 mt-auto relative z-10">
+                                    <a href={member.socials.facebook} className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center text-white hover:bg-[#E5192C] transition-colors" aria-label="Facebook">
+                                        <FaFacebookF className="w-3.5 h-3.5" />
+                                    </a>
+                                    <a href={member.socials.instagram} className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center text-white hover:bg-[#E5192C] transition-colors" aria-label="Instagram">
+                                        <FaInstagram className="w-3.5 h-3.5" />
+                                    </a>
+                                    <a href={member.socials.linkedin} className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center text-white hover:bg-[#E5192C] transition-colors" aria-label="LinkedIn">
+                                        <FaLinkedinIn className="w-3.5 h-3.5" />
+                                    </a>
+                                    <a href={member.socials.youtube} className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center text-white hover:bg-[#E5192C] transition-colors" aria-label="YouTube">
+                                        <FaYoutube className="w-3.5 h-3.5" />
+                                    </a>
                                 </div>
                             </div>
                         ))}
