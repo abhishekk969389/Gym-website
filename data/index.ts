@@ -43,6 +43,7 @@ export type RefundPolicySecData = typeof sec.RefundPolicySec.variants.GymRefundP
 export type TermsConditionSecData = typeof sec.TermsConditionSec.variants.GymTermsConditionSec1;
 export type FaqSecData = typeof sec.FaqSec.variants.GymFaqSec1;
 export type FaqQuestion = FaqSecData["categories"][0]["questions"][0];
+export type ThankYouSecData = typeof sec.ThankYouSec.variants.GymThankYouSec1;
 
 export const site = {
   topbar: sec.Topbar.variants.GymTopbar1,
@@ -76,4 +77,5 @@ export const site = {
   refundPolicySec: sec.RefundPolicySec.variants.GymRefundPolicySec1,
   termsConditionSec: sec.TermsConditionSec.variants.GymTermsConditionSec1,
   faqSec: sec.FaqSec.variants.GymFaqSec1,
+  thankYouSec: sec.ThankYouSec.variants.GymThankYouSec1,
 };

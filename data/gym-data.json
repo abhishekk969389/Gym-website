@@ -419,8 +419,8 @@
                   "url": "/termscondition"
                 },
                 {
-                  "label": "Sitemap",
-                  "url": "/sitemap"
+                  "label": "ThankYou",
+                  "url": "/thanku"
                 }
               ]
             }
@@ -4486,6 +4486,19 @@
                 ]
               }
             ]
+          }
+        }
+      },
+      "ThankYouSec": {
+        "variants": {
+          "GymThankYouSec1": {
+            "backgroundImage": "/program/pg7.jpg",
+            "titlePart1": "Thank",
+            "titlePart2": "You!",
+            "descriptionLine1": "Your request has been successfully submitted.",
+            "descriptionLine2": "Our team will get back to you shortly. Stay strong and keep pushing your limits!",
+            "buttonText": "Back to Home",
+            "buttonLink": "/"
           }
         }
       }
