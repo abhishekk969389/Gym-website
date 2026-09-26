@@ -1,18 +1,19 @@
 "use client";
 
 import React from "react";
-import { Program, gymData } from "@/data";
+import { Program, site, SectionProps } from "@/data";
 import { motion } from "framer-motion";
 import * as FontAwesome from "react-icons/fa";
 import { IconType } from "react-icons";
 import Link from "next/link";
 import { FaArrowRight, FaCalendarAlt } from "react-icons/fa";
 
-export default function ProgramBenefits({ program }: { program: Program }) {
+export default function ProgramBenefits({ data, className }: SectionProps<Program> = {}) {
+    const program = data || site.homePrograms.programs[0];
     if (!program || !program.details) return null;
 
     const { keyBenefits, targetAudience } = program.details;
-    const layout = gymData.homePrograms.programDetailsLayout;
+    const layout = site.homePrograms.programDetailsLayout;
 
     return (
         <motion.div 
@@ -103,3 +104,6 @@ export default function ProgramBenefits({ program }: { program: Program }) {
         </motion.div>
     );
 }
+
+
+

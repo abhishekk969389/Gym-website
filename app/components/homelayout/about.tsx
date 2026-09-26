@@ -6,10 +6,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariantsLeft, itemVariantsRight } from "@/app/utils/animations";
 import { FaCheck } from "react-icons/fa6";
-import { gymData } from "@/data";
+import { site } from "@/data";
 
-const homeData = gymData.homeAbout;
-const aboutData = gymData.aboutPageAbout;
+const homeData = site.homeAbout;
+const aboutData = site.aboutPageAbout;
 
 export default function HomeAbout({ isAboutPage = false }: { isAboutPage?: boolean }) {
 

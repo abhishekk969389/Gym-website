@@ -5,13 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import { gymData, TeamSecData } from "@/data";
+import { site, TeamSecData, SectionProps } from "@/data";
 import Pagination from "@/app/components/ui/pagination";
 
 // @ts-ignore
-const data: TeamSecData = gymData.teamSec;
+const data: TeamSecData = site.teamSec;
 
-export default function TeamSec() {
+export default function TeamSec({ data: propData, className }: SectionProps<TeamSecData> = {}) {
+    const data = propData || site.teamSec;
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 8;
 

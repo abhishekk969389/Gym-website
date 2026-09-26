@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaDumbbell, FaUsers, FaShower } from "react-icons/fa";
-import { gymData } from "@/data";
+import { site, SectionProps, MapSecData } from "@/data";
 import { containerVariants, itemVariants } from "@/app/utils/animations";
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -13,9 +13,8 @@ const ICON_MAP: Record<string, React.ElementType> = {
     FaShower
 };
 
-const data = gymData.mapSec;
-
-export default function MapSec() {
+export default function MapSec({ data, className }: SectionProps<MapSecData> = {}) {
+    const resolvedData = data || site.mapSec;
 
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 relative">
@@ -30,7 +29,7 @@ export default function MapSec() {
                     {/* Left Column (Google Map) */}
                     <motion.div variants={itemVariants} className="w-full lg:w-1/2 h-[400px] lg:h-full rounded-2xl overflow-hidden shadow-xl border border-slate-200">
                         <iframe
-                            src={data.mapUrl}
+                            src={resolvedData.mapUrl}
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
@@ -46,7 +45,7 @@ export default function MapSec() {
                         {/* Background Image */}
                         <div className="absolute inset-0">
                             <Image
-                                src={data.infoCard.bgImage}
+                                src={resolvedData.infoCard.bgImage}
                                 alt="Gym background"
                                 fill
                                 className="object-cover"
@@ -63,25 +62,25 @@ export default function MapSec() {
                                 <div className="inline-block relative mb-6">
                                     <div className="absolute inset-0 bg-[#E5192C] -skew-x-12 transform origin-bottom-left"></div>
                                     <span className="relative z-10 px-4 py-1.5 text-white text-sm sm:text-base font-bold italic uppercase tracking-wider block">
-                                        {data.infoCard.tag}
+                                        {resolvedData.infoCard.tag}
                                     </span>
                                 </div>
 
                                 {/* Title */}
                                 <h2 className="text-3xl sm:text-3xl md:text-4xl font-black italic uppercase tracking-tight mb-4 leading-none">
-                                    <span className="text-white block">{data.infoCard.titleLine1}</span>
-                                    <span className="text-[#E5192C] block">{data.infoCard.titleLine2}</span>
+                                    <span className="text-white block">{resolvedData.infoCard.titleLine1}</span>
+                                    <span className="text-[#E5192C] block">{resolvedData.infoCard.titleLine2}</span>
                                 </h2>
 
                                 {/* Description */}
                                 <p className="text-gray-300 text-sm sm:text-sm md:text-base max-w-sm leading-relaxed mb-8">
-                                    {data.infoCard.description}
+                                    {resolvedData.infoCard.description}
                                 </p>
                             </div>
 
                             {/* Features */}
                             <div className="flex justify-between items-start pt-6 border-t border-gray-700/50 mt-auto">
-                                {data.infoCard.features.map((feature, index) => {
+                                {resolvedData.infoCard.features.map((feature: any, index: number) => {
                                     const Icon = ICON_MAP[feature.icon];
                                     return (
                                         <React.Fragment key={feature.id}>
@@ -91,7 +90,7 @@ export default function MapSec() {
                                                     {feature.title}
                                                 </span>
                                             </div>
-                                            {index < data.infoCard.features.length - 1 && (
+                                            {index < resolvedData.infoCard.features.length - 1 && (
                                                 <div className="w-[1px] h-12 bg-gray-700/50 hidden sm:block mt-2"></div>
                                             )}
                                         </React.Fragment>
@@ -106,3 +105,7 @@ export default function MapSec() {
         </section>
     );
 }
+
+
+
+

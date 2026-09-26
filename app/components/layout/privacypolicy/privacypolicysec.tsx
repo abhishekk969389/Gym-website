@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import { gymData } from "@/data";
+import { site, SectionProps, PrivacyPolicySecData } from "@/data";
 import * as Icons from "react-icons/fa";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/app/utils/animations";
 
-export default function PrivacyPolicySec() {
-    const data = gymData.privacyPolicySec;
+export default function PrivacyPolicySec({ data: propData, className }: SectionProps<PrivacyPolicySecData> = {}) {
+    const data = propData || site.privacyPolicySec;
 
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14">
@@ -86,3 +86,4 @@ export default function PrivacyPolicySec() {
         </section>
     );
 }
+

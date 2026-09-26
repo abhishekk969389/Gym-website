@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { gymData } from "@/data";
+import { site } from "@/data";
 import { FaUsers, FaDumbbell, FaTrophy, FaGlobe } from "react-icons/fa6";
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -13,7 +13,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
     FaGlobe
 };
 
-const data = gymData.homeStats;
+const data = site.homeStats;
 
 export default function OurImpact() {
 

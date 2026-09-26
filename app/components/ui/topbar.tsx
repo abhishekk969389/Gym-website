@@ -10,7 +10,7 @@ import {
   FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa6";
-import { gymData, TopbarData } from "@/data";
+import { site, TopbarData, SectionProps } from "@/data";
 
 // Map JSON icon name strings to react-icons components
 const ICON_MAP: Record<string, IconType> = {
@@ -24,9 +24,10 @@ const ICON_MAP: Record<string, IconType> = {
   FaLinkedinIn,
 };
 
-const topbarData: TopbarData = gymData.topbar;
+const topbarData: TopbarData = site.topbar;
 
-export default function Topbar() {
+export default function Topbar({ data: propData, className }: SectionProps<TopbarData> = {}) {
+    const data = propData || site.topbar;
   const TaglineIcon = ICON_MAP[topbarData.taglineIcon] || FaDumbbell;
   const PhoneIcon = ICON_MAP[topbarData.phoneIcon] || FaPhone;
   const EmailIcon = ICON_MAP[topbarData.emailIcon] || FaEnvelope;

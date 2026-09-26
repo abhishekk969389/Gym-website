@@ -1,13 +1,13 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { gymData } from "@/data";
+import { site } from "@/data";
 import { FaArrowLeft, FaArrowRight, FaStar, FaQuoteRight } from "react-icons/fa6";
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight, BiSolidQuoteLeft } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/app/utils/animations";
 import Pagination from "@/app/components/ui/pagination";
-const data = gymData.homeTestimonials;
+const data = site.homeTestimonials;
 
 type TestimonialProps = {
     isPage?: boolean;

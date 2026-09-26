@@ -17,7 +17,7 @@ import { IoBarbell } from "react-icons/io5";
 import { PiBrain, PiHeart } from "react-icons/pi";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants, itemVariantsLeft, itemVariantsRight } from "@/app/utils/animations";
-import { gymData, HomeBannerData } from "@/data";
+import { site, HomeBannerData, SectionProps } from "@/data";
 
 const ICON_MAP: Record<string, IconType> = {
     FaArrowRight,
@@ -33,14 +33,14 @@ const ICON_MAP: Record<string, IconType> = {
     PiHeart,
 };
 
-const homeBannerData: HomeBannerData = gymData.homeBanner;
-
-export default function Banner() {
+export default function Banner({ data, className }: SectionProps<HomeBannerData> = {}) {
+    const homeBannerData = data || site.homeBanner;
+    
     const PrimaryIcon = ICON_MAP[homeBannerData.primaryButton.icon] || FaArrowRight;
     const SecondaryIcon = ICON_MAP[homeBannerData.secondaryButton.icon] || FaPlay;
 
     return (
-        <section className="relative w-full flex items-start bg-[#0a0e14] overflow-hidden">
+        <section className={`relative w-full flex items-start bg-[#0a0e14] overflow-hidden ${className || ""}`}>
             {/* Background Image & Overlay */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"

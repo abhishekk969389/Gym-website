@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import { gymData } from "@/data";
+import { site, SectionProps, TermsConditionSecData } from "@/data";
 import * as Icons from "react-icons/fa";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/app/utils/animations";
 
-export default function TermsConditionSec() {
-    const data = gymData.termsConditionSec;
+export default function TermsConditionSec({ data: propData, className }: SectionProps<TermsConditionSecData> = {}) {
+    const data = propData || site.termsConditionSec;
 
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14">
@@ -89,3 +89,4 @@ export default function TermsConditionSec() {
         </section>
     );
 }
+

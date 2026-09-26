@@ -2,6 +2,11 @@ import gymDataRaw from "./gym-data.json";
 
 const sec = gymDataRaw.GymFit.sections;
 
+export type SectionProps<T = unknown> = {
+  data?: T;
+  className?: string;
+};
+
 export type TopbarData = typeof sec.Topbar.variants.GymTopbar1;
 export type NavbarData = typeof sec.Navbar.variants.GymNavbar1;
 export type HomeBannerData = typeof sec.HomeBanner.variants.GymHomeBanner1;
@@ -39,7 +44,7 @@ export type TermsConditionSecData = typeof sec.TermsConditionSec.variants.GymTer
 export type FaqSecData = typeof sec.FaqSec.variants.GymFaqSec1;
 export type FaqQuestion = FaqSecData["categories"][0]["questions"][0];
 
-export const gymData = {
+export const site = {
   topbar: sec.Topbar.variants.GymTopbar1,
   navbar: sec.Navbar.variants.GymNavbar1,
   homeBanner: sec.HomeBanner.variants.GymHomeBanner1,

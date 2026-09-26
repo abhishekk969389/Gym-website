@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaRegClock, FaArrowRight } from "react-icons/fa";
 import { FaUser, FaList } from "react-icons/fa6";
-import { gymData } from "@/data";
+import { site, SectionProps, ContactPageSecData } from "@/data";
 import { containerVariants, itemVariants } from "@/app/utils/animations";
 import { Yellowtail } from "next/font/google";
 
@@ -18,9 +18,8 @@ const ICON_MAP: Record<string, React.ElementType> = {
     FaRegClock
 };
 
-const data = gymData.contactPageSec;
-
-export default function ContactSec() {
+export default function ContactSec({ data, className }: SectionProps<ContactPageSecData> = {}) {
+    const resolvedData = data || site.contactPageSec;
 
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 relative">
@@ -37,18 +36,18 @@ export default function ContactSec() {
                     <motion.div variants={itemVariants} className="flex items-center justify-center gap-3 ">
                                     <div className="w-8 h-[2px] bg-[#E5192C]"></div>
                         <span className="text-[#E5192C] font-bold tracking-[0.2em] uppercase text-sm md:text-base">
-                            {data.tag}
+                            {resolvedData.tag}
                         </span>
                                     <div className="w-8 h-[2px] bg-[#E5192C]"></div>
                     </motion.div>
 
                     <motion.h2 variants={itemVariants} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-2 tracking-tighter text-gray-900 italic">
-                        <span className="text-[#0a0e14]">{data.titleLine1} </span>
-                        <span className="text-[#E5192C]">{data.titleLine2}</span>
+                        <span className="text-[#0a0e14]">{resolvedData.titleLine1} </span>
+                        <span className="text-[#E5192C]">{resolvedData.titleLine2}</span>
                     </motion.h2>
 
                     <motion.p variants={itemVariants} className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-                        {data.description}
+                        {resolvedData.description}
                     </motion.p>
                 </motion.div>
 
@@ -64,7 +63,7 @@ export default function ContactSec() {
                     {/* Left Column (Contact Info) */}
                     <motion.div variants={itemVariants} className="w-full lg:w-[28%] bg-[#080d14] text-white p-6 flex flex-col justify-center rounded-2xl overflow-hidden">
                         <div className="flex flex-col gap-8">
-                            {data.contactInfo.map((item, index) => {
+                            {resolvedData.contactInfo.map((item: any, index: number) => {
                                 const Icon = ICON_MAP[item.icon];
                                 return (
                                     <React.Fragment key={item.id}>
@@ -79,7 +78,7 @@ export default function ContactSec() {
                                                 </p>
                                             </div>
                                         </div>
-                                        {index < data.contactInfo.length - 1 && (
+                                        {index < resolvedData.contactInfo.length - 1 && (
                                             <div className="w-full h-[1px] bg-gray-800"></div>
                                         )}
                                     </React.Fragment>
@@ -91,7 +90,7 @@ export default function ContactSec() {
                     {/* Center Column (Image) */}
                     <motion.div variants={itemVariants} className="w-full lg:w-[28%] relative hidden md:block h-[400px] lg:h-full rounded-2xl overflow-hidden">
                         <Image
-                            src={data.centerImage.src}
+                            src={resolvedData.centerImage.src}
                             alt="Fitness model"
                             fill
                             className="object-cover"
@@ -101,11 +100,11 @@ export default function ContactSec() {
 
                         {/* Top Text */}
                         <div className="absolute top-10 right-6 text-right font-black italic tracking-tighter uppercase leading-[0.9] -rotate-[6deg]">
-                            <div className="text-white text-2xl">{data.centerImage.topTextLine1}</div>
-                            <div className="text-white text-2xl">{data.centerImage.topTextLine2}</div>
-                            <div className="text-white text-2xl">{data.centerImage.topTextLine3}</div>
+                            <div className="text-white text-2xl">{resolvedData.centerImage.topTextLine1}</div>
+                            <div className="text-white text-2xl">{resolvedData.centerImage.topTextLine2}</div>
+                            <div className="text-white text-2xl">{resolvedData.centerImage.topTextLine3}</div>
                             <div className="text-[#E5192C] text-2xl relative inline-block mt-1">
-                                {data.centerImage.topTextLine4}
+                                {resolvedData.centerImage.topTextLine4}
                                 {/* Brush underline effect */}
                                 <div className="absolute -bottom-2 right-0 w-[100%] h-[5px] bg-[#E5192C] rounded-full"></div>
                                 <div className="absolute -bottom- right-2 w-[85%] h-[2px] bg-[#E5192C] rounded-full opacity-90"></div>
@@ -115,7 +114,7 @@ export default function ContactSec() {
                         {/* Bottom Text */}
                         <div className="absolute bottom-10 right-6 flex flex-col items-center -rotate-[8deg]">
                             <div className={`text-white text-3xl whitespace-pre-line leading-[0.9] text-center relative ${yellowtail.className}`}>
-                                {data.centerImage.bottomText}
+                                {resolvedData.centerImage.bottomText}
                                 {/* Brush underline effect */}
                                 <div className="mt-2">
                                 <div className="absolute -bottom-2 -right-4 w-[120%] h-[4px] bg-[#E5192C] rounded-full -rotate-2"></div>
@@ -129,17 +128,17 @@ export default function ContactSec() {
                     <motion.div variants={itemVariants} className="w-full lg:w-[44%] bg-white p-8 sm:p-10 flex flex-col justify-start rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                         <div className="flex items-center gap-3 mb-2">
                             <span className="text-[#E5192C] tracking-[0.3em] text-sm sm:text-sm md:text-base font-bold uppercase italic">
-                                {data.form.tag}
+                                {resolvedData.form.tag}
                             </span>
                                    <div className="w-12 sm:w-16 h-[2px] bg-[#E5192C]"></div>
                         </div>
 
                         <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase italic tracking-tight mb-2">
-                            {data.form.titleLine1} <span className="text-[#E5192C]">{data.form.titleLine2}</span>
+                            {resolvedData.form.titleLine1} <span className="text-[#E5192C]">{resolvedData.form.titleLine2}</span>
                         </h3>
 
                         <p className="text-gray-500 text-sm md:text-base mb-6">
-                            {data.form.description}
+                            {resolvedData.form.description}
                         </p>
 
                         <form className="flex flex-col gap-4">
@@ -148,7 +147,7 @@ export default function ContactSec() {
                                     <FaUser className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
                                     <input
                                         type="text"
-                                        placeholder={data.form.fields.namePlaceholder}
+                                        placeholder={resolvedData.form.fields.namePlaceholder}
                                         className="w-full pl-11 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-sm outline-none focus:border-[#E5192C] focus:bg-white transition-colors"
                                     />
                                 </div>
@@ -156,7 +155,7 @@ export default function ContactSec() {
                                     <FaEnvelope className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
                                     <input
                                         type="email"
-                                        placeholder={data.form.fields.emailPlaceholder}
+                                        placeholder={resolvedData.form.fields.emailPlaceholder}
                                         className="w-full pl-11 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-sm outline-none focus:border-[#E5192C] focus:bg-white transition-colors"
                                     />
                                 </div>
@@ -167,15 +166,15 @@ export default function ContactSec() {
                                     <FaPhoneAlt className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
                                     <input
                                         type="text"
-                                        placeholder={data.form.fields.phonePlaceholder}
+                                        placeholder={resolvedData.form.fields.phonePlaceholder}
                                         className="w-full pl-11 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-sm outline-none focus:border-[#E5192C] focus:bg-white transition-colors"
                                     />
                                 </div>
                                 <div className="relative flex-1">
                                     <FaList className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
                                     <select className="w-full pl-11 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-md text-sm outline-none focus:border-[#E5192C] focus:bg-white transition-colors appearance-none text-gray-500">
-                                        <option value="">{data.form.fields.subjectPlaceholder}</option>
-                                        {data.form.fields.subjectOptions?.map((option, idx) => (
+                                        <option value="">{resolvedData.form.fields.subjectPlaceholder}</option>
+                                        {resolvedData.form.fields.subjectOptions?.map((option: any, idx: number) => (
                                             <option key={idx} value={option}>{option}</option>
                                         ))}
                                     </select>
@@ -185,18 +184,18 @@ export default function ContactSec() {
                             <div className="relative">
                                 <textarea
                                     rows={4}
-                                    placeholder={data.form.fields.messagePlaceholder}
+                                    placeholder={resolvedData.form.fields.messagePlaceholder}
                                     className="w-full p-4 bg-gray-50 border border-gray-200 rounded-md text-sm outline-none focus:border-[#E5192C] focus:bg-white transition-colors resize-none"
                                 ></textarea>
                             </div>
 
                             <div className="flex items-end justify-between mt-2">
                                 <button type="button" className="bg-[#E5192C] hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md transition-colors flex items-center gap-2">
-                                    {data.form.buttonText} <FaArrowRight />
+                                    {resolvedData.form.buttonText} <FaArrowRight />
                                 </button>
                                 <div className={`hidden sm:flex flex-col items-center -rotate-[10deg] relative ${yellowtail.className}`}>
                                     <span className="text-gray-900 text-3xl whitespace-pre-line leading-[0.8] text-center">
-                                        {data.form.bottomScriptText}
+                                        {resolvedData.form.bottomScriptText}
                                     </span>
                                     {/* Brush underline effect */}
                                     <div className="mt-1">
@@ -213,3 +212,7 @@ export default function ContactSec() {
         </section>
     );
 }
+
+
+
+

@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { gymData, PricingSecData } from "@/data";
+import { site, PricingSecData, SectionProps } from "@/data";
 import { FiUser, FiAward, FiClock, FiShield, FiUserCheck, FiCheck, FiX } from "react-icons/fi";
 import { CgGym } from "react-icons/cg";
 import { IoDiamondOutline } from "react-icons/io5";
@@ -12,7 +12,7 @@ import { BiTargetLock } from "react-icons/bi";
 import { MdOutlineFitnessCenter } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa6";
 
-const pricingData: PricingSecData = gymData.pricingSec;
+const pricingData: PricingSecData = site.pricingSec;
 
 const iconMap: Record<string, React.ReactNode> = {
   FiUser: <FiUser className="w-8 h-8 sm:w-10 sm:h-10" />,
@@ -25,7 +25,8 @@ const iconMap: Record<string, React.ReactNode> = {
   MdOutlineFitnessCenter: <MdOutlineFitnessCenter className="w-7 h-7 sm:w-8 sm:h-8" />,
 };
 
-export default function PricingSec() {
+export default function PricingSec({ data: propData, className }: SectionProps<PricingSecData> = {}) {
+    const data = propData || site.pricingSec;
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14">
             {/* 1. PRICING PLANS SECTION */}

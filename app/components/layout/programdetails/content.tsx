@@ -1,18 +1,19 @@
 "use client";
 
 import React from "react";
-import { Program, gymData } from "@/data";
+import { Program, site, SectionProps } from "@/data";
 import { motion } from "framer-motion";
 import * as FontAwesome from "react-icons/fa";
 import { IconType } from "react-icons";
 import Link from "next/link";
 import { FaArrowRight, FaCalendarAlt } from "react-icons/fa";
 
-export default function ProgramContent({ program }: { program: Program }) {
+export default function ProgramContent({ data, className }: SectionProps<Program> = {}) {
+    const program = data || site.homePrograms.programs[0];
     if (!program || !program.details) return null;
 
     const { infoCards, overview, keyBenefits, targetAudience } = program.details;
-    const layout = gymData.homePrograms.programDetailsLayout;
+    const layout = site.homePrograms.programDetailsLayout;
 
     const titleParts = program.title.split(" ");
     const titleFirst = titleParts[0];

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { containerVariants, itemVariants, itemVariantsLeft, itemVariantsRight } from "@/app/utils/animations";
-import { gymData, FaqQuestion } from "@/data";
+import { site, FaqQuestion, SectionProps, FaqSecData } from "@/data";
 import { IconType } from "react-icons";
 import { 
     FaRegQuestionCircle, 
@@ -79,8 +79,8 @@ const AccordionItem = ({ question, index }: { question: FaqQuestion; index: numb
     );
 };
 
-export default function FaqSec() {
-    const data = gymData.faqSec;
+export default function FaqSec({ data: propData, className }: SectionProps<FaqSecData> = {}) {
+    const data = propData || site.faqSec;
     const [activeCategory, setActiveCategory] = useState(data.categories[0].id);
 
     // Update active category based on scroll position
@@ -252,3 +252,4 @@ export default function FaqSec() {
         </section>
     );
 }
+

@@ -5,9 +5,9 @@ import Image from 'next/image';
 import { FaImage } from 'react-icons/fa6';
 import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import { gymData, GalleryData } from '@/data';
+import { site, GalleryData } from "@/data";
 
-const galleryData: GalleryData = gymData.gallery;
+const galleryData: GalleryData = site.gallery;
 
 export default function GallerySec() {
     const [activeCategory, setActiveCategory] = useState("all");

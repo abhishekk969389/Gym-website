@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { containerVariants, itemVariants } from '@/app/utils/animations';
-import { gymData } from '@/data';
+import { site, SectionProps, FooterData } from "@/data";
 import { 
     FaFacebookF, 
     FaInstagram, 
@@ -29,9 +29,8 @@ const ICON_MAP: Record<string, IconType> = {
     FaRegClock
 };
 
-const data = gymData.footer;
-
-export default function Footer() {
+export default function Footer({ data, className }: SectionProps<FooterData> = {}) {
+    const resolvedData = data || site.footer;
 
     return (
         <footer className="relative bg-[#0a0e14] mt-8 sm:mt-10 md:mt-12 lg:mt-14 text-white overflow-hidden pt-16">
@@ -55,13 +54,13 @@ export default function Footer() {
                     {/* Col 1: Logo, Desc, Social */}
                     <motion.div variants={itemVariants} className="lg:col-span-3 flex flex-col">
                         <Link href="/" className="mb-6 inline-block">
-                            <img src={data.logo} alt="Logo" className="w-auto h-14 sm:h-16 lg:h-[72px] object-contain" />
+                            <img src={resolvedData.logo} alt="Logo" className="w-auto h-14 sm:h-16 lg:h-[72px] object-contain" />
                         </Link>
                         <p className="text-white text-sm md:text-[16px] leading-relaxed mb-6">
-                            {data.description}
+                            {resolvedData.description}
                         </p>
                         <div className="flex items-center gap-3">
-                            {data.socialLinks.map((social, idx) => {
+                            {resolvedData.socialLinks.map((social: any, idx: number) => {
                                 const Icon = ICON_MAP[social.icon];
                                 return (
                                     <Link key={idx} href={social.url} className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white hover:text-white hover:bg-[#E5192C] hover:border-[#E5192C] transition-all">
@@ -74,10 +73,10 @@ export default function Footer() {
 
                     {/* Col 2: Quick Links */}
                     <motion.div variants={itemVariants} className="lg:col-span-2">
-                        <h3 className="text-white font-bold text-lg">{data.quickLinks.title}</h3>
+                        <h3 className="text-white font-bold text-lg">{resolvedData.quickLinks.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
                         <ul className="flex flex-col gap-3">
-                            {data.quickLinks.links.map((link, idx) => (
+                            {resolvedData.quickLinks.links.map((link: any, idx: number) => (
                                 <li key={idx}>
                                     <Link href={link.url} className="text-gray-400 hover:text-[#E5192C] text-sm flex items-center gap-2 transition-colors">
                                         <FaChevronRight className="text-[#E5192C] text-[12px] shrink-0" />
@@ -90,10 +89,10 @@ export default function Footer() {
 
                     {/* Col 3: Our Services */}
                     <motion.div variants={itemVariants} className="lg:col-span-2">
-                        <h3 className="text-white font-bold text-lg">{data.ourServices.title}</h3>
+                        <h3 className="text-white font-bold text-lg">{resolvedData.ourServices.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
                         <ul className="flex flex-col gap-3">
-                            {data.ourServices.links.map((link, idx) => (
+                            {resolvedData.ourServices.links.map((link: any, idx: number) => (
                                 <li key={idx}>
                                     <Link href={link.url} className="text-gray-400 hover:text-[#E5192C] text-sm flex items-center gap-2 transition-colors">
                                         <FaChevronRight className="text-[#E5192C] text-[12px] shrink-0" />
@@ -106,10 +105,10 @@ export default function Footer() {
 
                     {/* Col 4: Contact Info */}
                     <motion.div variants={itemVariants} className="lg:col-span-2">
-                        <h3 className="text-white font-bold text-lg">{data.contactInfo.title}</h3>
+                        <h3 className="text-white font-bold text-lg">{resolvedData.contactInfo.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
                         <div className="flex flex-col gap-5">
-                            {data.contactInfo.items.map((item, idx) => {
+                            {resolvedData.contactInfo.items.map((item: any, idx: number) => {
                                 const Icon = ICON_MAP[item.icon];
                                 return (
                                     <div key={idx} className="flex items-start gap-4">
@@ -117,7 +116,7 @@ export default function Footer() {
                                             {Icon && <Icon className="text-white text-sm" />}
                                         </div>
                                         <span className="text-white text-sm md:text-[15px] leading-relaxed">
-                                            {item.text.split('\n').map((line, i) => (
+                                            {item.text.split('\n').map((line: any, i: number) => (
                                                 <span key={i} className="block">{line}</span>
                                             ))}
                                         </span>
@@ -129,11 +128,11 @@ export default function Footer() {
 
                     {/* Col 5: Opening Hours */}
                     <motion.div variants={itemVariants} className="lg:col-span-3 lg:pl-2 xl:pl-8">
-                        <h3 className="text-white font-bold text-lg">{data.openingHours.title}</h3>
+                        <h3 className="text-white font-bold text-lg">{resolvedData.openingHours.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
                         <div className="flex items-start gap-4">
                             {(() => {
-                                const Icon = ICON_MAP[data.openingHours.icon];
+                                const Icon = ICON_MAP[resolvedData.openingHours.icon];
                                 return (
                                     <div className="w-8 h-8 rounded-full bg-[#E5192C] flex items-center justify-center shrink-0 mt-1">
                                         {Icon && <Icon className="text-white text-sm" />}
@@ -141,7 +140,7 @@ export default function Footer() {
                                 );
                             })()}
                             <div className="flex flex-col gap-4">
-                                {data.openingHours.schedule.map((slot, idx) => (
+                                {resolvedData.openingHours.schedule.map((slot: any, idx: number) => (
                                     <div key={idx} className="flex flex-col">
                                         <span className="text-white text-sm md:text-[16px] font-semibold">{slot.day}</span>
                                         <span className="text-white/90 text-sm md:text-[14px]">{slot.time}</span>
@@ -164,15 +163,15 @@ export default function Footer() {
             >
                 <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-white text-sm md:text-[16px] ">
-                        {data.bottomBar.copyright}
+                        {resolvedData.bottomBar.copyright}
                     </p>
                     <div className="flex items-center gap-4 text-sm">
-                        {data.bottomBar.links.map((link, idx) => (
+                        {resolvedData.bottomBar.links.map((link: any, idx: number) => (
                             <React.Fragment key={idx}>
                                 <Link href={link.url} className="text-white text-sm md:text-[16px] hover:text-white transition-colors">
                                     {link.label}
                                 </Link>
-                                {idx < data.bottomBar.links.length - 1 && (
+                                {idx < resolvedData.bottomBar.links.length - 1 && (
                                     <span className="text-gray-600">|</span>
                                 )}
                             </React.Fragment>
@@ -183,3 +182,7 @@ export default function Footer() {
         </footer>
     );
 }
+
+
+
+

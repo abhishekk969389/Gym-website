@@ -2,10 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import { Program } from "@/data";
+import { Program, site, SectionProps } from "@/data";
 import { motion } from "framer-motion";
 
-export default function ProgramSidebar({ program }: { program: Program }) {
+export default function ProgramSidebar({ data, className }: SectionProps<Program> = {}) {
+    const program = data || site.homePrograms.programs[0];
     if (!program || !program.details) return null;
 
     const sidebar = program.details.sidebar;
@@ -52,3 +53,5 @@ export default function ProgramSidebar({ program }: { program: Program }) {
         </motion.div>
     );
 }
+
+

@@ -5,11 +5,12 @@ import Image from 'next/image';
 import { FaPlay } from 'react-icons/fa6';
 import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import { gymData, VideoGalleryData } from '@/data';
+import { site, VideoGalleryData, SectionProps } from "@/data";
 
-const videoData: VideoGalleryData = gymData.videoGallery;
+const videoData: VideoGalleryData = site.videoGallery;
 
-export default function VideoGal() {
+export default function VideoGal({ data: propData, className }: SectionProps<VideoGalleryData> = {}) {
+    const data = propData || site.videoGallery;
     const [activeCategory, setActiveCategory] = useState("all");
     const [visibleCount, setVisibleCount] = useState(8);
     const [modalOpen, setModalOpen] = useState(false);

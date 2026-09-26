@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariantsLeft } from "@/app/utils/animations";
-import { gymData } from "@/data";
+import { site } from "@/data";
 import { FaArrowRight } from "react-icons/fa6";
 
-const data = gymData.homeCta;
+const data = site.homeCta;
 
 export default function HomeTraining() {
 

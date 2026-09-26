@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants, itemVariantsLeft, itemVariantsRight } from "@/app/utils/animations";
-import { gymData } from "@/data";
+import { site, SectionProps, WhyChooseUsData } from "@/data";
 import { FaUserTie, FaStopwatch, FaCoins, FaHeartbeat } from "react-icons/fa";
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -14,9 +14,8 @@ const ICON_MAP: Record<string, React.ElementType> = {
   FaHeartbeat,
 };
 
-const data = gymData.whyChooseUs;
-
-export default function WhyChooseUs() {
+export default function WhyChooseUs({ data, className }: SectionProps<WhyChooseUsData> = {}) {
+    const resolvedData = data || site.whyChooseUs;
 
     return (
         <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-[#f8f9fa] relative overflow-hidden">
@@ -34,17 +33,17 @@ export default function WhyChooseUs() {
                 >
                     <motion.div variants={itemVariants} className="flex items-center justify-center gap-3">
                         <div className="w-8 h-[2px] bg-[#E5192C]"></div>
-                        <span className="text-[#E5192C] font-bold tracking-[0.2em] uppercase text-sm md:text-base">{data.tag}</span>
+                        <span className="text-[#E5192C] font-bold tracking-[0.2em] uppercase text-sm md:text-base">{resolvedData.tag}</span>
                         <div className="w-8 h-[2px] bg-[#E5192C]"></div>
                     </motion.div>
                     
                     <motion.h2 variants={itemVariants} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-2 tracking-tighter text-gray-900 italic">
-                        <span className="text-[#1a1a1a] mr-3">{data.titleLine1}</span>
-                        <span className="text-[#E5192C]">{data.titleLine2}</span>
+                        <span className="text-[#1a1a1a] mr-3">{resolvedData.titleLine1}</span>
+                        <span className="text-[#E5192C]">{resolvedData.titleLine2}</span>
                     </motion.h2>
                     
                     <motion.p variants={itemVariants} className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-                        {data.description}
+                        {resolvedData.description}
                     </motion.p>
                 </motion.div>
 
@@ -59,7 +58,7 @@ export default function WhyChooseUs() {
                         viewport={{ once: true, amount: 0.2 }}
                         className="flex flex-col gap-8 lg:gap-12"
                     >
-                        {data.leftCards.map((card) => {
+                        {resolvedData.leftCards.map((card: any) => {
                             const Icon = ICON_MAP[card.icon];
                             return (
                                 <motion.div key={card.id} variants={itemVariantsLeft} className="relative ml-[20px] sm:ml-[30px] mt-[20px] sm:mt-[30px]">
@@ -100,17 +99,17 @@ export default function WhyChooseUs() {
                         {/* Image Container */}
                         <div className="relative w-full h-full z-10 border-[8px] border-white shadow-xl bg-white overflow-hidden">
                             <Image 
-                                src={data.centerImage.src}
-                                alt={data.centerImage.alt}
+                                src={resolvedData.centerImage.src}
+                                alt={resolvedData.centerImage.alt}
                                 fill
                                 className="object-cover"
                             />
                             {/* Overlay Text */}
                             <div className="absolute left-4 sm:left-6 bottom-6 sm:bottom-8 z-20 text-white font-black uppercase italic leading-none transform -skew-x-12 -rotate-2">
-                                <div className="text-3xl sm:text-4xl tracking-tighter mb-1 drop-shadow-md">{data.centerImage.textLine1}</div>
-                                <div className="text-3xl sm:text-4xl tracking-tighter mb-1 drop-shadow-md">{data.centerImage.textLine2}</div>
+                                <div className="text-3xl sm:text-4xl tracking-tighter mb-1 drop-shadow-md">{resolvedData.centerImage.textLine1}</div>
+                                <div className="text-3xl sm:text-4xl tracking-tighter mb-1 drop-shadow-md">{resolvedData.centerImage.textLine2}</div>
                                 <div className="text-4xl sm:text-5xl tracking-tighter text-[#E5192C] relative drop-shadow-md">
-                                    {data.centerImage.textLine3}
+                                    {resolvedData.centerImage.textLine3}
                                     <div className="absolute -bottom-2 left-0 w-[80%] h-[5px] bg-[#E5192C]"></div>
                                 </div>
                             </div>
@@ -127,7 +126,7 @@ export default function WhyChooseUs() {
                         viewport={{ once: true, amount: 0.2 }}
                         className="flex flex-col gap-8 lg:gap-12"
                     >
-                        {data.rightCards.map((card) => {
+                        {resolvedData.rightCards.map((card: any) => {
                             const Icon = ICON_MAP[card.icon];
                             return (
                                 <motion.div key={card.id} variants={itemVariantsRight} className="relative ml-[20px] sm:ml-[30px] mt-[20px] sm:mt-[30px]">
@@ -156,3 +155,6 @@ export default function WhyChooseUs() {
         </section>
     );
 }
+
+
+

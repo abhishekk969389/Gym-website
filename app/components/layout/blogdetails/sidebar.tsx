@@ -1,15 +1,15 @@
 "use client";
 
 import React from "react";
-import { gymData } from "@/data";
+import { site, SectionProps } from "@/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
-export default function BlogSidebar() {
-    const layout = gymData.homeBlog.blogDetailsLayout.sidebar;
-    const recentPosts = gymData.homeBlog.posts.slice(0, 4); // Just take first 4 for recent posts
+export default function BlogSidebar({ data, className }: SectionProps<any> = {}) {
+    const layout = site.homeBlog.blogDetailsLayout.sidebar;
+    const recentPosts = site.homeBlog.posts.slice(0, 4); // Just take first 4 for recent posts
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -37,7 +37,7 @@ export default function BlogSidebar() {
                 <div className="flex flex-col gap-4">
                     {layout.categories.map((cat, idx) => {
                         // Find the first post with this category, or fallback to the first post overall
-                        const categoryPost = gymData.homeBlog.posts.find(p => p.category.toLowerCase() === cat.name.toLowerCase()) || gymData.homeBlog.posts[0];
+                        const categoryPost = site.homeBlog.posts.find(p => p.category.toLowerCase() === cat.name.toLowerCase()) || site.homeBlog.posts[0];
                         
                         return (
                             <Link 
@@ -92,3 +92,4 @@ export default function BlogSidebar() {
         </motion.div>
     );
 }
+

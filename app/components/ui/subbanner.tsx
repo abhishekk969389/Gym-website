@@ -4,11 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaHome, FaAngleRight } from 'react-icons/fa';
-import { gymData } from '@/data';
+import { site } from "@/data";
 import { motion } from 'framer-motion';
 import { containerVariants, itemVariantsLeft } from '@/app/utils/animations';
 
-type SubBannerKey = keyof typeof gymData.subBanners;
+type SubBannerKey = keyof typeof site.subBanners;
 
 interface SubBannerProps {
   bannerKey: SubBannerKey;
@@ -17,7 +17,7 @@ interface SubBannerProps {
   customBreadcrumbs?: { id: number; label: string; url: string }[];
 }
 
-const subBannersData = gymData.subBanners;
+const subBannersData = site.subBanners;
 
 const SubBanner = ({ bannerKey, customTitlePart1, customTitlePart2, customBreadcrumbs }: SubBannerProps) => {
   const data = subBannersData[bannerKey];

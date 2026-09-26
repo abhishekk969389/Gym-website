@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import { gymData } from "@/data";
+import { site, SectionProps, RefundPolicySecData } from "@/data";
 import * as Icons from "react-icons/fa";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/app/utils/animations";
 
-export default function RefundPolicySec() {
-    const data = gymData.refundPolicySec;
+export default function RefundPolicySec({ data: propData, className }: SectionProps<RefundPolicySecData> = {}) {
+    const data = propData || site.refundPolicySec;
 
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14">
@@ -89,3 +89,4 @@ export default function RefundPolicySec() {
         </section>
     );
 }
+

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/app/utils/animations";
-import { gymData } from "@/data";
+import { site } from "@/data";
 import { 
     FaDumbbell, 
     FaFire, 
@@ -29,7 +29,7 @@ interface HomeProgramsProps {
     isProgramPage?: boolean;
 }
 
-const data = gymData.homePrograms;
+const data = site.homePrograms;
 
 export default function HomePrograms({ isProgramPage = false }: HomeProgramsProps) {
 

@@ -1,16 +1,17 @@
 "use client";
 
 import React from "react";
-import { Program, gymData } from "@/data";
+import { Program, site, SectionProps } from "@/data";
 import { motion } from "framer-motion";
 import * as FontAwesome from "react-icons/fa";
 import { IconType } from "react-icons";
 
-export default function ProgramIncluded({ program }: { program: Program }) {
+export default function ProgramIncluded({ data, className }: SectionProps<Program> = {}) {
+    const program = data || site.homePrograms.programs[0];
     if (!program || !program.details) return null;
 
     const { whatsIncluded } = program.details;
-    const layout = gymData.homePrograms.programDetailsLayout;
+    const layout = site.homePrograms.programDetailsLayout;
 
     return (
         <div className="flex flex-col gap-8 w-full mt-10 md:mt-16">
@@ -40,3 +41,6 @@ export default function ProgramIncluded({ program }: { program: Program }) {
         </div>
     );
 }
+
+
+

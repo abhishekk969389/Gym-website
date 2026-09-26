@@ -2,17 +2,18 @@
 
 import React from "react";
 import Link from "next/link";
-import { TeamMember, gymData } from "@/data";
+import { TeamMember, site, SectionProps } from "@/data";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { IconType } from "react-icons";
 import * as FontAwesome from "react-icons/fa";
 import { motion } from "framer-motion";
 
-export default function TeamContent({ member }: { member: TeamMember }) {
+export default function TeamContent({ data, className }: SectionProps<TeamMember> = {}) {
+    const member = data || site.teamSec.members[0];
     if (!member || !member.details) return null;
 
-    const layout = gymData.teamSec.detailsLayout;
+    const layout = site.teamSec.detailsLayout;
 
     const nameParts = member.name.split(" ");
     const firstName = nameParts[0];
@@ -145,3 +146,6 @@ export default function TeamContent({ member }: { member: TeamMember }) {
         </motion.div>
     );
 }
+
+
+

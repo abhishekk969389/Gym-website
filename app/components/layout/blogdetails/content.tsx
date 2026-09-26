@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
-import { BlogPost, gymData } from "@/data";
+import { BlogPost, site, SectionProps } from "@/data";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaUserAlt, FaCalendarAlt, FaFolder, FaQuoteLeft, FaCheckCircle } from "react-icons/fa";
 
-export default function BlogContent({ post }: { post: BlogPost }) {
+export default function BlogContent({ data, className }: SectionProps<BlogPost> = {}) {
+    const post = data || site.homeBlog.posts[0];
     if (!post || !post.details) return null;
 
     const { details } = post;
@@ -43,7 +44,7 @@ export default function BlogContent({ post }: { post: BlogPost }) {
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-5 sm:gap-6 text-[14px] text-gray-500 font-medium mb-6 sm:mb-8">
                 <div className="flex items-center gap-2">
                     <FaUserAlt className="text-[#E5192C] h-5 w-5" />
-                    <span className="text-sm sm:text-sm md:text-base">{gymData.homeBlog.blogDetailsLayout.authorPrefix}{post.author}</span>
+                    <span className="text-sm sm:text-sm md:text-base">{site.homeBlog.blogDetailsLayout.authorPrefix}{post.author}</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <FaCalendarAlt className="text-[#E5192C] h-5 w-5" />
@@ -119,3 +120,5 @@ export default function BlogContent({ post }: { post: BlogPost }) {
         </motion.div>
     );
 }
+
+

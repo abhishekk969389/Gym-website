@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/app/utils/animations";
-import { gymData } from "@/data";
+import { site } from "@/data";
 import { FaArrowRight, FaDumbbell } from "react-icons/fa6";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import Pagination from "@/app/components/ui/pagination";
@@ -14,7 +14,7 @@ interface HomeBlogProps {
     isBlogPage?: boolean;
 }
 
-const data = gymData.homeBlog;
+const data = site.homeBlog;
 
 export default function HomeBlog({ isBlogPage = false }: HomeBlogProps) {
 

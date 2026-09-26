@@ -3,12 +3,13 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { gymData, MissionSecData } from "@/data";
+import { site, MissionSecData, SectionProps } from "@/data";
 
 // @ts-ignore
-const data: MissionSecData = gymData.missionSec;
+const data: MissionSecData = site.missionSec;
 
-export default function MissionSec() {
+export default function MissionSec({ data: propData, className }: SectionProps<MissionSecData> = {}) {
+    const data = propData || site.missionSec;
     return (
         <section className="bg-white">
             {/* Our Mission Section */}

@@ -2,15 +2,16 @@
 
 import React from "react";
 import Image from "next/image";
-import { TeamMember, gymData } from "@/data";
+import { TeamMember, site, SectionProps } from "@/data";
 import { FaUser, FaBriefcase, FaCalendarAlt, FaStar, FaClock } from "react-icons/fa";
 import { FaQuoteLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-export default function TeamSidebar({ member }: { member: TeamMember }) {
+export default function TeamSidebar({ data, className }: SectionProps<TeamMember> = {}) {
+    const member = data || site.teamSec.members[0];
     if (!member || !member.details) return null;
 
-    const layout = gymData.teamSec.detailsLayout;
+    const layout = site.teamSec.detailsLayout;
 
     const quickInfo = [
         { icon: FaUser, label: layout.labels.name, value: member.name },
@@ -76,3 +77,6 @@ export default function TeamSidebar({ member }: { member: TeamMember }) {
         </motion.div>
     );
 }
+
+
+

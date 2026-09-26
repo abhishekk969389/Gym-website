@@ -3,14 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { gymData, ConsultationSecData } from "@/data";
+import { site, ConsultationSecData, SectionProps } from "@/data";
 import { FiUser, FiHeart, FiMail, FiPhone, FiCalendar, FiClock, FiCheck } from "react-icons/fi";
 import { LuClipboardList, LuFileText } from "react-icons/lu";
 import { CgGym } from "react-icons/cg";
 import { BiTargetLock } from "react-icons/bi";
 import { FaArrowRight, FaLock } from "react-icons/fa";
 
-const data: ConsultationSecData = gymData.consultationSec;
+const data: ConsultationSecData = site.consultationSec;
 
 const iconMap: Record<string, React.ReactNode> = {
     FiUser: <FiUser className="w-6 h-6 sm:w-8 sm:h-8" />,
@@ -25,7 +25,8 @@ const iconMap: Record<string, React.ReactNode> = {
     LuFileText: <LuFileText className="w-5 h-5 text-gray-400" />
 };
 
-export default function ConsultationSec() {
+export default function ConsultationSec({ data: propData, className }: SectionProps<ConsultationSecData> = {}) {
+    const data = propData || site.consultationSec;
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 -mb-2 sm:-mb-2 md:-mb-4 lg:-mb-6 relative z-10">
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">

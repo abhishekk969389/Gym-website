@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants, itemVariantsLeft, itemVariantsRight } from "@/app/utils/animations";
-import { gymData } from "@/data";
+import { site } from "@/data";
 import { FaArrowRight, FaClipboardList, FaChartLine, FaTrophy } from "react-icons/fa6";
 import { FaListCheck } from "react-icons/fa6";
 import { IconType } from "react-icons";
@@ -18,7 +18,7 @@ const ICON_MAP: Record<string, IconType> = {
     FaTrophy
 };
 
-const data = gymData.homeHowItWorks;
+const data = site.homeHowItWorks;
 
 export default function HowItWorks() {
 

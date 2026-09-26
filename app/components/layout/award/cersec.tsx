@@ -5,12 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import { gymData, CerSecData } from "@/data";
+import { site, CerSecData, SectionProps } from "@/data";
 
 // @ts-ignore
-const data: CerSecData = gymData.cerSec;
+const data: CerSecData = site.cerSec;
 
-export default function CerSec() {
+export default function CerSec({ data: propData, className }: SectionProps<CerSecData> = {}) {
+    const data = propData || site.cerSec;
     return (
         <section className="relative bg-white w-full mt-6 overflow-hidden">
             {/* Split Backgrounds */}

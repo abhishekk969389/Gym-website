@@ -6,15 +6,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IconType } from "react-icons";
 import { FaArrowRight, FaBars } from "react-icons/fa6";
-import { gymData, NavbarData } from "@/data";
+import { site, NavbarData, SectionProps } from "@/data";
 
 const ICON_MAP: Record<string, IconType> = {
   FaArrowRight,
 };
 
-const navbarData: NavbarData = gymData.navbar;
+const navbarData: NavbarData = site.navbar;
 
-export default function Navbar() {
+export default function Navbar({ data: propData, className }: SectionProps<NavbarData> = {}) {
+    const data = propData || site.navbar;
   const pathname = usePathname();
   const ButtonIcon = ICON_MAP[navbarData.button.icon] || FaArrowRight;
 

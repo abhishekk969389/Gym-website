@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaShieldAlt, FaUsers, FaStar, FaTrophy, FaArrowRight } from "react-icons/fa";
-import { gymData, AwardSecData } from "@/data";
+import { site, AwardSecData, SectionProps } from "@/data";
 
 // @ts-ignore
-const data: AwardSecData = gymData.awardSec;
+const data: AwardSecData = site.awardSec;
 
 const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -20,7 +20,8 @@ const getIcon = (iconName: string) => {
     }
 };
 
-export default function AwardSec() {
+export default function AwardSec({ data: propData, className }: SectionProps<AwardSecData> = {}) {
+    const data = propData || site.awardSec;
     return (
         <section className="bg-white">
             {/* Top Section */}
