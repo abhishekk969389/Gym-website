@@ -36,7 +36,7 @@ export default function HomeAbout({ isAboutPage = false }: { isAboutPage?: boole
                     >
                         <div className="relative w-full max-w-[600px] aspect-[4/5] sm:aspect-square lg:aspect-[4/5] xl:aspect-square">
                             {/* Main large image (Bottom Right) */}
-                            <div className="absolute bottom-0 right-[-5%] lg:right-[-10%] w-[80%] h-[85%] z-10">
+                            <div className="absolute bottom-0 right-0 sm:right-[-5%] lg:right-[-10%] w-[80%] h-[85%] z-10">
                                 <Image
                                     src={image2}
                                     alt="Fitness Model"
