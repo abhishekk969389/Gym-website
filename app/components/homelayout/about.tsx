@@ -24,7 +24,7 @@ export default function HomeAbout({ isAboutPage = false }: { isAboutPage?: boole
             <div className="absolute inset-0 bg-white opacity-50 z-0"></div>
 
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-12 xl:gap-8">
 
                     {/* Left: Images */}
                     <motion.div 
