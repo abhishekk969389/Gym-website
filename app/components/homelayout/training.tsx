@@ -13,7 +13,7 @@ const data = site.homeCta;
 export default function HomeTraining() {
 
     return (
-        <section className="relative w-full h-90 overflow-hidden flex items-center mt-8 sm:mt-12 lg:mt-16">
+        <section className="relative w-full h-90 overflow-hidden flex items-center mt-8 sm:mt-10 md:mt-12 lg:mt-14">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -28,7 +28,7 @@ export default function HomeTraining() {
             </div>
 
             {/* Content */}
-            <motion.div 
+            <motion.div
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -56,12 +56,12 @@ export default function HomeTraining() {
 
                     {/* Button */}
                     <motion.div variants={itemVariantsLeft}>
-                        <Link 
+                        <Link
                             href={data.button.url}
                             className="inline-flex items-center justify-center gap-2 bg-[#E5192C] text-white px-6 py-2.5 sm:px-8 sm:py-3 rounded-md hover:bg-white hover:text-black transition-colors duration-300 font-medium tracking-wide group"
                         >
-                        {data.button.label}
-                        <FaArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
+                            {data.button.label}
+                            <FaArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
                         </Link>
                     </motion.div>
                 </div>

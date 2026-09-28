@@ -5,6 +5,7 @@ import Topbar from "@/app/components/ui/topbar";
 
 import Navbar from "@/app/components/ui/navbar";
 import Footer from "@/app/components/ui/footer";
+import SmoothScroll from "./components/ui/smoothscroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,12 +33,14 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <header className="sticky top-0 z-50 w-full flex flex-col shadow-md">
-          <Topbar />
-          <Navbar />
-        </header>
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SmoothScroll>
+          <header className="sticky top-0 z-50 w-full flex flex-col shadow-md">
+            <Topbar />
+            <Navbar />
+          </header>
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

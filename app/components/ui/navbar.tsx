@@ -1,11 +1,12 @@
 "use client";
 
 
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IconType } from "react-icons";
-import { FaArrowRight, FaBars } from "react-icons/fa6";
+import { FaArrowRight, FaBars, FaXmark, FaChevronDown } from "react-icons/fa6";
 import { site, NavbarData, SectionProps } from "@/data";
 
 const ICON_MAP: Record<string, IconType> = {
@@ -15,9 +16,19 @@ const ICON_MAP: Record<string, IconType> = {
 const navbarData: NavbarData = site.navbar;
 
 export default function Navbar({ data: propData, className }: SectionProps<NavbarData> = {}) {
-    const data = propData || site.navbar;
+  const data = propData || site.navbar;
   const pathname = usePathname();
   const ButtonIcon = ICON_MAP[navbarData.button.icon] || FaArrowRight;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdownId, setOpenDropdownId] = useState<string | null>(null);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  const toggleDropdown = (id: string) => {
+    setOpenDropdownId((prev) => (prev === id ? null : id));
+  };
 
   return (
     <nav className="w-full bg-[#0a0e14] text-white py-3 sm:py-4 border-b border-gray-800/40">
@@ -38,18 +49,17 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
           {navbarData.links.map((link) => {
             // @ts-ignore
             const hasSubLinks = link.subLinks && link.subLinks.length > 0;
-            const isActive = pathname === link.url || (hasSubLinks && 
+            const isActive = pathname === link.url || (hasSubLinks &&
               // @ts-ignore
               link.subLinks.some((sub: any) => pathname === sub.url || pathname === sub.url.split('#')[0])
             );
-            
+
             return (
               <div key={link.id} className="relative group">
                 {hasSubLinks ? (
                   <button
-                    className={`relative font-medium tracking-wide transition-colors text-sm xl:text-base flex items-center gap-1.5 cursor-default ${
-                      isActive ? "text-[#c40d2e]" : "text-gray-100 hover:text-[#c40d2e]"
-                    }`}
+                    className={`relative font-medium tracking-wide transition-colors text-sm xl:text-base flex items-center gap-1.5 cursor-default ${isActive ? "text-[#c40d2e]" : "text-gray-100 hover:text-[#c40d2e]"
+                      }`}
                   >
                     {link.label}
                     <svg className="w-3 h-3 opacity-70 group-hover:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,9 +72,8 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
                 ) : (
                   <Link
                     href={link.url}
-                    className={`relative font-medium tracking-wide transition-colors text-sm xl:text-base flex items-center gap-1.5 ${
-                      isActive ? "text-[#c40d2e]" : "text-gray-100 hover:text-[#c40d2e]"
-                    }`}
+                    className={`relative font-medium tracking-wide transition-colors text-sm xl:text-base flex items-center gap-1.5 ${isActive ? "text-[#c40d2e]" : "text-gray-100 hover:text-[#c40d2e]"
+                      }`}
                   >
                     {link.label}
                     {isActive && (
@@ -72,7 +81,7 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
                     )}
                   </Link>
                 )}
-                
+
                 {hasSubLinks && (
                   <div className="absolute top-full left-0 pt-6 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <div className="bg-[#0a0e14] shadow-2xl rounded-b-md border-t-2 border-[#E5192C] border border-t-0 border-gray-800/60 overflow-hidden transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
@@ -114,11 +123,83 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
           <div className="hidden sm:block w-[1px] h-8 bg-gray-700/60 shrink-0"></div>
 
           {/* Hamburger Menu */}
-          <button className="text-white hover:text-[#c40d2e] transition-colors p-1">
-            <FaBars className="text-2xl" />
+          <button 
+            className="text-white hover:text-[#c40d2e] transition-colors p-1 lg:cursor-default"
+            onClick={() => {
+              if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+                setIsMobileMenuOpen(!isMobileMenuOpen);
+              }
+            }}
+          >
+            {isMobileMenuOpen ? <FaXmark className="text-2xl" /> : <FaBars className="text-2xl" />}
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-[#0a0e14] border-t border-gray-800/60 shadow-2xl z-50 max-h-[calc(100vh-100px)] overflow-y-auto lg:hidden">
+          <div className="flex flex-col px-4 py-4 space-y-2">
+            {navbarData.links.map((link) => {
+              // @ts-ignore
+              const hasSubLinks = link.subLinks && link.subLinks.length > 0;
+              const isActive = pathname === link.url || (hasSubLinks && 
+                // @ts-ignore
+                link.subLinks.some((sub: any) => pathname === sub.url || pathname === sub.url.split('#')[0])
+              );
+              const isDropdownOpen = openDropdownId === link.id;
+              
+              return (
+                <div key={link.id} className="flex flex-col border-b border-gray-800/40 last:border-0">
+                  {hasSubLinks ? (
+                    <div className="flex flex-col">
+                      <button 
+                        onClick={() => toggleDropdown(link.id)}
+                        className={`flex items-center justify-between font-semibold py-3 w-full text-left transition-colors ${isActive ? "text-[#E5192C]" : "text-gray-100 hover:text-white"}`}
+                      >
+                        {link.label}
+                        <FaChevronDown className={`text-sm transition-transform duration-300 ${isDropdownOpen ? "rotate-180 text-[#E5192C]" : "text-gray-400"}`} />
+                      </button>
+                      
+                      {isDropdownOpen && (
+                        <div className="flex flex-col pl-4 border-l-2 border-[#E5192C]/30 space-y-1 mb-2 mt-1">
+                          {/* @ts-ignore */}
+                          {link.subLinks.map((sub) => (
+                            <Link
+                              key={sub.id}
+                              href={sub.url}
+                              className={`py-2 text-sm transition-colors ${pathname === sub.url ? "text-[#E5192C] font-medium" : "text-gray-400 hover:text-white"}`}
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      href={link.url}
+                      className={`font-semibold py-3 transition-colors ${isActive ? "text-[#E5192C]" : "text-gray-100 hover:text-white"}`}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </div>
+              );
+            })}
+            
+            <div className="pt-4 pb-2 mt-2">
+              <Link
+                href={navbarData.button.url}
+                className="flex items-center justify-center gap-2 bg-[#E5192C] text-white px-5 py-3 rounded-full font-medium hover:bg-red-700 transition-colors"
+              >
+                <span>{navbarData.button.label}</span>
+                <ButtonIcon className="text-sm" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

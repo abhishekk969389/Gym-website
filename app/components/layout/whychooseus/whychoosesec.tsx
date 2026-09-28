@@ -18,7 +18,7 @@ export default function WhyChooseUs({ data, className }: SectionProps<WhyChooseU
     const resolvedData = data || site.whyChooseUs;
 
     return (
-        <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 bg-[#f8f9fa] relative overflow-hidden">
+        <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14">
             {/* Background texture (optional, white/gray mix) */}
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20 z-0"></div>
             

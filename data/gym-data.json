@@ -1275,28 +1275,28 @@
                 "icon": "FaChartLine",
                 "title": "Fitness Assessment",
                 "description": "We analyze your current fitness level and set realistic goals.",
-                "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=400"
+                "image": "/img1.jpg"
               },
               {
                 "number": "02",
                 "icon": "FaAppleAlt",
                 "title": "Personalized Plan",
                 "description": "Get a customized workout and nutrition plan tailored for you.",
-                "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&q=80&w=400"
+                "image": "/img2.jpg"
               },
               {
                 "number": "03",
                 "icon": "IoBarbell",
                 "title": "Train & Track",
                 "description": "Follow your plan, train hard, and track your progress daily.",
-                "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=400"
+                "image": "/img3.jpg"
               },
               {
                 "number": "04",
                 "icon": "PiHeart",
                 "title": "Achieve Results",
                 "description": "Reach your goals, build confidence, and become a stronger you.",
-                "image": "https://images.unsplash.com/photo-1526506159807-60d19dece0e5?auto=format&fit=crop&q=80&w=400"
+                "image": "/img4.jpg"
               }
             ]
           }
@@ -4060,7 +4060,7 @@
               ]
             },
             "bottomSection": {
-              "bgImage": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=1600&q=80",
+              "bgImage": "/img5.jpg",
               "badge": "OUR",
               "title": "Awards",
               "description": "Our dedication to fitness, community wellness and client success has earned us several awards and recognitions over the years.",
@@ -4100,7 +4100,7 @@
         "variants": {
           "GymCerSec1": {
             "leftSection": {
-              "bgImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80",
+              "bgImage": "/img6.jpg",
               "badge": "OUR",
               "title": "Certifications",
               "description": "We are certified by internationally recognized fitness and wellness organizations, ensuring that our training programs follow the highest standards of safety, knowledge and professionalism.",
