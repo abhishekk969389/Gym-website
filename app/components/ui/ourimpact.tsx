@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { site } from "@/data";
 import { FaUsers, FaDumbbell, FaTrophy, FaGlobe } from "react-icons/fa6";
 
@@ -14,6 +14,47 @@ const ICON_MAP: Record<string, React.ElementType> = {
 };
 
 const data = site.homeStats;
+
+function AnimatedCounter({ value }: { value: string }) {
+    const ref = useRef<HTMLSpanElement>(null);
+    const isInView = useInView(ref, { once: true, amount: 0.5 });
+    
+    useEffect(() => {
+        const numMatch = value.replace(/,/g, '').match(/(\d+)/);
+        const targetNum = numMatch ? parseInt(numMatch[1], 10) : 0;
+        const suffix = value.replace(/[\d,]/g, '');
+
+        if (isInView && targetNum > 0) {
+            const duration = 2500;
+            let startTime: number | null = null;
+            
+            const animate = (currentTime: number) => {
+                if (!startTime) startTime = currentTime;
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                const currentNum = Math.floor(easeProgress * targetNum);
+                
+                if (ref.current) {
+                    ref.current.textContent = currentNum.toLocaleString('en-US') + suffix;
+                }
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    if (ref.current) {
+                        ref.current.textContent = value;
+                    }
+                }
+            };
+            requestAnimationFrame(animate);
+        }
+    }, [isInView, value]);
+    
+    const suffix = value.replace(/[\d,]/g, '');
+    return <span ref={ref}>0{suffix}</span>;
+}
 
 export default function OurImpact() {
 
@@ -74,7 +115,7 @@ export default function OurImpact() {
                                     </div>
                                     <div className="flex flex-col justify-center">
                                         <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#E5192C] leading-none mb-1 tracking-tight">
-                                            {stat.value}
+                                            <AnimatedCounter value={stat.value} />
                                         </div>
                                         <div className="text-white text-[10px] sm:text-xs font-bold tracking-wider uppercase mt-1">
                                             {stat.label}

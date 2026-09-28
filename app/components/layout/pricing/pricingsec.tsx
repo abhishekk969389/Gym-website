@@ -116,12 +116,12 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                                 </ul>
 
                                 {/* Button */}
-                                <button className={`w-full py-3.5 px-4 rounded font-bold text-sm sm:text-base uppercase tracking-wider transition-all duration-300
+                                <Link href="/consultation" className={`block text-center w-full py-3.5 px-4 rounded font-bold text-sm sm:text-base uppercase tracking-wider transition-all duration-300
                                     ${plan.isPopular 
                                         ? 'bg-[#E5192C] text-white hover:bg-red-700 hover:shadow-lg hover:shadow-red-700/30' 
                                         : 'bg-white text-[#E5192C] border-2 border-[#E5192C] hover:bg-[#E5192C] hover:text-white'}`}>
                                     {plan.buttonText}
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

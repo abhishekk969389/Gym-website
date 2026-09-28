@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { IconType } from "react-icons";
 import {
@@ -35,7 +35,8 @@ const ICON_MAP: Record<string, IconType> = {
 
 export default function Banner({ data, className }: SectionProps<HomeBannerData> = {}) {
     const homeBannerData = data || site.homeBanner;
-    
+    const [isVideoOpen, setIsVideoOpen] = useState(false);
+
     const PrimaryIcon = ICON_MAP[homeBannerData.primaryButton.icon] || FaArrowRight;
     const SecondaryIcon = ICON_MAP[homeBannerData.secondaryButton.icon] || FaPlay;
 
@@ -48,11 +49,15 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
             >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a0e14]/40 to-transparent"></div>
             </div>
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 z-10 bg-black/70 pointer-events-none block sm:hidden"
+            />
 
             <div className="relative z-10 w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-8 lg:pb-10 flex flex-col lg:flex-row items-start justify-between">
 
                 {/* Left Content Block */}
-                <motion.div 
+                <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -61,11 +66,14 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
                 >
 
                     {/* Subtitle */}
-                    <motion.div variants={itemVariantsLeft} className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold tracking-[0.2em] text-gray-300/80 mb-4 uppercase">
+                    <motion.div variants={itemVariantsLeft} className="flex flex-wrap items-center gap-y-1.5 gap-x-2 sm:gap-x-3 text-xs sm:text-sm font-semibold tracking-[0.2em] text-gray-300/80 mb-4 uppercase">
                         {homeBannerData.subtitle.split('|').map((part, index, array) => (
                             <React.Fragment key={index}>
+                                {index === 2 && <div className="w-full sm:hidden"></div>}
                                 <span>{part.trim()}</span>
-                                {index < array.length - 1 && <span className="text-[#E5192C]">|</span>}
+                                {index < array.length - 1 && (
+                                    <span className={`text-[#E5192C] ${index === 1 ? 'hidden sm:block' : ''}`}>|</span>
+                                )}
                             </React.Fragment>
                         ))}
                     </motion.div>
@@ -96,19 +104,19 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
 
                         <div className="hidden sm:block w-[1px] h-10 bg-red-600/80 shrink-0"></div>
 
-                        <Link
-                            href={homeBannerData.secondaryButton.url}
-                            className="flex items-center gap-3 text-white hover:text-[#E5192C] transition-colors group"
+                        <button
+                            onClick={(e) => { e.preventDefault(); setIsVideoOpen(true); }}
+                            className="flex items-center gap-3 text-white hover:text-[#E5192C] transition-colors group text-left"
                         >
-                            <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center group-hover:border-[#E5192C] transition-colors">
-                                <SecondaryIcon className="ml-1 text-sm" />
+                            <div className="w-10 cursor-pointer h-10 rounded-full border-2 border-white flex items-center justify-center group-hover:border-[#E5192C] transition-colors">
+                                <SecondaryIcon className=" ml-1 text-sm" />
                             </div>
-                            <span className="font-semibold text-sm tracking-wide uppercase leading-tight w-24">
+                            <span className="font-semibold  cursor-pointer text-sm tracking-wide uppercase leading-tight w-24">
                                 {homeBannerData.secondaryButton.label.split('\n').map((word, i) => (
                                     <span key={i} className="block">{word}</span>
                                 ))}
                             </span>
-                        </Link>
+                        </button>
                     </motion.div>
 
                     {/* Bottom Features */}
@@ -135,7 +143,7 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
                 </motion.div>
 
                 {/* Right Content Block (Features List) */}
-                <motion.div 
+                <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -162,6 +170,29 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
                 </motion.div>
 
             </div>
+
+            {/* Video Modal */}
+            {isVideoOpen && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 px-4 backdrop-blur-sm">
+                    <button 
+                        onClick={() => setIsVideoOpen(false)}
+                        className="absolute top-6 right-6 sm:top-10 sm:right-10 text-white hover:text-[#E5192C] transition-colors p-2"
+                    >
+                        <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div className="w-full max-w-5xl aspect-video rounded-xl overflow-hidden shadow-2xl relative bg-black">
+                        <iframe 
+                            // @ts-ignore
+                            src={homeBannerData.secondaryButton.videoUrl} 
+                            className="w-full h-full"
+                            allow="autoplay; encrypted-media; fullscreen" 
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                </div>
+            )}
         </section>
     );
 }

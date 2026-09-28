@@ -14,9 +14,9 @@ export default function CerSec({ data: propData, className }: SectionProps<CerSe
     const data = propData || site.cerSec;
     return (
         <section className="relative bg-white w-full mt-6 overflow-hidden">
-            {/* Split Backgrounds */}
-            <div className="absolute inset-0 flex flex-col lg:flex-row z-0">
-                <div className="w-full lg:w-[30%] relative bg-gray-700">
+            {/* Split Backgrounds (Desktop Only) */}
+            <div className="hidden lg:flex absolute inset-0 z-0">
+                <div className="w-[30%] relative bg-gray-700">
                     <Image
                         src={data.leftSection.bgImage}
                         alt="Certifications Background"
@@ -25,35 +25,48 @@ export default function CerSec({ data: propData, className }: SectionProps<CerSe
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
                 </div>
-                <div className="w-full lg:w-[70%] bg-white"></div>
+                <div className="w-[70%] bg-white"></div>
             </div>
 
             <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row relative z-10">
                 {/* Left Column Content */}
-                <div className="w-full lg:w-[30%] py-8 px-4 sm:py-12 sm:px-8 lg:py-12 lg:pl-8 lg:pr-12 text-white flex flex-col justify-center">
-                    <div className="flex items-center gap-3 mb-4">
-                        <div className="w-8 h-[2px] bg-[#E5192C]"></div>
-                        <span className="tracking-[0.2em] text-sm font-bold uppercase">
-                            {data.leftSection.badge}
-                        </span>
+                <div className="relative w-full lg:w-[30%] py-8 px-4 sm:py-12 sm:px-8 lg:py-12 lg:pl-8 lg:pr-12 text-white flex flex-col justify-center bg-gray-900 lg:bg-transparent">
+                    {/* Mobile Background */}
+                    <div className="absolute inset-0 z-0 lg:hidden overflow-hidden">
+                        <Image
+                            src={data.leftSection.bgImage}
+                            alt="Certifications Background"
+                            fill
+                            className="object-cover opacity-20 mix-blend-overlay"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
                     </div>
 
-                    <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-black uppercase mb-3 tracking-tighter">
-                        {data.leftSection.title}
-                    </h2>
+                    <div className="relative z-10 flex flex-col justify-center">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-8 h-[2px] bg-[#E5192C]"></div>
+                            <span className="tracking-[0.2em] text-sm font-bold uppercase">
+                                {data.leftSection.badge}
+                            </span>
+                        </div>
 
-                    <p className="text-gray-300 text-sm sm:text-base max-w-[280px] leading-relaxed mb-8">
-                        {data.leftSection.description}
-                    </p>
+                        <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-black uppercase mb-3 tracking-tighter">
+                            {data.leftSection.title}
+                        </h2>
 
-                    <div>
-                        <Link
-                            href={data.leftSection.buttonLink}
-                            className="inline-flex items-center justify-center bg-[#E5192C] text-white px-6 py-3 font-bold uppercase tracking-wider text-sm transition-all hover:bg-[#c41525] group gap-2"
-                        >
-                            {data.leftSection.buttonText}
-                            <FaArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
+                        <p className="text-gray-300 text-sm sm:text-base max-w-[280px] leading-relaxed mb-8">
+                            {data.leftSection.description}
+                        </p>
+
+                        <div>
+                            <Link
+                                href={data.leftSection.buttonLink}
+                                className="inline-flex items-center justify-center bg-[#E5192C] text-white px-6 py-3 font-bold uppercase tracking-wider text-sm transition-all hover:bg-[#c41525] group gap-2"
+                            >
+                                {data.leftSection.buttonText}
+                                <FaArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                            </Link>
+                        </div>
                     </div>
                 </div>
 

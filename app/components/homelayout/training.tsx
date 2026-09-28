@@ -13,7 +13,7 @@ const data = site.homeCta;
 export default function HomeTraining() {
 
     return (
-        <section className="relative w-full h-90 overflow-hidden flex items-center mt-8 sm:mt-10 md:mt-12 lg:mt-14">
+        <section className="relative w-full h-90 overflow-hidden flex items-center mt-4 sm:mt-6 md:mt-8 lg:mt-10">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image

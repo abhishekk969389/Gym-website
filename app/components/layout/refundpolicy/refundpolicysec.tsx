@@ -19,12 +19,12 @@ export default function RefundPolicySec({ data: propData, className }: SectionPr
             >
                 {/* Header */}
             <motion.div variants={itemVariants} className="text-center mb-6 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                             <div className="flex items-center justify-center gap-3 ">
-                             <div className="w-8 h-[2px] bg-[#E5192C]"></div>
-                                 <span className="text-[#E5192C] font-bold tracking-[0.2em] uppercase text-sm md:text-base">
+                             <div className="flex items-center justify-center gap-2 sm:gap-3 ">
+                                 <div className="w-8 sm:w-8 h-[2px] bg-[#E5192C]"></div>
+                                 <span className="text-[#E5192C] font-bold tracking-[0.1em] sm:tracking-[0.2em] uppercase text-[12px] sm:text-sm md:text-base whitespace-nowrap">
                                      {data.tag}
                                  </span>
-                                   <div className="w-8 h-[2px] bg-[#E5192C]"></div>
+                                 <div className="w-8 sm:w-8 h-[2px] bg-[#E5192C]"></div>
                              </div>
                              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-2 tracking-tighter text-gray-900 italic">
                                  {data.titleLine1} <span className="text-[#E5192C]">{data.titleLine2}</span>
@@ -47,7 +47,7 @@ export default function RefundPolicySec({ data: propData, className }: SectionPr
                                     className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12 flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-10 items-start"
                                 >
                                     {/* Left Icon */}
-                                    <div className="shrink-0 flex justify-center sm:justify-start">
+                                    <div className="shrink-0 self-center sm:self-start flex justify-center sm:justify-start">
                                     <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-[3px] border-[#FFE8E8] flex items-center justify-center bg-white shadow-sm">
                                         {IconComponent && <IconComponent className="text-2xl sm:text-3xl text-[#E5192C]" />}
                                     </div>

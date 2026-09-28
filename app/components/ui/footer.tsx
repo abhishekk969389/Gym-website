@@ -48,11 +48,11 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12"
+                    className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-x-4 gap-y-10 md:gap-10 pb-12"
                 >
                     
                     {/* Col 1: Logo, Desc, Social */}
-                    <motion.div variants={itemVariants} className="lg:col-span-3 flex flex-col">
+                    <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 lg:col-span-3 flex flex-col">
                         <Link href="/" className="mb-6 inline-block">
                             <img src={resolvedData.logo} alt="Logo" className="w-auto h-14 sm:h-16 lg:h-[72px] object-contain" />
                         </Link>
@@ -72,7 +72,7 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                     </motion.div>
 
                     {/* Col 2: Quick Links */}
-                    <motion.div variants={itemVariants} className="lg:col-span-2">
+                    <motion.div variants={itemVariants} className="col-span-1 lg:col-span-2">
                         <h3 className="text-white font-bold text-lg">{resolvedData.quickLinks.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
                         <ul className="flex flex-col gap-3">
@@ -88,7 +88,7 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                     </motion.div>
 
                     {/* Col 3: Our Services */}
-                    <motion.div variants={itemVariants} className="lg:col-span-2">
+                    <motion.div variants={itemVariants} className="col-span-1 lg:col-span-2">
                         <h3 className="text-white font-bold text-lg">{resolvedData.ourServices.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
                         <ul className="flex flex-col gap-3">
@@ -104,7 +104,7 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                     </motion.div>
 
                     {/* Col 4: Contact Info */}
-                    <motion.div variants={itemVariants} className="lg:col-span-2">
+                    <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 lg:col-span-2">
                         <h3 className="text-white font-bold text-lg">{resolvedData.contactInfo.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
                         <div className="flex flex-col gap-5">
@@ -127,7 +127,7 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                     </motion.div>
 
                     {/* Col 5: Opening Hours */}
-                    <motion.div variants={itemVariants} className="lg:col-span-3 lg:pl-2 xl:pl-8">
+                    <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 lg:col-span-3 lg:pl-2 xl:pl-8">
                         <h3 className="text-white font-bold text-lg">{resolvedData.openingHours.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
                         <div className="flex items-start gap-4">
@@ -161,18 +161,18 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="relative z-10 border-t border-white/90"
             >
-                <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-white text-sm md:text-[16px] ">
+                <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6">
+                    <p className="text-white text-center lg:text-left text-sm md:text-[16px] ">
                         {resolvedData.bottomBar.copyright}
                     </p>
-                    <div className="flex items-center gap-4 text-sm">
+                    <div className="flex flex-wrap justify-center items-center gap-y-2 gap-x-2 sm:gap-x-4 text-sm">
                         {resolvedData.bottomBar.links.map((link: any, idx: number) => (
                             <React.Fragment key={idx}>
-                                <Link href={link.url} className="text-white text-sm md:text-[16px] hover:text-white transition-colors">
+                                <Link href={link.url} className="text-white text-sm md:text-[16px] hover:text-white transition-colors whitespace-nowrap">
                                     {link.label}
                                 </Link>
                                 {idx < resolvedData.bottomBar.links.length - 1 && (
-                                    <span className="text-gray-600">|</span>
+                                    <span className="text-gray-600 shrink-0">|</span>
                                 )}
                             </React.Fragment>
                         ))}

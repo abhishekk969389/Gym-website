@@ -7,10 +7,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IconType } from "react-icons";
 import { FaArrowRight, FaBars, FaXmark, FaChevronDown } from "react-icons/fa6";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaRegClock } from "react-icons/fa";
 import { site, NavbarData, SectionProps } from "@/data";
 
 const ICON_MAP: Record<string, IconType> = {
   FaArrowRight,
+};
+
+const CONTACT_ICON_MAP: Record<string, IconType> = {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaRegClock,
 };
 
 const navbarData: NavbarData = site.navbar;
@@ -20,19 +28,32 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
   const pathname = usePathname();
   const ButtonIcon = ICON_MAP[navbarData.button.icon] || FaArrowRight;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [openDropdownId, setOpenDropdownId] = useState<string | null>(null);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setIsSidebarOpen(false);
   }, [pathname]);
+
+  // Prevent body scroll when sidebar is open
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isSidebarOpen]);
 
   const toggleDropdown = (id: string) => {
     setOpenDropdownId((prev) => (prev === id ? null : id));
   };
 
   return (
+    <>
     <nav className="w-full bg-[#0a0e14] text-white py-3 sm:py-4 border-b border-gray-800/40">
-      <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="relative w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <Link href="/" className="flex items-center shrink-0">
           <Image
             src="/logo-main.png"
@@ -45,7 +66,7 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
         </Link>
 
         {/* Middle: Links */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8 ml-auto mr-4 lg:mr-6 xl:mr-9">
+        <div className="hidden lg:flex items-center gap-4 lg:gap-3 xl:gap-6 2xl:gap-8 lg:absolute lg:left-1/2 lg:-translate-x-1/2 xl:static xl:translate-x-0 xl:left-auto xl:ml-auto mr-4 lg:mr-0 xl:mr-9 z-10">
           {navbarData.links.map((link) => {
             // @ts-ignore
             const hasSubLinks = link.subLinks && link.subLinks.length > 0;
@@ -58,7 +79,7 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
               <div key={link.id} className="relative group">
                 {hasSubLinks ? (
                   <button
-                    className={`relative font-medium tracking-wide transition-colors text-sm xl:text-base flex items-center gap-1.5 cursor-default ${isActive ? "text-[#c40d2e]" : "text-gray-100 hover:text-[#c40d2e]"
+                    className={`relative font-medium tracking-wide transition-colors text-sm lg:text-[15px] xl:text-base flex items-center gap-1.5 cursor-default ${isActive ? "text-[#c40d2e]" : "text-gray-100 hover:text-[#c40d2e]"
                       }`}
                   >
                     {link.label}
@@ -72,7 +93,7 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
                 ) : (
                   <Link
                     href={link.url}
-                    className={`relative font-medium tracking-wide transition-colors text-sm xl:text-base flex items-center gap-1.5 ${isActive ? "text-[#c40d2e]" : "text-gray-100 hover:text-[#c40d2e]"
+                    className={`relative font-medium tracking-wide transition-colors text-sm lg:text-[15px] xl:text-base flex items-center gap-1.5 ${isActive ? "text-[#c40d2e]" : "text-gray-100 hover:text-[#c40d2e]"
                       }`}
                   >
                     {link.label}
@@ -106,14 +127,14 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
         </div>
 
         {/* Right: Actions */}
-        <div className="flex items-center gap-3 sm:gap-4 lg:gap-7 shrink-0">
+        <div className="flex items-center gap-3 sm:gap-4 lg:gap-3 xl:gap-7 shrink-0">
           {/* Separator */}
           <div className="hidden sm:block w-[1px] h-8 bg-gray-700/60 shrink-0"></div>
 
           {/* Action Button */}
           <Link
             href={navbarData.button.url}
-            className="hidden sm:flex items-center gap-2 bg-[#E5192C] hover:bg-red-700 text-white px-5 sm:px-5 py-2.5 sm:py-3 rounded-full transition-colors text-sm xl:text-base"
+            className="hidden sm:flex items-center gap-2 bg-[#E5192C] hover:bg-red-700 text-white px-5 sm:px-5 py-2.5 sm:py-3 lg:px-4 lg:py-2 xl:px-5 xl:py-3 rounded-full transition-colors text-sm lg:text-[13px] xl:text-base"
           >
             <span>{navbarData.button.label}</span>
             <ButtonIcon className="text-sm" />
@@ -124,14 +145,16 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
 
           {/* Hamburger Menu */}
           <button 
-            className="text-white hover:text-[#c40d2e] transition-colors p-1 lg:cursor-default"
+            className="text-white hover:text-[#c40d2e] cursor-pointer transition-colors p-1"
             onClick={() => {
               if (typeof window !== 'undefined' && window.innerWidth < 1024) {
                 setIsMobileMenuOpen(!isMobileMenuOpen);
+              } else {
+                setIsSidebarOpen(!isSidebarOpen);
               }
             }}
           >
-            {isMobileMenuOpen ? <FaXmark className="text-2xl" /> : <FaBars className="text-2xl" />}
+            {(isMobileMenuOpen || isSidebarOpen) ? <FaXmark className="text-2xl" /> : <FaBars className="text-2xl" />}
           </button>
         </div>
       </div>
@@ -201,5 +224,65 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
         </div>
       )}
     </nav>
+
+    {/* Desktop Sidebar Overlay */}
+    <div 
+      className={`fixed inset-0 bg-black/50 z-[999] transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+      onClick={() => setIsSidebarOpen(false)}
+    />
+
+    {/* Desktop Sidebar Panel */}
+    <div 
+      className={`fixed top-0 right-0 h-full w-[380px] max-w-[90vw] bg-white z-[1000] shadow-2xl transform transition-transform duration-400 ease-in-out overflow-y-auto ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}
+    >
+      {/* Sidebar Header */}
+      <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
+        <Link href="/" onClick={() => setIsSidebarOpen(false)}>
+          <Image
+            src={navbarData.sidebar.logo}
+            alt={navbarData.logoAlt}
+            width={250}
+            height={80}
+            className="w-auto h-12 object-contain"
+          />
+        </Link>
+        <button 
+          onClick={() => setIsSidebarOpen(false)}
+          className="w-9 h-9 cursor-pointer rounded-full bg-[#E5192C] flex items-center justify-center text-white hover:bg-red-700 transition-colors"
+        >
+          <FaXmark className="text-lg" />
+        </button>
+      </div>
+
+      {/* About Us */}
+      <div className="px-6 py-6 border-b border-gray-100">
+        <h3 className="text-xl font-bold text-[#111820] mb-3">{navbarData.sidebar.aboutTitle}</h3>
+        <p className="text-sm sm:text-sm md:text-base text-gray-500 leading-relaxed">
+          {navbarData.sidebar.aboutDescription}
+        </p>
+      </div>
+
+      {/* Contact Information */}
+      <div className="px-6 py-6">
+        <h3 className="text-xl font-bold text-[#111820] mb-5">{navbarData.sidebar.contactTitle}</h3>
+        <div className="flex flex-col gap-5">
+          {navbarData.sidebar.contactItems.map((item, index) => {
+            const ContactIcon = CONTACT_ICON_MAP[item.icon];
+            return (
+              <div key={index} className="flex items-start gap-4">
+                <div className="w-11 h-11 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0">
+                  {ContactIcon && <ContactIcon className="text-[#E5192C] text-lg" />}
+                </div>
+                <div>
+                  <h4 className="font-bold text-[#111820] text-[15px] mb-0.5">{item.title}</h4>
+                  <p className="text-sm text-gray-500">{item.text}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+    </>
   );
 }

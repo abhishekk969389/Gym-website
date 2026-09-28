@@ -46,7 +46,7 @@ export default function HomeBlog({ isBlogPage = false }: HomeBlogProps) {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.05 }}
                 className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8"
             >
                 
@@ -86,11 +86,12 @@ export default function HomeBlog({ isBlogPage = false }: HomeBlogProps) {
                         >
                             
                             {/* Image Container */}
-                            <div className="relative w-full h-50 aspect-[4/3] overflow-hidden">
+                            <div className="relative w-full h-[240px] sm:h-[260px] md:h-[220px] lg:h-[250px] overflow-hidden shrink-0">
                                 <Image
                                     src={post.image}
                                     alt={post.title}
                                     fill
+                                    unoptimized
                                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                                 {/* Category Tag */}

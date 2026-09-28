@@ -214,6 +214,34 @@
               "label": "Free Consultation",
               "url": "/consultation",
               "icon": "FaArrowRight"
+            },
+            "sidebar": {
+              "logo": "/logo.png",
+              "aboutTitle": "About Us",
+              "aboutDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut tur incidunt ut labore et",
+              "contactTitle": "Contact Information",
+              "contactItems": [
+                {
+                  "icon": "FaMapMarkerAlt",
+                  "title": "Office Address",
+                  "text": "4252 Stanton Hollow Road, New York USA"
+                },
+                {
+                  "icon": "FaPhoneAlt",
+                  "title": "Call Us",
+                  "text": "+1 (044) 123 456 789"
+                },
+                {
+                  "icon": "FaEnvelope",
+                  "title": "Email Us",
+                  "text": "info@golan.com"
+                },
+                {
+                  "icon": "FaRegClock",
+                  "title": "Office Open",
+                  "text": "Sun - Fri (08AM - 10PM)"
+                }
+              ]
             }
           }
         }
@@ -233,7 +261,8 @@
             },
             "secondaryButton": {
               "label": "WATCH\nMY STORY",
-              "url": "/story",
+              "url": "#",
+              "videoUrl": "https://www.youtube.com/embed/UBMk30rjy0o",
               "icon": "FaPlay"
             },
             "bottomFeatures": [
@@ -404,7 +433,7 @@
               ]
             },
             "bottomBar": {
-              "copyright": "© 2024 GolanFitness. All Rights Reserved.",
+              "copyright": "© 2026 All Rights Reserved. powered by Lestow",
               "links": [
                 {
                   "label": "Privacy Policy",
@@ -1266,7 +1295,7 @@
             "description": "Follow our proven process to transform your body and achieve your fitness goals. We provide step-by-step guidance to ensure you reach your maximum potential.",
             "button": {
               "label": "START YOUR JOURNEY",
-              "url": "#",
+              "url": "/program",
               "icon": "FaArrowRight"
             },
             "steps": [
@@ -1870,7 +1899,7 @@
             "description": "We make fitness simple and effective. From understanding your goals to helping you achieve real results, our process is designed to keep you motivated, consistent and on the right track.",
             "button": {
               "label": "Start Your Journey",
-              "url": "#start",
+              "url": "/program",
               "icon": "FaArrowRight"
             },
             "centerTextLine1": "HOW IT",

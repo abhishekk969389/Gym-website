@@ -32,11 +32,11 @@ export default function HomeAbout({ isAboutPage = false }: { isAboutPage?: boole
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="w-full lg:w-1/2 flex justify-center lg:justify-start relative"
+                        className="w-full lg:w-[42%] xl:w-1/2 flex justify-center lg:justify-start relative"
                     >
                         <div className="relative w-full max-w-[600px] aspect-[4/5] sm:aspect-square lg:aspect-[4/5] xl:aspect-square">
                             {/* Main large image (Bottom Right) */}
-                            <div className="absolute bottom-0 right-[-5%] lg:right-[-10%] w-[95%] h-[85%] z-10">
+                            <div className="absolute bottom-0 right-[-5%] lg:right-[-10%] w-[80%] h-[85%] z-10">
                                 <Image
                                     src={image2}
                                     alt="Fitness Model"
@@ -71,7 +71,7 @@ export default function HomeAbout({ isAboutPage = false }: { isAboutPage?: boole
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className={`w-full lg:w-1/2 flex flex-col items-start pt-4 lg:pt-0 pl-0 lg:pl-10 ${isAboutPage ? 'xl:pl-20' : 'xl:pl-16'}`}
+                        className={`w-full lg:w-[58%] xl:w-1/2 flex flex-col items-start pt-4 lg:pt-0 pl-0 lg:pl-12 ${isAboutPage ? 'xl:pl-20' : 'xl:pl-16'}`}
                     >
                         {isAboutPage ? (
                             <>
@@ -106,7 +106,7 @@ export default function HomeAbout({ isAboutPage = false }: { isAboutPage?: boole
                                 </motion.div>
 
                                 {/* Title */}
-                                <motion.h2 variants={itemVariantsRight} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase italic leading-none mb-4 tracking-tight">
+                                <motion.h2 variants={itemVariantsRight} className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-5xl font-black uppercase italic leading-none mb-4 tracking-tight">
                                     <span className="text-[#1a1a1a] block">{homeData.titleLine1}</span>
                                     <span className="text-[#E5192C] block whitespace-nowrap">{homeData.titleLine2}</span>
                                 </motion.h2>

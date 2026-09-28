@@ -46,12 +46,12 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                     className="flex flex-col items-center justify-center mb-6"
                 >
                     {/* Tag */}
-                    <motion.div variants={itemVariants} className="flex items-center justify-center gap-3 mb-1">
-                        <div className="w-16 sm:w-20 h-[1px] bg-[#E5192C]"></div>
-                        <span className={`${isProgramPage ? "text-black" : "text-gray-300"} tracking-[0.3em] text-xs sm:text-sm font-medium uppercase`}>
+                    <motion.div variants={itemVariants} className="flex items-center justify-center gap-2 sm:gap-3 mb-1">
+                        <div className="w-8 sm:w-20 h-[1px] bg-[#E5192C]"></div>
+                        <span className={`${isProgramPage ? "text-black" : "text-gray-300"} tracking-[0.3em] text-xs sm:text-sm font-medium uppercase text-center`}>
                             {data.tag}
                         </span>
-                        <div className="w-16 sm:w-20 h-[1px] bg-[#E5192C]"></div>
+                        <div className="w-8 sm:w-20 h-[1px] bg-[#E5192C]"></div>
                     </motion.div>
 
                     {/* Title */}
@@ -147,20 +147,20 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="mt-8 flex justify-center"
                     >
-                        <div className="flex items-center">
-                            <div className="w-16 sm:w-24 h-[1px] bg-white/80"></div>
+                        <div className="flex items-center w-full justify-center overflow-hidden">
+                            <div className="w-8 sm:w-24 h-[1px] bg-white/80 shrink"></div>
                         <Link 
                             href={data.button.url}
-                            className="mx-4 flex items-center gap-3 bg-[#E5192C] text-white px-6  py-2 rounded-full hover:bg-white hover:text-black transition-colors duration-300 group"
+                            className="mx-2 sm:mx-4 flex items-center gap-2 sm:gap-3 bg-[#E5192C] text-white px-4 sm:px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors duration-300 group shrink-0"
                         >
-                            <span className="font-semibold tracking-wider text-sm sm:text-base">
+                            <span className="font-semibold tracking-wider text-xs sm:text-base whitespace-nowrap text-center">
                                 {data.button.label}
                             </span>
-                            <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center group-hover:bg-[#E5192C] transition-colors">
-                                <FaArrowRight className="text-white text-[14px]" />
+                            <div className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 rounded-full bg-black flex items-center justify-center group-hover:bg-[#E5192C] transition-colors">
+                                <FaArrowRight className="text-white text-[12px] sm:text-[14px]" />
                             </div>
                         </Link>
-                        <div className="w-16 sm:w-24 h-[1px] bg-white/80"></div>
+                        <div className="w-8 sm:w-24 h-[1px] bg-white/80 shrink"></div>
                     </div>
                 </motion.div>
                 )}
