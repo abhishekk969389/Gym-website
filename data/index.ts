@@ -33,9 +33,7 @@ export type ConsultationSecData = typeof sec.ConsultationSec.variants.GymConsult
 export type TeamSecData = typeof sec.TeamSec.variants.GymTeamSec1;
 export type TeamMember = TeamSecData["members"][0];
 export type MissionSecData = typeof sec.MissionSec.variants.GymMissionSec1;
-// @ts-ignore
 export type AwardSecData = typeof sec.AwardSec.variants.GymAwardSec1;
-// @ts-ignore
 export type CerSecData = typeof sec.CerSec.variants.GymCerSec1;
 
 export type PrivacyPolicySecData = typeof sec.PrivacyPolicySec.variants.GymPrivacyPolicySec1;
@@ -69,9 +67,7 @@ export const site = {
   consultationSec: sec.ConsultationSec.variants.GymConsultationSec1,
   teamSec: sec.TeamSec.variants.GymTeamSec1,
   missionSec: sec.MissionSec.variants.GymMissionSec1,
-  // @ts-ignore
   awardSec: sec.AwardSec.variants.GymAwardSec1,
-  // @ts-ignore
   cerSec: sec.CerSec.variants.GymCerSec1,
   privacyPolicySec: sec.PrivacyPolicySec.variants.GymPrivacyPolicySec1,
   refundPolicySec: sec.RefundPolicySec.variants.GymRefundPolicySec1,

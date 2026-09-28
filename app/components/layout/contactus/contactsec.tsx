@@ -24,8 +24,6 @@ export default function ContactSec({ data, className }: SectionProps<ContactPage
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14 relative">
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-
-                {/* Header */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -50,8 +48,6 @@ export default function ContactSec({ data, className }: SectionProps<ContactPage
                         {resolvedData.description}
                     </motion.p>
                 </motion.div>
-
-                {/* Main Content (3 Columns) */}
                 <motion.div 
                     variants={containerVariants}
                     initial="hidden"
@@ -59,8 +55,6 @@ export default function ContactSec({ data, className }: SectionProps<ContactPage
                     viewport={{ once: true, amount: 0.1 }}
                     className="flex flex-col lg:flex-row gap-6 lg:gap-6 h-auto lg:h-[600px]"
                 >
-
-                    {/* Left Column (Contact Info) */}
                     <motion.div variants={itemVariants} className="w-full lg:w-[28%] bg-[#080d14] text-white p-6 flex flex-col justify-center rounded-2xl overflow-hidden">
                         <div className="flex flex-col gap-8">
                             {resolvedData.contactInfo.map((item: any, index: number) => {
@@ -86,8 +80,6 @@ export default function ContactSec({ data, className }: SectionProps<ContactPage
                             })}
                         </div>
                     </motion.div>
-
-                    {/* Center Column (Image) */}
                     <motion.div variants={itemVariants} className="w-full lg:w-[28%] relative hidden md:block h-[400px] lg:h-full rounded-2xl overflow-hidden">
                         <Image
                             src={resolvedData.centerImage.src}
@@ -95,27 +87,21 @@ export default function ContactSec({ data, className }: SectionProps<ContactPage
                             fill
                             className="object-cover"
                         />
-                        {/* Overlay Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
 
-                        {/* Top Text */}
                         <div className="absolute top-10 right-6 text-right font-black italic tracking-tighter uppercase leading-[0.9] -rotate-[6deg]">
                             <div className="text-white text-2xl">{resolvedData.centerImage.topTextLine1}</div>
                             <div className="text-white text-2xl">{resolvedData.centerImage.topTextLine2}</div>
                             <div className="text-white text-2xl">{resolvedData.centerImage.topTextLine3}</div>
                             <div className="text-[#E5192C] text-2xl relative inline-block mt-1">
                                 {resolvedData.centerImage.topTextLine4}
-                                {/* Brush underline effect */}
                                 <div className="absolute -bottom-2 right-0 w-[100%] h-[5px] bg-[#E5192C] rounded-full"></div>
                                 <div className="absolute -bottom- right-2 w-[85%] h-[2px] bg-[#E5192C] rounded-full opacity-90"></div>
                             </div>
                         </div>
-
-                        {/* Bottom Text */}
                         <div className="absolute bottom-10 right-6 flex flex-col items-center -rotate-[8deg]">
                             <div className={`text-white text-3xl whitespace-pre-line leading-[0.9] text-center relative ${yellowtail.className}`}>
                                 {resolvedData.centerImage.bottomText}
-                                {/* Brush underline effect */}
                                 <div className="mt-2">
                                 <div className="absolute -bottom-2 -right-4 w-[120%] h-[4px] bg-[#E5192C] rounded-full -rotate-2"></div>
                                 <div className="absolute right-0 w-[100%] h-[2px] bg-[#E5192C] rounded-full opacity-90 -rotate-2"></div>
@@ -123,8 +109,6 @@ export default function ContactSec({ data, className }: SectionProps<ContactPage
                             </div>
                         </div>
                     </motion.div>
-
-                    {/* Right Column (Form) */}
                     <motion.div variants={itemVariants} className="w-full lg:w-[44%] bg-white p-8 sm:p-10 flex flex-col justify-start rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                         <div className="flex items-center gap-3 mb-2">
                             <span className="text-[#E5192C] tracking-[0.3em] text-sm sm:text-sm md:text-base font-bold uppercase italic">
@@ -197,7 +181,6 @@ export default function ContactSec({ data, className }: SectionProps<ContactPage
                                     <span className="text-gray-900 text-3xl whitespace-pre-line leading-[0.8] text-center">
                                         {resolvedData.form.bottomScriptText}
                                     </span>
-                                    {/* Brush underline effect */}
                                     <div className="mt-1">
                                         <div className="absolute -bottom-1 -right-2 w-[110%] h-[3px] bg-[#E5192C] rounded-full -rotate-2"></div>
                                         <div className="absolute -bottom-1.5 right-1 w-[90%] h-[2px] bg-[#E5192C] rounded-full opacity-90 -rotate-2"></div>

@@ -42,7 +42,6 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
 
     return (
         <section className={`relative w-full flex items-start bg-[#0a0e14] overflow-hidden ${className || ""}`}>
-            {/* Background Image & Overlay */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
                 style={{ backgroundImage: "url('/home-banner.png')" }}
@@ -55,8 +54,6 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
             />
 
             <div className="relative z-10 w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-8 lg:pb-10 flex flex-col lg:flex-row items-start justify-between">
-
-                {/* Left Content Block */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -64,8 +61,6 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
                     viewport={{ once: true, amount: 0.2 }}
                     className="w-full lg:w-[60%] flex flex-col"
                 >
-
-                    {/* Subtitle */}
                     <motion.div variants={itemVariantsLeft} className="flex flex-wrap items-center gap-y-1.5 gap-x-2 sm:gap-x-3 text-xs sm:text-sm font-semibold tracking-[0.2em] text-gray-300/80 mb-4 uppercase">
                         {homeBannerData.subtitle.split('|').map((part, index, array) => (
                             <React.Fragment key={index}>
@@ -78,19 +73,16 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
                         ))}
                     </motion.div>
 
-                    {/* Title */}
                     <motion.h1 variants={itemVariantsLeft} className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-3 uppercase italic tracking-tight">
                         <span className="block">{homeBannerData.titleLine1}</span>
                         <span className="block text-[#E5192C] text-3xl sm:text-4xl md:text-6xl lg:text-7xl">{homeBannerData.titleLine2}</span>
                         <span className="block text-2xl sm:text-3xl md:text-5xl lg:text-[3.5rem]">{homeBannerData.titleLine3}</span>
                     </motion.h1>
 
-                    {/* Description */}
                     <motion.p variants={itemVariantsLeft} className="text-gray-200 text-sm sm:text-sm md:text-base max-w-md mb-3 leading-relaxed">
                         {homeBannerData.description}
                     </motion.p>
 
-                    {/* Buttons */}
                     <motion.div variants={itemVariantsLeft} className="flex flex-wrap items-center gap-6 sm:gap-8 mb-8">
                         <Link
                             href={homeBannerData.primaryButton.url}
@@ -118,8 +110,6 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
                             </span>
                         </button>
                     </motion.div>
-
-                    {/* Bottom Features */}
                     <motion.div variants={itemVariantsLeft} className="flex flex-wrap items-center gap-4 sm:gap-5">
                         {homeBannerData.bottomFeatures.map((feature, index) => {
                             const Icon = ICON_MAP[feature.icon];
@@ -142,7 +132,6 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
                     </motion.div>
                 </motion.div>
 
-                {/* Right Content Block (Features List) */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -171,7 +160,6 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
 
             </div>
 
-            {/* Video Modal */}
             {isVideoOpen && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 px-4 backdrop-blur-sm">
                     <button 
@@ -184,7 +172,6 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
                     </button>
                     <div className="w-full max-w-5xl aspect-video rounded-xl overflow-hidden shadow-2xl relative bg-black">
                         <iframe 
-                            // @ts-ignore
                             src={homeBannerData.secondaryButton.videoUrl} 
                             className="w-full h-full"
                             allow="autoplay; encrypted-media; fullscreen" 

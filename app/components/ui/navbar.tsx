@@ -36,7 +36,6 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
     setIsSidebarOpen(false);
   }, [pathname]);
 
-  // Prevent body scroll when sidebar is open
   useEffect(() => {
     if (isSidebarOpen) {
       document.body.style.overflow = 'hidden';
@@ -65,13 +64,10 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
           />
         </Link>
 
-        {/* Middle: Links */}
         <div className="hidden lg:flex items-center gap-4 lg:gap-3 xl:gap-6 2xl:gap-8 lg:absolute lg:left-1/2 lg:-translate-x-1/2 xl:static xl:translate-x-0 xl:left-auto xl:ml-auto mr-4 lg:mr-0 xl:mr-9 z-10">
           {navbarData.links.map((link) => {
-            // @ts-ignore
             const hasSubLinks = link.subLinks && link.subLinks.length > 0;
             const isActive = pathname === link.url || (hasSubLinks &&
-              // @ts-ignore
               link.subLinks.some((sub: any) => pathname === sub.url || pathname === sub.url.split('#')[0])
             );
 
@@ -107,7 +103,6 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
                   <div className="absolute top-full left-0 pt-6 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <div className="bg-[#0a0e14] shadow-2xl rounded-b-md border-t-2 border-[#E5192C] border border-t-0 border-gray-800/60 overflow-hidden transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                       <div className="py-2">
-                        {/* @ts-ignore */}
                         {link.subLinks.map((sub) => (
                           <Link
                             key={sub.id}
@@ -125,13 +120,8 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
             );
           })}
         </div>
-
-        {/* Right: Actions */}
         <div className="flex items-center gap-3 sm:gap-4 lg:gap-3 xl:gap-7 shrink-0">
-          {/* Separator */}
           <div className="hidden sm:block w-[1px] h-8 bg-gray-700/60 shrink-0"></div>
-
-          {/* Action Button */}
           <Link
             href={navbarData.button.url}
             className="hidden sm:flex items-center gap-2 bg-[#E5192C] hover:bg-red-700 text-white px-5 sm:px-5 py-2.5 sm:py-3 lg:px-4 lg:py-2 xl:px-5 xl:py-3 rounded-full transition-colors text-sm lg:text-[13px] xl:text-base"
@@ -139,11 +129,7 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
             <span>{navbarData.button.label}</span>
             <ButtonIcon className="text-sm" />
           </Link>
-
-          {/* Separator */}
           <div className="hidden sm:block w-[1px] h-8 bg-gray-700/60 shrink-0"></div>
-
-          {/* Hamburger Menu */}
           <button 
             className="text-white hover:text-[#c40d2e] cursor-pointer transition-colors p-1"
             onClick={() => {
@@ -158,16 +144,12 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
           </button>
         </div>
       </div>
-
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-[#0a0e14] border-t border-gray-800/60 shadow-2xl z-50 max-h-[calc(100vh-100px)] overflow-y-auto lg:hidden">
           <div className="flex flex-col px-4 py-4 space-y-2">
             {navbarData.links.map((link) => {
-              // @ts-ignore
               const hasSubLinks = link.subLinks && link.subLinks.length > 0;
               const isActive = pathname === link.url || (hasSubLinks && 
-                // @ts-ignore
                 link.subLinks.some((sub: any) => pathname === sub.url || pathname === sub.url.split('#')[0])
               );
               const isDropdownOpen = openDropdownId === link.id;
@@ -186,7 +168,6 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
                       
                       {isDropdownOpen && (
                         <div className="flex flex-col pl-4 border-l-2 border-[#E5192C]/30 space-y-1 mb-2 mt-1">
-                          {/* @ts-ignore */}
                           {link.subLinks.map((sub) => (
                             <Link
                               key={sub.id}
@@ -225,17 +206,13 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
       )}
     </nav>
 
-    {/* Desktop Sidebar Overlay */}
     <div 
       className={`fixed inset-0 bg-black/50 z-[999] transition-opacity duration-300 ${isSidebarOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
       onClick={() => setIsSidebarOpen(false)}
     />
-
-    {/* Desktop Sidebar Panel */}
     <div 
       className={`fixed top-0 right-0 h-full w-[380px] max-w-[90vw] bg-white z-[1000] shadow-2xl transform transition-transform duration-400 ease-in-out overflow-y-auto ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}
     >
-      {/* Sidebar Header */}
       <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
         <Link href="/" onClick={() => setIsSidebarOpen(false)}>
           <Image
@@ -253,16 +230,12 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
           <FaXmark className="text-lg" />
         </button>
       </div>
-
-      {/* About Us */}
       <div className="px-6 py-6 border-b border-gray-100">
         <h3 className="text-xl font-bold text-[#111820] mb-3">{navbarData.sidebar.aboutTitle}</h3>
         <p className="text-sm sm:text-sm md:text-base text-gray-500 leading-relaxed">
           {navbarData.sidebar.aboutDescription}
         </p>
       </div>
-
-      {/* Contact Information */}
       <div className="px-6 py-6">
         <h3 className="text-xl font-bold text-[#111820] mb-5">{navbarData.sidebar.contactTitle}</h3>
         <div className="flex flex-col gap-5">

@@ -21,7 +21,6 @@ import {
     FaMinus 
 } from "react-icons/fa";
 
-// Dynamic Icon Map
 const ICON_MAP: Record<string, IconType> = {
     FaRegQuestionCircle,
     FaRegIdCard,
@@ -82,13 +81,10 @@ const AccordionItem = ({ question, index }: { question: FaqQuestion; index: numb
 export default function FaqSec({ data: propData, className }: SectionProps<FaqSecData> = {}) {
     const data = propData || site.faqSec;
     const [activeCategory, setActiveCategory] = useState(data.categories[0].id);
-
-    // Update active category based on scroll position
     useEffect(() => {
         const handleScroll = () => {
             const categoryElements = data.categories.map(cat => document.getElementById(cat.id));
-            const scrollPosition = window.scrollY + 200; // Offset for sticky header
-
+            const scrollPosition = window.scrollY + 200; 
             for (let i = categoryElements.length - 1; i >= 0; i--) {
                 const el = categoryElements[i];
                 if (el && el.offsetTop <= scrollPosition) {
@@ -106,7 +102,7 @@ export default function FaqSec({ data: propData, className }: SectionProps<FaqSe
         const el = document.getElementById(id);
         if (el) {
             window.scrollTo({
-                top: el.offsetTop - 100, // Offset for sticky header
+                top: el.offsetTop - 100, 
                 behavior: "smooth"
             });
         }
@@ -122,11 +118,10 @@ export default function FaqSec({ data: propData, className }: SectionProps<FaqSe
                 className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8"
             >
                 
-                {/* Header Section */}
                 <motion.div variants={itemVariants} className="flex flex-col items-center justify-center mb-8">
                     <div className="flex items-center justify-center gap-3">
                        <div className="w-10 sm:w-16 h-[1px] bg-[#E5192C]"></div>
-                        <span className="text-black tracking-[0.2em] sm:tracking-[0.3em] text-xs sm:text-sm font-medium uppercase">
+                        <span className="text-[#E5192C] tracking-[0.2em] sm:tracking-[0.3em] text-xs sm:text-sm font-medium uppercase">
                             {data.tag}
                         </span>
                  <div className="w-10 sm:w-16 h-[1px] bg-[#E5192C]"></div>
@@ -139,14 +134,11 @@ export default function FaqSec({ data: propData, className }: SectionProps<FaqSe
                     </p>
                 </motion.div>
 
-                {/* Main Content */}
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 relative">
                     
-                    {/* Left Sidebar */}
                     <motion.div variants={itemVariantsLeft} className="lg:w-[350px] shrink-0">
                         <div className="sticky top-24 flex flex-col gap-8">
                             
-                            {/* Navigation List */}
                             <div className="flex flex-col gap-2">
                                 {data.categories.map((cat) => {
                                     const Icon = ICON_MAP[cat.icon];
@@ -165,8 +157,6 @@ export default function FaqSec({ data: propData, className }: SectionProps<FaqSe
                                     );
                                 })}
                             </div>
-
-                            {/* Still Have Questions Card */}
                             <div className="relative rounded-2xl overflow-hidden text-white group bg-black">
                                 <div className="absolute inset-0 z-0">
                                     <Image
@@ -217,7 +207,6 @@ export default function FaqSec({ data: propData, className }: SectionProps<FaqSe
                         </div>
                     </motion.div>
 
-                    {/* Right Content */}
                     <motion.div variants={itemVariantsRight} className="flex-1 flex flex-col gap-12 lg:gap-16">
                         {data.categories.map((category) => {
                             const Icon = ICON_MAP[category.icon];

@@ -28,7 +28,6 @@ export default function TeamSidebar({ data, className }: SectionProps<TeamMember
             transition={{ duration: 0.6 }}
             className="w-full lg:w-[450px] shrink-0 flex flex-col gap-8"
         >
-            {/* Image & Quote */}
             <div className="relative w-full h-[600px] rounded-xl overflow-hidden group shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
                 <Image
                     src={member.image}
@@ -37,7 +36,6 @@ export default function TeamSidebar({ data, className }: SectionProps<TeamMember
                     className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
                 
-                {/* Quote Box (Black Overlay) */}
                 <div className="absolute bottom-0 left-0 right-0 bg-[#0a0e14] p-6 sm:p-8 flex items-start gap-4">
                     <FaQuoteLeft className="text-[#E5192C] text-3xl shrink-0 opacity-100 mt-1" />
                     <div className="flex flex-col">
@@ -50,8 +48,6 @@ export default function TeamSidebar({ data, className }: SectionProps<TeamMember
                     </div>
                 </div>
             </div>
-
-            {/* Quick Info */}
             <div className="bg-white rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.03)] border border-gray-100 p-6 sm:p-8">
                 <div className="mb-6">
                     <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.quickInfoTitle}</h3>

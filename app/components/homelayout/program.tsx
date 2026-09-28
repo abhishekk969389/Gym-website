@@ -37,7 +37,6 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
         <section className={`${isProgramPage ? "bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14" : "bg-[#0a0e14] mt-8 sm:mt-10 md:mt-12 lg:mt-14"} relative overflow-hidden`}>
             <div className={`relative z-10 ${isProgramPage ? "" : "py-8 sm:py-10 md:py-12 lg:py-14"} max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8`}>
                 
-                {/* Header Section */}
                 <motion.div 
                     variants={containerVariants}
                     initial="hidden"
@@ -45,7 +44,6 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                     viewport={{ once: true, amount: 0.2 }}
                     className="flex flex-col items-center justify-center mb-6"
                 >
-                    {/* Tag */}
                     <motion.div variants={itemVariants} className="flex items-center justify-center gap-2 sm:gap-3 mb-1">
                         <div className="w-8 sm:w-20 h-[1px] bg-[#E5192C]"></div>
                         <span className={`${isProgramPage ? "text-black" : "text-gray-300"} tracking-[0.3em] text-xs sm:text-sm font-medium uppercase text-center`}>
@@ -53,20 +51,14 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                         </span>
                         <div className="w-8 sm:w-20 h-[1px] bg-[#E5192C]"></div>
                     </motion.div>
-
-                    {/* Title */}
                     <motion.h2 variants={itemVariants} className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-2 tracking-tighter">
                         <span className={isProgramPage ? "text-black" : "text-white"}>{data.titleLine1} </span>
                         <span className="text-[#E5192C]">{data.titleLine2}</span>
                     </motion.h2>
-
-                    {/* Subtitle */}
                     <motion.p variants={itemVariants} className={`${isProgramPage ? "text-gray-600" : "text-white"} text-center text-sm sm:text-base max-w-lg mx-auto leading-relaxed`}>
                         {data.subtitle}
                     </motion.p>
                 </motion.div>
-
-                {/* Programs Grid */}
                 <motion.div 
                     variants={containerVariants}
                     initial="hidden"
@@ -82,7 +74,6 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                                 variants={itemVariants}
                                 className={`relative overflow-hidden ${isProgramPage ? "bg-white border-gray-200 hover:border-gray-300" : "bg-black border-gray-700 hover:border-gray-500"} border flex flex-col h-[240px] sm:h-[260px] group transition-colors duration-300`}
                             >
-                                {/* Background Image (Right Side) */}
                                 <div className="absolute right-0 top-0 bottom-0 w-[65%] z-0">
                                     <Image
                                         src={program.bgImage}
@@ -91,14 +82,11 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </div>
-
-                                {/* Content Overlay (Left Side with Skewed Cut) */}
                                 <div 
                                     className={`absolute left-0 top-0 bottom-0 z-10 w-[65%] ${isProgramPage ? "bg-white shadow-[10px_0_15px_-5px_rgba(0,0,0,0.1)]" : "bg-[#080808]"}`}
                                     style={{ clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0 100%)' }}
                                 >
                                     <div className="relative w-[90%] h-full p-4 lg:p-5 flex flex-col">
-                                        {/* Top Row: Number & Icon */}
                                         <div className="flex items-center gap-3 mb-2 sm:mb-3">
                                             <span 
                                                 className="text-4xl sm:text-5xl font-black text-transparent"
@@ -110,8 +98,6 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                                                 {Icon && <Icon className="text-white text-lg" />}
                                             </div>
                                         </div>
-
-                                        {/* Content */}
                                         <div className="flex flex-col flex-1">
                                             <h3 className={`${isProgramPage ? "text-[#0d1624]" : "text-white"} text-base lg:text-lg font-black mb-1 whitespace-nowrap overflow-hidden text-ellipsis`}>
                                                 {program.title}
@@ -119,8 +105,6 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                                             <p className={`${isProgramPage ? "text-gray-600" : "text-gray-300"} text-xs sm:text-[13px] md:text-[15px] leading-snug mb-3 pr-2`}>
                                                 {program.description}
                                             </p>
-
-                                            {/* Link */}
                                             <Link 
                                                 href={`/programdetails?name=${program.title.replace(/ /g, '-').toLowerCase()}`} 
                                                 className={`inline-flex items-center gap-2 ${isProgramPage ? "text-[#E5192C] hover:text-black" : "text-white hover:text-gray-300"} text-[13px] font-bold group/link transition-colors mt-auto`}
@@ -137,8 +121,6 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                         );
                     })}
                 </motion.div>
-
-                {/* Bottom Button */}
                 {!isProgramPage && (
                     <motion.div 
                         initial={{ opacity: 0, y: 30 }}

@@ -31,16 +31,11 @@ export default function BlogContent({ data, className }: SectionProps<BlogPost> 
             viewport={{ once: true, amount: 0.1 }}
             className="flex-1 w-full lg:max-w-[70%] flex flex-col"
         >
-            {/* Title */}
             <motion.h1 variants={itemVariants} className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase mb-3 mt-2 tracking-tighter text-gray-900">
                 {post.title.split(' ').map((word, idx) => (
-                    // Optional styling if the user wants red words, assuming first word or specific pattern is red 
-                    // To match the screenshot exactly, it has "a Healthier You" in red. We'll just style the whole title and let them refine it.
                     <span key={idx} className={idx > post.title.split(' ').length - 4 ? 'text-[#E5192C] inline-block mr-2' : 'inline-block mr-2'}>{word}</span>
                 ))}
             </motion.h1>
-
-            {/* Meta tags */}
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-5 sm:gap-6 text-[14px] text-gray-500 font-medium mb-6 sm:mb-8">
                 <div className="flex items-center gap-2">
                     <FaUserAlt className="text-[#E5192C] h-5 w-5" />
@@ -55,8 +50,6 @@ export default function BlogContent({ data, className }: SectionProps<BlogPost> 
                     <span className="text-sm sm:text-sm md:text-base">{post.category}</span>
                 </div>
             </motion.div>
-
-            {/* Main Image */}
             <motion.div variants={itemVariants} className="w-full relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden mb-8">
                 <Image 
                     src={post.image}
@@ -65,30 +58,22 @@ export default function BlogContent({ data, className }: SectionProps<BlogPost> 
                     className="object-cover"
                 />
             </motion.div>
-
-            {/* Paragraphs 1 */}
             <motion.div variants={itemVariants} className="flex flex-col gap-4 text-gray-600 leading-relaxed text-[15px] sm:text-[16px] mb-8">
                 {details.paragraphs1.map((para, idx) => (
                     <p key={idx}>{para}</p>
                 ))}
             </motion.div>
-
-            {/* Quote Block */}
             <motion.div variants={itemVariants} className="bg-pink-200/20 border-l-4 border-[#E5192C] p-6 sm:p-8 mb-8 flex gap-4 sm:gap-5 items-start">
                 <FaQuoteLeft className="text-[#E5192C] text-3xl sm:text-4xl shrink-0 mt-1" />
                 <p className="text-[#0a0e14] font-semibold italic text-lg sm:text-xl leading-snug tracking-tight">
                     "{details.quote}"
                 </p>
             </motion.div>
-
-            {/* Paragraphs 2 */}
             <motion.div variants={itemVariants} className="flex flex-col gap-4 text-gray-600 leading-relaxed text-[15px] sm:text-[16px] mb-10">
                 {details.paragraphs2.map((para, idx) => (
                     <p key={idx}>{para}</p>
                 ))}
             </motion.div>
-
-            {/* List Section */}
             {details.listSection && (
                 <motion.div variants={itemVariants} className="flex flex-col gap-5">
                     <h2 className="text-2xl sm:text-[28px] font-black uppercase text-[#0a0e14] tracking-tight">{details.listSection.title}</h2>

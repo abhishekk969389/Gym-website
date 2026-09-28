@@ -34,7 +34,6 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
 
     return (
         <footer className="relative bg-[#0a0e14] mt-8 sm:mt-10 md:mt-12 lg:mt-14 text-white overflow-hidden pt-16">
-            {/* Background Image & Overlay */}
             <div 
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-70"
                 style={{ backgroundImage: "url('/footer.png')" }}
@@ -42,7 +41,6 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
             <div className="absolute inset-0 z-0"></div>
 
             <div className="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Top Footer Area (Grid) */}
                 <motion.div 
                     variants={containerVariants}
                     initial="hidden"
@@ -50,8 +48,6 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                     viewport={{ once: true, amount: 0.2 }}
                     className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-12 gap-x-4 gap-y-10 md:gap-10 pb-12"
                 >
-                    
-                    {/* Col 1: Logo, Desc, Social */}
                     <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 lg:col-span-3 flex flex-col">
                         <Link href="/" className="mb-6 inline-block">
                             <img src={resolvedData.logo} alt="Logo" className="w-auto h-14 sm:h-16 lg:h-[72px] object-contain" />
@@ -70,8 +66,6 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                             })}
                         </div>
                     </motion.div>
-
-                    {/* Col 2: Quick Links */}
                     <motion.div variants={itemVariants} className="col-span-1 lg:col-span-2">
                         <h3 className="text-white font-bold text-lg">{resolvedData.quickLinks.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
@@ -86,8 +80,6 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                             ))}
                         </ul>
                     </motion.div>
-
-                    {/* Col 3: Our Services */}
                     <motion.div variants={itemVariants} className="col-span-1 lg:col-span-2">
                         <h3 className="text-white font-bold text-lg">{resolvedData.ourServices.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
@@ -102,8 +94,6 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                             ))}
                         </ul>
                     </motion.div>
-
-                    {/* Col 4: Contact Info */}
                     <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 lg:col-span-2">
                         <h3 className="text-white font-bold text-lg">{resolvedData.contactInfo.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
@@ -125,8 +115,6 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
                             })}
                         </div>
                     </motion.div>
-
-                    {/* Col 5: Opening Hours */}
                     <motion.div variants={itemVariants} className="col-span-2 md:col-span-1 lg:col-span-3 lg:pl-2 xl:pl-8">
                         <h3 className="text-white font-bold text-lg">{resolvedData.openingHours.title}</h3>
                         <div className="w-8 h-[2px] bg-[#E5192C] mt-3 mb-6"></div>
@@ -152,8 +140,6 @@ export default function Footer({ data, className }: SectionProps<FooterData> = {
 
                 </motion.div>
             </div>
-
-            {/* Bottom Bar - Full Width Border */}
             <motion.div 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}

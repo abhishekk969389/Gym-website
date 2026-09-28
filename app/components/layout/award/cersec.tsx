@@ -7,14 +7,12 @@ import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 import { site, CerSecData, SectionProps } from "@/data";
 
-// @ts-ignore
 const data: CerSecData = site.cerSec;
 
 export default function CerSec({ data: propData, className }: SectionProps<CerSecData> = {}) {
     const data = propData || site.cerSec;
     return (
         <section className="relative bg-white w-full mt-6 overflow-hidden">
-            {/* Split Backgrounds (Desktop Only) */}
             <div className="hidden lg:flex absolute inset-0 z-0">
                 <div className="w-[30%] relative bg-gray-700">
                     <Image
@@ -29,9 +27,7 @@ export default function CerSec({ data: propData, className }: SectionProps<CerSe
             </div>
 
             <div className="max-w-[1320px] mx-auto flex flex-col lg:flex-row relative z-10">
-                {/* Left Column Content */}
                 <div className="relative w-full lg:w-[30%] py-8 px-4 sm:py-12 sm:px-8 lg:py-12 lg:pl-8 lg:pr-12 text-white flex flex-col justify-center bg-gray-900 lg:bg-transparent">
-                    {/* Mobile Background */}
                     <div className="absolute inset-0 z-0 lg:hidden overflow-hidden">
                         <Image
                             src={data.leftSection.bgImage}
@@ -69,11 +65,8 @@ export default function CerSec({ data: propData, className }: SectionProps<CerSe
                         </div>
                     </div>
                 </div>
-
-                {/* Right Column Content - Certificates */}
                 <div className="w-full bg-white lg:w-[68%] py-8 px-4 sm:py-12 sm:px-8 lg:py-12 lg:pl-4 xl:pl-6 flex flex-col justify-center">
 
-                    {/* Cards Grid / Flex */}
                     <div className="w-full overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                         <div className="flex lg:grid lg:grid-cols-4 gap-4 xl:gap-5 min-w-max lg:min-w-0 px-2 lg:px-0">
                             {data.rightSection.certificates.map((cert: any, idx: number) => (
@@ -86,10 +79,7 @@ export default function CerSec({ data: propData, className }: SectionProps<CerSe
                                     className="w-[260px] sm:w-[280px] lg:w-full shrink-0"
                                 >
                                     <div className="bg-white rounded-md border border-gray-200 h-full flex flex-col relative overflow-hidden group">
-                                        {/* Top Left Red Accent */}
                                         <div className="absolute top-4 left-0 w-1 h-4 bg-[#E5192C]"></div>
-
-                                        {/* Certificate Image Area */}
                                         <div className="px-1 pt-5 pb-1 sm:px-2 sm:pt-6 sm:pb-1 flex items-center justify-center bg-white overflow-hidden">
                                             <div className="relative w-full aspect-[1.3/1] transition-transform duration-500 group-hover:scale-105">
                                                 <Image
@@ -100,8 +90,6 @@ export default function CerSec({ data: propData, className }: SectionProps<CerSe
                                                 />
                                             </div>
                                         </div>
-
-                                        {/* Text Area */}
                                         <div className="px-4 pb-6 flex-grow flex flex-col items-center justify-center text-center">
                                             <h3 className="text-[15px] xl:text-[16px] font-black text-gray-900 mb-2 leading-tight tracking-tight">
                                                 {cert.title}

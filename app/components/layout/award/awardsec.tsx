@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { FaShieldAlt, FaUsers, FaStar, FaTrophy, FaArrowRight } from "react-icons/fa";
 import { site, AwardSecData, SectionProps } from "@/data";
 
-// @ts-ignore
 const data: AwardSecData = site.awardSec;
 
 const getIcon = (iconName: string) => {
@@ -24,7 +23,6 @@ export default function AwardSec({ data: propData, className }: SectionProps<Awa
     const data = propData || site.awardSec;
     return (
         <section className="bg-white">
-            {/* Top Section */}
             <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div className="flex items-center justify-center gap-3">
                     <div className="w-8 h-[2px] bg-[#E5192C]"></div>
@@ -63,10 +61,7 @@ export default function AwardSec({ data: propData, className }: SectionProps<Awa
                     ))}
                 </div>
             </div>
-
-            {/* Bottom Section (Dark bg with Awards) */}
             <div className="relative pt-4 pb-12 mt-8 bg-gray-900 overflow-hidden">
-                {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <Image
                         src={data.bottomSection.bgImage}
@@ -79,7 +74,6 @@ export default function AwardSec({ data: propData, className }: SectionProps<Awa
                 <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="flex flex-col lg:flex-row gap-8 lg:gap-6 xl:gap-10 items-center">
                         
-                        {/* Left Column - Intro */}
                         <div className="w-full lg:w-[25%] xl:w-[22%] shrink-0 text-white">
                             <div className="flex items-center gap-3 ">
                                 <div className="w-8 h-[2px] bg-[#E5192C]"></div>
@@ -104,8 +98,6 @@ export default function AwardSec({ data: propData, className }: SectionProps<Awa
                                 <FaArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                             </Link>
                         </div>
-
-                        {/* Right Column - Awards Grid */}
                         <div className="w-full lg:w-[75%] xl:w-[78%]">
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-5">
                                 {data.bottomSection.awards.map((award: any, idx: number) => (
@@ -118,7 +110,6 @@ export default function AwardSec({ data: propData, className }: SectionProps<Awa
                                         className="group"
                                     >
                                         <div className="text-left h-full flex flex-col justify-end">
-                                            {/* Award Image Area */}
                                             <div className="relative w-full h-48 sm:h-56 lg:h-64 z-10 mb-[-10px] pointer-events-none">
                                                 <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-110">
                                                     <Image
@@ -130,7 +121,6 @@ export default function AwardSec({ data: propData, className }: SectionProps<Awa
                                                 </div>
                                             </div>
                                             
-                                            {/* Award Text Area */}
                                             <div className="bg-[#F8F9FA] rounded-md p-3 flex-grow flex flex-col justify-start relative z-20 shadow-xl border-t-2 border-[#E5192C]/0 group-hover:border-[#E5192C] transition-colors duration-300">
                                                 <h3 className="text-[14px] sm:text-[16px] lg:text-[13px] xl:text-[15px] font-black text-gray-900 mb-1 leading-tight tracking-tight whitespace-nowrap truncate">
                                                     {award.title}

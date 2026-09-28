@@ -26,7 +26,6 @@ export default function ProgramContent({ data, className }: SectionProps<Program
             transition={{ duration: 0.6 }}
             className="flex-1 flex flex-col gap-7 sm:gap-8"
         >
-            {/* Header Section */}
             <div className="flex flex-col">
                 <div className="flex items-center gap-3">
                     <div className="w-12 h-[2px] bg-[#E5192C]"></div>
@@ -41,8 +40,6 @@ export default function ProgramContent({ data, className }: SectionProps<Program
                     {program.description}
                 </p>
             </div>
-
-            {/* Info Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 md:gap-y-0 py-2">
                 {infoCards.map((info, idx) => {
                     const Icon = FontAwesome[info.icon as keyof typeof FontAwesome] as IconType;
@@ -65,9 +62,7 @@ export default function ProgramContent({ data, className }: SectionProps<Program
                         </motion.div>
                     );
                 })}
-            </div>
-
-            {/* Program Overview */}
+            </div>         
             <div className="flex flex-col gap-5 mt-2">
                 <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.overviewTitle}</h3>
                 <p className="text-gray-600 leading-relaxed text-base">

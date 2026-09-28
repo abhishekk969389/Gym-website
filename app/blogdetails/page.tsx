@@ -5,15 +5,12 @@ import BlogContent from "@/app/components/layout/blogdetails/content";
 import { site } from "@/data";
 
 export default async function BlogDetailsPage({ searchParams }: { searchParams: Promise<{ name?: string }> }) {
-    // Await searchParams before accessing properties (Next.js 15+ requirement)
     const resolvedParams = await searchParams;
     
     const posts = site.homeBlog.posts;
     
-    // Determine the post based on the 'name' query parameter
     const postName = resolvedParams.name ? resolvedParams.name.replace(/-/g, ' ').toLowerCase() : '';
     
-    // Find the post by matching title (case-insensitive), fallback to the first one if not found
     const post = posts.find(p => p.title.toLowerCase() === postName) || posts[0];
 
     return (

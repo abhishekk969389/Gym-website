@@ -17,7 +17,6 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
     const sectionRef = useRef<HTMLElement>(null);
     const sliderRef = useRef<HTMLDivElement>(null);
 
-    // Duplicate testimonials so the slider can smoothly scroll even when showing 3 cards
     const displayTestimonials = [...data.testimonials, ...data.testimonials, ...data.testimonials];
     const totalOriginal = data.testimonials.length;
 
@@ -25,12 +24,10 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
     const [cardsToShow, setCardsToShow] = useState(3);
     const [isAutoScrolling, setIsAutoScrolling] = useState(true);
 
-    // Touch/swipe state
     const [touchStartX, setTouchStartX] = useState(0);
     const [touchEndX, setTouchEndX] = useState(0);
     const [isSwiping, setIsSwiping] = useState(false);
 
-    // Pagination for grid layout (isPage = true)
     const [pageNumber, setPageNumber] = useState(1);
     const itemsPerPage = 6;
     const indexOfLastItem = pageNumber * itemsPerPage;
@@ -52,8 +49,6 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
             else if (window.innerWidth < 1024) setCardsToShow(2);
             else setCardsToShow(3);
         };
-
-        // Initial setup
         updateCardsToShow();
 
         window.addEventListener('resize', updateCardsToShow);
@@ -68,7 +63,6 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
         setCurrentIndex((prev) => (prev - 1 + totalOriginal) % totalOriginal);
     }, [totalOriginal]);
 
-    // Auto-scroll for mobile & tablet (cardsToShow < 3)
     useEffect(() => {
         if (isPage || cardsToShow >= 3 || !isAutoScrolling) return;
 
@@ -79,7 +73,6 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
         return () => clearInterval(interval);
     }, [isPage, cardsToShow, isAutoScrolling, nextSlide]);
 
-    // Touch handlers for swipe
     const handleTouchStart = (e: React.TouchEvent) => {
         setTouchStartX(e.targetTouches[0].clientX);
         setIsSwiping(true);
@@ -104,13 +97,11 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
         }
 
         setIsSwiping(false);
-        // Resume auto-scroll after 4 seconds of no interaction
         setTimeout(() => setIsAutoScrolling(true), 4000);
     };
 
     return (
         <section ref={sectionRef} className={`bg-white relative overflow-hidden ${isPage ? 'mt-8 sm:mt-10 md:mt-12 lg:mt-14' : 'mt-8 sm:mt-10 md:mt-12 lg:mt-14'}`}>
-            {/* Background Decorative Elements */}
             <div className="absolute top-2 right-10 opacity-[0.03] text-[#E5192C] z-0 pointer-events-none">
                 <BiSolidQuoteLeft className="text-[100px]" />
             </div>
@@ -122,10 +113,7 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                 viewport={{ once: true, amount: 0.2 }}
                 className={`relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 ${isPage ? 'lg:px-8' : 'lg:px-16'}`}
             >
-
-                {/* Header Content */}
                 <motion.div variants={itemVariants} className="text-center">
-                    {/* Tag */}
                     <div className="flex items-center justify-center gap-3 ">
                         <div className="w-12 sm:w-16 h-[1px] bg-[#E5192C]"></div>
                         <span className="text-black tracking-[0.3em] text-xs sm:text-sm font-medium uppercase">
@@ -133,14 +121,10 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                         </span>
                         <div className="w-12 sm:w-16 h-[1px] bg-[#E5192C]"></div>
                     </div>
-
-                    {/* Title */}
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-2 tracking-tighter text-gray-900">
                         <span>{data.titleLine1} </span>
                         <span className="text-[#E5192C]">{data.titleLine2}</span>
                     </h2>
-
-                    {/* Subtitle */}
                     <p className="text-gray-600 text-sm sm:text-base">
                         {data.subtitle}
                     </p>
@@ -148,7 +132,6 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
 
                 {isPage ? (
                     <>
-                    {/* Grid Container */}
                     <motion.div 
                         key={pageNumber}
                         initial={{ opacity: 0, y: 20 }}
@@ -173,30 +156,25 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                                             </div>
                                         </div>
 
-                                        {/* Stars and Text */}
                                         <div className="flex flex-col w-full">
                                             <div className="flex justify-between items-start mb-2">
-                                                {/* Stars */}
+                                            
                                                 <div className="flex items-center gap-[2px] mt-1">
                                                     {[...Array(testimonial.rating)].map((_, i) => (
                                                         <FaStar key={i} className="text-[#E5192C] text-[13px] sm:text-[15px]" />
                                                     ))}
                                                 </div>
-
-                                                {/* Quote Icon */}
                                                 <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#FFE8E8] flex items-center justify-center shrink-0">
                                                     <BiSolidQuoteAltLeft className="text-lg sm:text-xl text-[#E5192C]" />
                                                 </div>
                                             </div>
 
-                                            {/* Text */}
                                             <p className="text-gray-600 text-sm sm:text-sm md:text-base   leading-relaxed pr-2">
                                                 &quot;{testimonial.text.split(' ').slice(0, 18).join(' ')}{testimonial.text.split(' ').length > 18 ? '...' : ''}&quot;
                                             </p>
                                         </div>
                                     </div>
 
-                                    {/* Bottom: Name & Role */}
                                     <div className="mt-auto pt-4 border-t border-gray-100">
                                         <h3 className="text-sm sm:text-sm md:text-base font-black text-gray-900 leading-tight">
                                             {testimonial.name}
@@ -210,8 +188,6 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                             </div>
                         ))}
                     </motion.div>
-
-                    {/* Pagination Controls for Grid */}
                     <Pagination 
                         currentPage={pageNumber} 
                         totalPages={totalPages} 
@@ -219,9 +195,8 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                     />
                 </>
                 ) : (
-                    /* Slider Container */
                     <motion.div variants={itemVariants} className="relative w-full">
-                        {/* Arrows */}
+                 
                         <button
                             onClick={prevSlide}
                             className="hidden lg:flex absolute top-1/2 -left-12 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full items-center justify-center shadow-[0_4px_15px_rgba(0,0,0,0.1)] hover:bg-[#E5192C] hover:text-white transition-all z-20 text-gray-800"
@@ -235,8 +210,6 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                         >
                             <FaArrowRight />
                         </button>
-
-                        {/* Slider window */}
                         <div 
                             ref={sliderRef}
                             className="overflow-hidden py-6"
@@ -255,10 +228,7 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                                         style={{ width: `${100 / cardsToShow}%` }}
                                     >
                                         <div className="relative bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 flex flex-col h-full overflow-hidden group">
-
-                                            {/* Header: Avatar + Info */}
                                             <div className="flex items-center gap-5 mb-6">
-                                                {/* Avatar with gradient border */}
                                                 <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-pink-200 to-red-400 p-[2px] shrink-0">
                                                     <div className="w-full h-full bg-white rounded-full p-[2px]">
                                                         <div className="relative w-full h-full rounded-full overflow-hidden">
@@ -271,8 +241,6 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                                                         </div>
                                                     </div>
                                                 </div>
-
-                                                {/* Info */}
                                                 <div>
                                                     <h3 className="text-xl font-black text-gray-900 leading-tight">
                                                         {testimonial.name}
@@ -287,13 +255,9 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            {/* Text */}
                                             <p className="text-gray-600 text-[16px] leading-relaxed relative z-10">
                                                 &quot;{testimonial.text}&quot;
                                             </p>
-
-                                            {/* Watermark Quote */}
                                             <div className="absolute bottom-2 right-6 z-0">
                                                 <BiSolidQuoteAltRight className="text-4xl text-[#FFE8E8] transition-transform group-hover:scale-110 duration-300" />
                                             </div>

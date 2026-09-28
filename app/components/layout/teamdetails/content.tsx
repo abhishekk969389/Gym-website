@@ -39,8 +39,6 @@ export default function TeamContent({ data, className }: SectionProps<TeamMember
             transition={{ duration: 0.6 }}
             className="flex-1 flex flex-col gap-10"
         >
-            
-            {/* Header Section */}
             <div className="flex flex-col">
                 <div className="flex items-center gap-3">
                     <div className="w-12 h-[2px] bg-[#E5192C]"></div>
@@ -55,8 +53,6 @@ export default function TeamContent({ data, className }: SectionProps<TeamMember
                     {member.description}
                 </p>
             </div>
-
-            {/* Contact & Socials */}
             <div className="flex flex-col gap-6 mt-2 mb-2">
                 <div className="flex flex-wrap gap-x-8 gap-y-6 sm:gap-x-16">
                     {contactInfo.map((info, idx) => (
@@ -83,8 +79,6 @@ export default function TeamContent({ data, className }: SectionProps<TeamMember
                     ))}
                 </div>
             </div>
-
-            {/* Specialization */}
             <div className="flex flex-col gap-6">
                 <h3 className="text-2xl font-black uppercase text-[#0a0e14]">Specialization</h3>
                 <div className="flex flex-wrap gap-3">
@@ -95,16 +89,12 @@ export default function TeamContent({ data, className }: SectionProps<TeamMember
                     ))}
                 </div>
             </div>
-
-            {/* About */}
             <div className="flex flex-col gap-6 mt-4">
                 <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.aboutPrefix} {firstName}</h3>
                 <p className="text-gray-600 leading-relaxed text-base">
                     {member.details.about}
                 </p>
             </div>
-
-            {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4">
                 {member.details.stats.map((stat, idx) => {
                     const Icon = FontAwesome[stat.icon as keyof typeof FontAwesome] as IconType;
@@ -119,8 +109,6 @@ export default function TeamContent({ data, className }: SectionProps<TeamMember
                     );
                 })}
             </div>
-
-            {/* Experience & Journey */}
             <div className="flex flex-col gap-8 mt-8">
                 <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.experienceJourneyTitle}</h3>
                 <div className="flex flex-col relative before:absolute before:left-[5px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gray-200 gap-8">

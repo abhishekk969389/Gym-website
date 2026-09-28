@@ -9,7 +9,7 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 
 export default function BlogSidebar({ data, className }: SectionProps<any> = {}) {
     const layout = site.homeBlog.blogDetailsLayout.sidebar;
-    const recentPosts = site.homeBlog.posts.slice(0, 4); // Just take first 4 for recent posts
+    const recentPosts = site.homeBlog.posts.slice(0, 4);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -29,14 +29,12 @@ export default function BlogSidebar({ data, className }: SectionProps<any> = {})
             viewport={{ once: true, amount: 0.1 }}
             className="w-full lg:w-[350px] xl:w-[400px] shrink-0 flex flex-col gap-8"
         >
-            {/* Categories */}
             <motion.div variants={itemVariants} className="bg-[#fafafa] p-6 sm:p-8 rounded-lg">
                 <h3 className="text-xl sm:text-[22px] font-black uppercase text-[#0a0e14] mb-6 tracking-tight">
                     {layout.categoriesTitle}
                 </h3>
                 <div className="flex flex-col gap-4">
                     {layout.categories.map((cat, idx) => {
-                        // Find the first post with this category, or fallback to the first post overall
                         const categoryPost = site.homeBlog.posts.find(p => p.category.toLowerCase() === cat.name.toLowerCase()) || site.homeBlog.posts[0];
                         
                         return (
@@ -54,8 +52,6 @@ export default function BlogSidebar({ data, className }: SectionProps<any> = {})
                     })}
                 </div>
             </motion.div>
-
-            {/* Recent Posts */}
             <motion.div variants={itemVariants} className="bg-[#fafafa] p-6 sm:p-8 rounded-lg">
                 <h3 className="text-xl sm:text-[22px] font-black uppercase text-[#0a0e14] mb-6 tracking-tight">
                     {layout.recentPostsTitle}

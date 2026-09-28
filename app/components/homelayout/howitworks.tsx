@@ -25,8 +25,6 @@ export default function HowItWorks() {
     return (
         <section className="w-full mt-4 sm:mt-6 md:mt-8 lg:mt-10 bg-white text-[#0d1c2a]">
             <div className="w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[340px_1fr] xl:grid-cols-[340px_1fr] gap-10 lg:gap-6 xl:gap-[36px] items-start lg:pt-10">
-
-                {/* LEFT — intro */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -64,7 +62,6 @@ export default function HowItWorks() {
                     </motion.div>
                 </motion.div>
 
-                {/* RIGHT — diagram */}
                 <div className="w-full min-w-0">
                     <motion.div
                         variants={containerVariants}
@@ -94,7 +91,6 @@ export default function HowItWorks() {
                                     key={step.id}
                                     className={`relative lg:absolute w-full lg:w-[42%] xl:w-[42%] min-h-[220px] lg:min-h-[170px] xl:min-h-[170px] bg-white shadow-[0_2px_15px_rgba(0,0,0,0.08),inset_0_0_0_1px_rgba(0,0,0,0.025)] flex flex-col sm:flex-row lg:flex-row items-center overflow-visible z-10 ${posClasses} ${shapeBase} ${shapeLg}`}
                                 >
-                                    {/* Mobile/Tablet switch order based on layout */}
                                     <div className={`w-full relative z-10 ${isLeft ? 'order-2 sm:order-1 lg:order-1' : 'order-2 sm:order-2 lg:order-2'}`}>
                                         <div className="text-[40px] lg:text-[34px] xl:text-[46px] font-extrabold text-[#c9cdd0] leading-none mb-1">
                                             {step.number}
@@ -117,8 +113,6 @@ export default function HowItWorks() {
                                 </motion.div>
                             );
                         })}
-
-                        {/* Center Circle (Hidden on smaller screens) */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -127,7 +121,6 @@ export default function HowItWorks() {
                             className="hidden lg:flex w-[116px] h-[116px] xl:w-[120px] xl:h-[120px] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
                         >
                             <div className="w-full h-full relative rounded-full border-[1.5px] border-[#263e50] flex items-center justify-center">
-                                {/* Connecting Dots */}
                                 <span className="absolute top-[-3px] left-1/2 -translate-x-1/2 w-[5px] h-[5px] xl:w-[7px] xl:h-[7px] rounded-full bg-[#263e50]" />
                                 <span className="absolute bottom-[-3px] left-1/2 -translate-x-1/2 w-[5px] h-[5px] xl:w-[7px] xl:h-[7px] rounded-full bg-[#263e50]" />
                                 <span className="absolute top-[20%] left-[-2px] w-[5px] h-[5px] xl:w-[7px] xl:h-[7px] rounded-full bg-[#E5192C]" />

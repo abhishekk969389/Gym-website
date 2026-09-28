@@ -7,15 +7,12 @@ import ProgramBenefits from "@/app/components/layout/programdetails/benefits";
 import { site } from "@/data";
 
 export default async function ProgramDetailsPage({ searchParams }: { searchParams: Promise<{ name?: string }> }) {
-    // Await searchParams before accessing properties (Next.js 15+ requirement)
     const resolvedParams = await searchParams;
     
     const programs = site.homePrograms.programs;
     
-    // Determine the program based on the 'name' query parameter
     const programName = resolvedParams.name ? resolvedParams.name.replace(/-/g, ' ').toLowerCase() : '';
     
-    // Find the program by matching title (case-insensitive), fallback to the first one if not found
     const program = programs.find(p => p.title.toLowerCase() === programName) || programs[0];
 
     return (

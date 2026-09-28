@@ -256,7 +256,7 @@
             "description": "Personalized training programs to help you get stronger, fitter and more confident — inside and out.",
             "primaryButton": {
               "label": "START YOUR JOURNEY",
-              "url": "/program",
+              "url": "/about",
               "icon": "FaArrowRight"
             },
             "secondaryButton": {
@@ -1448,7 +1448,7 @@
             "titleLine3": " ?",
             "button": {
               "label": "Get Started",
-              "url": "/consultation",
+              "url": "/contactus",
               "icon": "FaArrowRight"
             },
             "bgImage": "/training.png"
@@ -4094,7 +4094,7 @@
               "title": "Awards",
               "description": "Our dedication to fitness, community wellness and client success has earned us several awards and recognitions over the years.",
               "buttonText": "View Our Journey",
-              "buttonLink": "#",
+              "buttonLink": "/about",
               "awards": [
                 {
                   "image": "/award/awd1.png",
@@ -4103,13 +4103,13 @@
                   "desc": "For Outstanding Contribution to Health & Fitness"
                 },
                 {
-                  "image": "/award/awd2.png",
+                  "image": "/award/awd1.png",
                   "title": "Best Gym of the Year",
                   "year": "2022",
                   "desc": "Recognized for Exceptional Training Programs"
                 },
                 {
-                  "image": "/award/awd3.png",
+                  "image": "/award/awd1.png",
                   "title": "Community Health Champion",
                   "year": "2021",
                   "desc": "For Promoting a Healthier Community"
@@ -4134,7 +4134,7 @@
               "title": "Certifications",
               "description": "We are certified by internationally recognized fitness and wellness organizations, ensuring that our training programs follow the highest standards of safety, knowledge and professionalism.",
               "buttonText": "Our Training Standards",
-              "buttonLink": "#"
+              "buttonLink": "/program"
             },
             "rightSection": {
               "certificates": [

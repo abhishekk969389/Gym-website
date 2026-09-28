@@ -12,7 +12,6 @@ export default function ThankYou({ data, className }: SectionProps<ThankYouSecDa
 
   return (
     <main className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0e14] -mb-8 sm:-mb-10 md:-mb-12 lg:-mb-14">
-      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
           src={resolvedData.backgroundImage} 

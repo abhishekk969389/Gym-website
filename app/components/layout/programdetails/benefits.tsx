@@ -23,9 +23,7 @@ export default function ProgramBenefits({ data, className }: SectionProps<Progra
             transition={{ duration: 0.6 }}
             className="w-full mt-12 md:mt-16"
         >
-            {/* Three Columns: Benefits, Target Audience, CTA */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 items-start">
-                {/* Key Benefits */}
                 <div className="flex flex-col gap-6 lg:border-r border-gray-200 lg:pr-8">
                     <div>
                         <h3 className="text-xl sm:text-[22px] font-black text-[#0a0e14] mb-3 tracking-tight">{layout.benefitsTitle}</h3>
@@ -49,8 +47,6 @@ export default function ProgramBenefits({ data, className }: SectionProps<Progra
                         ))}
                     </div>
                 </div>
-
-                {/* Who Is This Program For */}
                 <div className="flex flex-col gap-6 lg:border-r border-gray-200 lg:pr-8">
                     <div>
                         <h3 className="text-xl sm:text-[22px] font-black text-[#0a0e14] mb-3 tracking-tight">{layout.audienceTitle}</h3>
@@ -75,8 +71,6 @@ export default function ProgramBenefits({ data, className }: SectionProps<Progra
                         })}
                     </div>
                 </div>
-
-                {/* Ready to get started box */}
                 <motion.div 
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}

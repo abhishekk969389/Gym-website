@@ -17,7 +17,7 @@ const pricingData: PricingSecData = site.pricingSec;
 const iconMap: Record<string, React.ReactNode> = {
   FiUser: <FiUser className="w-8 h-8 sm:w-10 sm:h-10" />,
   CgGym: <CgGym className="w-8 h-8 sm:w-10 sm:h-10" />,
-  FaCrown: <FiAward className="w-8 h-8 sm:w-10 sm:h-10" />, // Using FiAward instead of FaCrown for better consistency
+  FaCrown: <FiAward className="w-8 h-8 sm:w-10 sm:h-10" />,
   IoDiamondOutline: <IoDiamondOutline className="w-8 h-8 sm:w-10 sm:h-10" />,
   BiTargetLock: <BiTargetLock className="w-7 h-7 sm:w-8 sm:h-8" />,
   FiShield: <FiShield className="w-7 h-7 sm:w-8 sm:h-8" />,
@@ -29,7 +29,6 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
     const data = propData || site.pricingSec;
     return (
         <section className="bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14">
-            {/* 1. PRICING PLANS SECTION */}
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 mb-14">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
@@ -54,7 +53,6 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                     </p>
                 </motion.div>
 
-                {/* Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
                     {pricingData.plans.map((plan, index) => (
                         <motion.div 
@@ -75,7 +73,6 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                             )}
                             
                             <div className="p-6 sm:p-8 flex-grow flex flex-col">
-                                {/* Icon & Title */}
                                 <div className="mb-4">
                                     <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-2 transition-colors duration-300
                                         ${plan.isPopular ? 'bg-[#E5192C]/10 text-[#E5192C]' : 'bg-gray-50 text-gray-500 group-hover:bg-[#E5192C]/10 group-hover:text-[#E5192C]'}`}>
@@ -85,7 +82,6 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                                     <p className="text-gray-500 text-sm">{plan.subtitle}</p>
                                 </div>
 
-                                {/* Price */}
                                 <div className="mb-6 flex items-baseline">
                                     <span className="text-4xl sm:text-5xl font-black text-gray-900 tracking-tighter">
                                         ${plan.price}
@@ -95,7 +91,6 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                                     </span>
                                 </div>
 
-                                {/* Features List */}
                                 <ul className="space-y-2.5 mb-8 flex-grow">
                                     {plan.features.map((feat, i) => (
                                         <li key={i} className="flex items-start gap-3">
@@ -115,7 +110,6 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                                     ))}
                                 </ul>
 
-                                {/* Button */}
                                 <Link href="/consultation" className={`block text-center w-full py-3.5 px-4 rounded font-bold text-sm sm:text-base uppercase tracking-wider transition-all duration-300
                                     ${plan.isPopular 
                                         ? 'bg-[#E5192C] text-white hover:bg-red-700 hover:shadow-lg hover:shadow-red-700/30' 
@@ -127,8 +121,6 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                     ))}
                 </div>
             </div>
-
-            {/* 2. PLAN COMPARISON */}
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 mb-10 sm:mb-14 hidden md:block">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
@@ -154,7 +146,6 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                     </p>
                 </motion.div>
 
-                {/* Table */}
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -188,7 +179,6 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                                     ))}
                                 </tr>
                             ))}
-                            {/* Price Row */}
                             <tr className="bg-gray-50/30">
                                 <td className="py-5 px-4 font-black text-gray-900 text-base border border-gray-100">{pricingData.compare.priceRow.feature}</td>
                                 {pricingData.compare.priceRow.values.map((val, j) => (
@@ -203,10 +193,8 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                 </motion.div>
             </div>
 
-            {/* 3. CTA & FEATURES ROW */}
             <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row bg-white rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
-                    {/* Left CTA block */}
                     <div className="relative w-full lg:w-5/12 bg-gray-900 text-white p-6 sm:p-8 lg:p-10 overflow-hidden flex flex-col justify-center min-h-[280px]">
                         <div className="absolute inset-0 z-0">
                             <Image 
@@ -237,8 +225,6 @@ export default function PricingSec({ data: propData, className }: SectionProps<P
                             </Link>
                         </div>
                     </div>
-
-                    {/* Right Features block */}
                     <div className="w-full lg:w-7/12 py-10 px-4 sm:px-6 flex flex-col sm:flex-row items-stretch justify-between bg-white gap-y-8">
                         {pricingData.cta.features.map((feat, index) => (
                             <div key={index} className={`flex flex-col items-center justify-center text-center px-2 w-full sm:w-1/4 ${index < 3 ? 'sm:border-r sm:border-gray-200' : ''}`}>
