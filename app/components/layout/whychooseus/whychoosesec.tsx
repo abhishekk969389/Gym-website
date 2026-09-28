@@ -18,7 +18,7 @@ export default function WhyChooseUs({ data, className }: SectionProps<WhyChooseU
     const resolvedData = data || site.whyChooseUs;
 
     return (
-        <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14">
+        <section className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 overflow-hidden">
             {/* Background texture (optional, white/gray mix) */}
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20 z-0"></div>
             
@@ -48,7 +48,7 @@ export default function WhyChooseUs({ data, className }: SectionProps<WhyChooseU
                 </motion.div>
 
                 {/* Content Layout */}
-                <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-10 lg:gap-8 xl:gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-2 sm:gap-6 md:gap-6 lg:gap-8 xl:gap-12 items-center">
                     
                     {/* Left Cards */}
                     <motion.div 
@@ -88,11 +88,11 @@ export default function WhyChooseUs({ data, className }: SectionProps<WhyChooseU
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        className="relative mx-auto w-full max-w-[380px] lg:w-[360px] xl:w-[420px] aspect-[3/4] mt-8 mb-8 lg:mt-0 lg:mb-0"
+                        className="relative mx-auto w-[85%] sm:w-full max-w-[380px] lg:w-[360px] xl:w-[420px] aspect-[3/4] mt-8 mb-8 lg:mt-0 lg:mb-0"
                     >
                         {/* Red Offset Background */}
                         <div 
-                            className="absolute top-[-10px] bottom-[-10px] left-[-20px] right-[-20px] bg-[#E5192C] z-0 shadow-lg" 
+                            className="absolute top-[-10px] bottom-[-10px] left-[-12px] right-[-12px] sm:left-[-20px] sm:right-[-20px] bg-[#E5192C] z-0 shadow-lg" 
                             style={{ clipPath: 'polygon(0 15%, 100% 0, 100% 85%, 0 100%)' }}
                         ></div>
                         

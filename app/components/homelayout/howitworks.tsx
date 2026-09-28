@@ -71,7 +71,7 @@ export default function HowItWorks() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="w-full relative min-h-auto lg:min-h-[400px] xl:min-h-[440px] grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-0 lg:block"
+                        className="w-full relative min-h-auto lg:min-h-[400px] xl:min-h-[440px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 lg:gap-0 lg:block"
                     >
                         {data.steps.map((step, index) => {
                             const isLeft = step.side === "left";

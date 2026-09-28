@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { site } from "@/data";
 import { FaArrowLeft, FaArrowRight, FaStar, FaQuoteRight } from "react-icons/fa6";
@@ -15,6 +15,7 @@ type TestimonialProps = {
 
 export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
     const sectionRef = useRef<HTMLElement>(null);
+    const sliderRef = useRef<HTMLDivElement>(null);
 
     // Duplicate testimonials so the slider can smoothly scroll even when showing 3 cards
     const displayTestimonials = [...data.testimonials, ...data.testimonials, ...data.testimonials];
@@ -22,6 +23,12 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsToShow, setCardsToShow] = useState(3);
+    const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+
+    // Touch/swipe state
+    const [touchStartX, setTouchStartX] = useState(0);
+    const [touchEndX, setTouchEndX] = useState(0);
+    const [isSwiping, setIsSwiping] = useState(false);
 
     // Pagination for grid layout (isPage = true)
     const [pageNumber, setPageNumber] = useState(1);
@@ -53,12 +60,52 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
         return () => window.removeEventListener('resize', updateCardsToShow);
     }, []);
 
-    const nextSlide = () => {
+    const nextSlide = useCallback(() => {
         setCurrentIndex((prev) => (prev + 1) % totalOriginal);
+    }, [totalOriginal]);
+
+    const prevSlide = useCallback(() => {
+        setCurrentIndex((prev) => (prev - 1 + totalOriginal) % totalOriginal);
+    }, [totalOriginal]);
+
+    // Auto-scroll for mobile & tablet (cardsToShow < 3)
+    useEffect(() => {
+        if (isPage || cardsToShow >= 3 || !isAutoScrolling) return;
+
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [isPage, cardsToShow, isAutoScrolling, nextSlide]);
+
+    // Touch handlers for swipe
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchStartX(e.targetTouches[0].clientX);
+        setIsSwiping(true);
+        setIsAutoScrolling(false);
     };
 
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev - 1 + totalOriginal) % totalOriginal);
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEndX(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!isSwiping) return;
+        const diff = touchStartX - touchEndX;
+        const minSwipeDistance = 50;
+
+        if (Math.abs(diff) > minSwipeDistance) {
+            if (diff > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+
+        setIsSwiping(false);
+        // Resume auto-scroll after 4 seconds of no interaction
+        setTimeout(() => setIsAutoScrolling(true), 4000);
     };
 
     return (
@@ -107,7 +154,7 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 text-left"
+                        className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 text-left"
                     >
                         {currentGridTestimonials.map((testimonial, index) => (
                             <div key={index} className="flex flex-col h-full">
@@ -144,7 +191,7 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
 
                                             {/* Text */}
                                             <p className="text-gray-600 text-sm sm:text-sm md:text-base   leading-relaxed pr-2">
-                                                "{testimonial.text.split(' ').slice(0, 18).join(' ')}{testimonial.text.split(' ').length > 18 ? '...' : ''}"
+                                                &quot;{testimonial.text.split(' ').slice(0, 18).join(' ')}{testimonial.text.split(' ').length > 18 ? '...' : ''}&quot;
                                             </p>
                                         </div>
                                     </div>
@@ -190,7 +237,13 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                         </button>
 
                         {/* Slider window */}
-                        <div className="overflow-hidden py-6">
+                        <div 
+                            ref={sliderRef}
+                            className="overflow-hidden py-6"
+                            onTouchStart={handleTouchStart}
+                            onTouchMove={handleTouchMove}
+                            onTouchEnd={handleTouchEnd}
+                        >
                             <div
                                 className="flex transition-transform duration-500 ease-out"
                                 style={{ transform: `translateX(-${currentIndex * (100 / cardsToShow)}%)` }}
@@ -237,7 +290,7 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
 
                                             {/* Text */}
                                             <p className="text-gray-600 text-[16px] leading-relaxed relative z-10">
-                                                "{testimonial.text}"
+                                                &quot;{testimonial.text}&quot;
                                             </p>
 
                                             {/* Watermark Quote */}
@@ -249,6 +302,7 @@ export default function HomeTestimonials({ isPage = false }: TestimonialProps) {
                                 ))}
                             </div>
                         </div>
+
                     </motion.div>
                 )}
             </motion.div>
