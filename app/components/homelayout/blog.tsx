@@ -44,8 +44,7 @@ export default function HomeBlog({ isBlogPage = false }: HomeBlogProps) {
             <motion.div 
                 variants={containerVariants}
                 initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.05 }}
+                animate="visible"
                 className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8"
             >
                 <motion.div 
@@ -79,7 +78,6 @@ export default function HomeBlog({ isBlogPage = false }: HomeBlogProps) {
                                     src={post.image}
                                     alt={post.title}
                                     fill
-                                    unoptimized
                                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                                 <div className="absolute top-4 left-4 bg-[#E5192C] text-white px-3 py-1.5 rounded-sm text-xs font-semibold flex items-center gap-1.5 z-10 shadow-sm">

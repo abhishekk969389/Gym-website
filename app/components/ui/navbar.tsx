@@ -36,14 +36,7 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
     setIsSidebarOpen(false);
   }, [pathname]);
 
-  useEffect(() => {
-    if (isSidebarOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
-  }, [isSidebarOpen]);
+
 
   const toggleDropdown = (id: string) => {
     setOpenDropdownId((prev) => (prev === id ? null : id));
@@ -211,7 +204,7 @@ export default function Navbar({ data: propData, className }: SectionProps<Navba
       onClick={() => setIsSidebarOpen(false)}
     />
     <div 
-      className={`fixed top-0 right-0 h-full w-[380px] max-w-[90vw] bg-white z-[1000] shadow-2xl transform transition-transform duration-400 ease-in-out overflow-y-auto ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}
+      className={`fixed top-0 right-0 h-full w-[380px] max-w-[90vw] bg-white z-[1000] shadow-2xl transform transition-transform duration-300 ease-in-out overflow-y-auto ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}
     >
       <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
         <Link href="/" onClick={() => setIsSidebarOpen(false)}>

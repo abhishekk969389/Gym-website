@@ -15,7 +15,10 @@ export default function ProgramIncluded({ data, className }: SectionProps<Progra
 
     return (
         <div className="flex flex-col gap-8 w-full mt-10 md:mt-16">
-            <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.includedTitle}</h3>
+            <div>
+                <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.includedTitle}</h3>
+                <div className="w-12 h-[3px] bg-[#E5192C] mt-2"></div>
+            </div>
             <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

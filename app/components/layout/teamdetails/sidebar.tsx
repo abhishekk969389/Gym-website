@@ -51,7 +51,7 @@ export default function TeamSidebar({ data, className }: SectionProps<TeamMember
             <div className="bg-white rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.03)] border border-gray-100 p-6 sm:p-8">
                 <div className="mb-6">
                     <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.quickInfoTitle}</h3>
-                    <div className="w-10 h-[2px] bg-[#E5192C] mt-2"></div>
+                    <div className="w-12 h-[3px] bg-[#E5192C] mt-2"></div>
                 </div>
                 <div className="flex flex-col gap-4">
                     {quickInfo.map((info, idx) => {

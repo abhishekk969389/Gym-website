@@ -39,7 +39,7 @@ export default function ContactSec({ data, className }: SectionProps<ContactPage
                                     <div className="w-8 h-[2px] bg-[#E5192C]"></div>
                     </motion.div>
 
-                    <motion.h2 variants={itemVariants} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-2 tracking-tighter text-gray-900 italic">
+                    <motion.h2 variants={itemVariants} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase mb-2 tracking-tighter text-gray-900">
                         <span className="text-[#0a0e14]">{resolvedData.titleLine1} </span>
                         <span className="text-[#E5192C]">{resolvedData.titleLine2}</span>
                     </motion.h2>
@@ -89,7 +89,7 @@ export default function ContactSec({ data, className }: SectionProps<ContactPage
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
 
-                        <div className="absolute top-10 right-6 text-right font-black italic tracking-tighter uppercase leading-[0.9] -rotate-[6deg]">
+                        <div className="absolute top-10 right-6 text-right font-black tracking-tighter uppercase leading-[0.9] -rotate-[6deg]">
                             <div className="text-white text-2xl">{resolvedData.centerImage.topTextLine1}</div>
                             <div className="text-white text-2xl">{resolvedData.centerImage.topTextLine2}</div>
                             <div className="text-white text-2xl">{resolvedData.centerImage.topTextLine3}</div>
@@ -111,13 +111,13 @@ export default function ContactSec({ data, className }: SectionProps<ContactPage
                     </motion.div>
                     <motion.div variants={itemVariants} className="w-full lg:w-[44%] bg-white p-8 sm:p-10 flex flex-col justify-start rounded-2xl overflow-hidden shadow-xl border border-gray-100">
                         <div className="flex items-center gap-3 mb-2">
-                            <span className="text-[#E5192C] tracking-[0.3em] text-sm sm:text-sm md:text-base font-bold uppercase italic">
+                            <span className="text-[#E5192C] tracking-[0.3em] text-sm sm:text-sm md:text-base font-bold uppercase">
                                 {resolvedData.form.tag}
                             </span>
                                    <div className="w-12 sm:w-16 h-[2px] bg-[#E5192C]"></div>
                         </div>
 
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase italic tracking-tight mb-2">
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight mb-2">
                             {resolvedData.form.titleLine1} <span className="text-[#E5192C]">{resolvedData.form.titleLine2}</span>
                         </h3>
 

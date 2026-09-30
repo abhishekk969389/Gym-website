@@ -53,7 +53,7 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
                 className="absolute inset-0 z-10 bg-black/70 pointer-events-none block sm:hidden"
             />
 
-            <div className="relative z-10 w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-8 lg:pb-10 flex flex-col lg:flex-row items-start justify-between">
+            <div className="relative z-10 w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-14 pb-8 lg:pb-10 flex flex-col lg:flex-row items-start justify-between">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -110,53 +110,10 @@ export default function Banner({ data, className }: SectionProps<HomeBannerData>
                             </span>
                         </button>
                     </motion.div>
-                    <motion.div variants={itemVariantsLeft} className="flex flex-wrap items-center gap-4 sm:gap-5">
-                        {homeBannerData.bottomFeatures.map((feature, index) => {
-                            const Icon = ICON_MAP[feature.icon];
-                            return (
-                                <React.Fragment key={index}>
-                                    {index > 0 && (
-                                        <div className="hidden sm:block w-[1px] h-8 bg-red-600/80 shrink-0"></div>
-                                    )}
-                                    <div className="flex items-center gap-3">
-                                        {Icon && <Icon className="text-[#E5192C] text-2xl sm:text-3xl" />}
-                                        <span className="text-white text-xs sm:text-sm font-semibold tracking-wider leading-tight uppercase">
-                                            {feature.title.split('\n').map((line, i) => (
-                                                <span key={i} className="block">{line}</span>
-                                            ))}
-                                        </span>
-                                    </div>
-                                </React.Fragment>
-                            );
-                        })}
-                    </motion.div>
+
                 </motion.div>
 
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    className="hidden lg:flex w-full lg:w-[35%] flex-col items-end gap-4 lg:pt-2"
-                >
-                    {homeBannerData.rightFeatures.map((feature, index) => {
-                        const Icon = ICON_MAP[feature.icon];
-                        return (
-                            <motion.div variants={itemVariantsRight} key={index} className="flex items-center justify-start gap-4 w-[180px]">
-                                <div className="w-12 h-12 rounded-full border-2 border-[#E5192C] bg-transparent flex items-center justify-center shrink-0">
-                                    {Icon && <Icon className="text-white text-xl sm:text-2xl" />}
-                                </div>
-                                <div className="flex flex-col text-left">
-                                    <span className="text-gray-300 text-[12px] font-semibold tracking-wider leading-snug">
-                                        {feature.title.split('\n').map((line, i) => (
-                                            <span key={i} className="block">{line}</span>
-                                        ))}
-                                    </span>
-                                </div>
-                            </motion.div>
-                        );
-                    })}
-                </motion.div>
+
 
             </div>
 

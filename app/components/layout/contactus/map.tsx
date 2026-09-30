@@ -53,11 +53,11 @@ export default function MapSec({ data, className }: SectionProps<MapSecData> = {
                             <div>
                                 <div className="inline-block relative mb-6">
                                     <div className="absolute inset-0 bg-[#E5192C] -skew-x-12 transform origin-bottom-left"></div>
-                                    <span className="relative z-10 px-4 py-1.5 text-white text-sm sm:text-base font-bold italic uppercase tracking-wider block">
+                                    <span className="relative z-10 px-4 py-1.5 text-white text-sm sm:text-base font-bold uppercase tracking-wider block">
                                         {resolvedData.infoCard.tag}
                                     </span>
                                 </div>
-                                <h2 className="text-3xl sm:text-3xl md:text-4xl font-black italic uppercase tracking-tight mb-4 leading-none">
+                                <h2 className="text-3xl sm:text-3xl md:text-4xl font-black uppercase tracking-tight mb-4 leading-none">
                                     <span className="text-white block">{resolvedData.infoCard.titleLine1}</span>
                                     <span className="text-[#E5192C] block">{resolvedData.infoCard.titleLine2}</span>
                                 </h2>

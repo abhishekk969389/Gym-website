@@ -118,7 +118,6 @@ export default function SmoothScroll({
       }}
     >
       <ScrollToTopOnNavigate />
-      <GlobalScrollEffects />
       <AnchorOffsetHandler />
       {children}
     </ReactLenis>

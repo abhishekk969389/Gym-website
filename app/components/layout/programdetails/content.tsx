@@ -64,7 +64,10 @@ export default function ProgramContent({ data, className }: SectionProps<Program
                 })}
             </div>         
             <div className="flex flex-col gap-5 mt-2">
-                <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.overviewTitle}</h3>
+                <div>
+                    <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.overviewTitle}</h3>
+                    <div className="w-12 h-[3px] bg-[#E5192C] mt-2"></div>
+                </div>
                 <p className="text-gray-600 leading-relaxed text-base">
                     {overview.text}
                 </p>

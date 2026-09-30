@@ -6,13 +6,13 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/app/utils/animations";
 import { site } from "@/data";
-import { 
-    FaDumbbell, 
-    FaFire, 
-    FaPersonRunning, 
-    FaWeightHanging, 
-    FaUsers, 
-    FaArrowRight 
+import {
+    FaDumbbell,
+    FaFire,
+    FaPersonRunning,
+    FaWeightHanging,
+    FaUsers,
+    FaArrowRight
 } from "react-icons/fa6";
 import { IconType } from "react-icons";
 
@@ -36,8 +36,8 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
     return (
         <section className={`${isProgramPage ? "bg-white mt-8 sm:mt-10 md:mt-12 lg:mt-14" : "bg-[#0a0e14] mt-8 sm:mt-10 md:mt-12 lg:mt-14"} relative overflow-hidden`}>
             <div className={`relative z-10 ${isProgramPage ? "" : "py-8 sm:py-10 md:py-12 lg:py-14"} max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8`}>
-                
-                <motion.div 
+
+                <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -59,7 +59,7 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                         {data.subtitle}
                     </motion.p>
                 </motion.div>
-                <motion.div 
+                <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -69,8 +69,8 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                     {data.programs.map((program, index) => {
                         const Icon = ICON_MAP[program.icon];
                         return (
-                            <motion.div 
-                                key={index} 
+                            <motion.div
+                                key={index}
                                 variants={itemVariants}
                                 className={`relative overflow-hidden ${isProgramPage ? "bg-white border-gray-200 hover:border-gray-300" : "bg-black border-gray-700 hover:border-gray-500"} border flex flex-col h-[240px] sm:h-[260px] group transition-colors duration-300`}
                             >
@@ -82,13 +82,13 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                 </div>
-                                <div 
+                                <div
                                     className={`absolute left-0 top-0 bottom-0 z-10 w-[65%] ${isProgramPage ? "bg-white shadow-[10px_0_15px_-5px_rgba(0,0,0,0.1)]" : "bg-[#080808]"}`}
                                     style={{ clipPath: 'polygon(0 0, 100% 0, 75% 100%, 0 100%)' }}
                                 >
                                     <div className="relative w-[90%] h-full p-4 lg:p-5 flex flex-col">
                                         <div className="flex items-center gap-3 mb-2 sm:mb-3">
-                                            <span 
+                                            <span
                                                 className="text-4xl sm:text-5xl font-black text-transparent"
                                                 style={{ WebkitTextStroke: isProgramPage ? '1px rgba(0,0,0,0.3)' : '1px rgba(255,255,255,0.7)' }}
                                             >
@@ -105,8 +105,8 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                                             <p className={`${isProgramPage ? "text-gray-600" : "text-gray-300"} text-xs sm:text-[13px] md:text-[15px] leading-snug mb-3 pr-2`}>
                                                 {program.description}
                                             </p>
-                                            <Link 
-                                                href={`/programdetails?name=${program.title.replace(/ /g, '-').toLowerCase()}`} 
+                                            <Link
+                                                href={`/programdetails?name=${program.title.replace(/ /g, '-').toLowerCase()}`}
                                                 className={`inline-flex items-center gap-2 ${isProgramPage ? "text-[#E5192C] hover:text-black" : "text-white hover:text-gray-300"} text-[13px] font-bold group/link transition-colors mt-auto`}
                                             >
                                                 {data.learnMoreText}
@@ -122,7 +122,7 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                     })}
                 </motion.div>
                 {!isProgramPage && (
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -131,20 +131,20 @@ export default function HomePrograms({ isProgramPage = false }: HomeProgramsProp
                     >
                         <div className="flex items-center w-full justify-center overflow-hidden">
                             <div className="w-8 sm:w-24 h-[1px] bg-white/80 shrink"></div>
-                        <Link 
-                            href={data.button.url}
-                            className="mx-2 sm:mx-4 flex items-center gap-2 sm:gap-3 bg-[#E5192C] text-white px-4 sm:px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors duration-300 group shrink-0"
-                        >
-                            <span className="font-semibold tracking-wider text-xs sm:text-base whitespace-nowrap text-center">
-                                {data.button.label}
-                            </span>
-                            <div className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 rounded-full bg-black flex items-center justify-center group-hover:bg-[#E5192C] transition-colors">
-                                <FaArrowRight className="text-white text-[12px] sm:text-[14px]" />
-                            </div>
-                        </Link>
-                        <div className="w-8 sm:w-24 h-[1px] bg-white/80 shrink"></div>
-                    </div>
-                </motion.div>
+                            <Link
+                                href={data.button.url}
+                                className="mx-2 sm:mx-4 flex items-center gap-2 sm:gap-3 bg-[#E5192C] text-white px-4 sm:px-6 py-2 rounded-full hover:bg-white hover:text-black transition-colors duration-300 group shrink-0"
+                            >
+                                <span className="font-semibold tracking-wider text-xs sm:text-base whitespace-nowrap text-center">
+                                    {data.button.label}
+                                </span>
+                                <div className="w-7 h-7 sm:w-8 sm:h-8 shrink-0 rounded-full bg-black flex items-center justify-center group-hover:bg-[#E5192C] transition-colors">
+                                    <FaArrowRight className="text-white text-[12px] sm:text-[14px]" />
+                                </div>
+                            </Link>
+                            <div className="w-8 sm:w-24 h-[1px] bg-white/80 shrink"></div>
+                        </div>
+                    </motion.div>
                 )}
 
             </div>

@@ -80,7 +80,10 @@ export default function TeamContent({ data, className }: SectionProps<TeamMember
                 </div>
             </div>
             <div className="flex flex-col gap-6">
-                <h3 className="text-2xl font-black uppercase text-[#0a0e14]">Specialization</h3>
+                <div>
+                    <h3 className="text-2xl font-black uppercase text-[#0a0e14]">Specialization</h3>
+                    <div className="w-12 h-[3px] bg-[#E5192C] mt-2"></div>
+                </div>
                 <div className="flex flex-wrap gap-3">
                     {member.details.specialization.map((spec, idx) => (
                         <span key={idx} className="px-5 py-2.5 border border-gray-200 rounded-md text-gray-700 font-medium text-sm hover:border-[#E5192C] hover:text-[#E5192C] transition-colors cursor-default">
@@ -90,7 +93,10 @@ export default function TeamContent({ data, className }: SectionProps<TeamMember
                 </div>
             </div>
             <div className="flex flex-col gap-6 mt-4">
-                <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.aboutPrefix} {firstName}</h3>
+                <div>
+                    <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.aboutPrefix} {firstName}</h3>
+                    <div className="w-12 h-[3px] bg-[#E5192C] mt-2"></div>
+                </div>
                 <p className="text-gray-600 leading-relaxed text-base">
                     {member.details.about}
                 </p>
@@ -110,7 +116,10 @@ export default function TeamContent({ data, className }: SectionProps<TeamMember
                 })}
             </div>
             <div className="flex flex-col gap-8 mt-8">
-                <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.experienceJourneyTitle}</h3>
+                <div>
+                    <h3 className="text-2xl font-black uppercase text-[#0a0e14]">{layout.experienceJourneyTitle}</h3>
+                    <div className="w-12 h-[3px] bg-[#E5192C] mt-2"></div>
+                </div>
                 <div className="flex flex-col relative before:absolute before:left-[5px] before:top-2 before:bottom-2 before:w-[2px] before:bg-gray-200 gap-8">
                     {member.details.experience.map((exp, idx) => (
                         <div key={idx} className="relative pl-8 flex flex-col md:flex-row md:items-start gap-2 md:gap-8 group">

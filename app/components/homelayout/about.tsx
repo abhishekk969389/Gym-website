@@ -1,15 +1,49 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useInView, animate } from "framer-motion";
 import { containerVariants, itemVariantsLeft, itemVariantsRight } from "@/app/utils/animations";
 import { FaCheck } from "react-icons/fa6";
 import { site } from "@/data";
 
 const homeData = site.homeAbout;
 const aboutData = site.aboutPageAbout;
+
+function Counter({ value }: { value: string }) {
+    const nodeRef = useRef<HTMLSpanElement>(null);
+    const inView = useInView(nodeRef, { once: true, amount: 0.5 });
+
+    useEffect(() => {
+        const match = value.match(/^(\d+)(.*)$/);
+        if (!match) {
+            if (nodeRef.current) nodeRef.current.textContent = value;
+            return;
+        }
+
+        const endValue = parseInt(match[1], 10);
+        const suffix = match[2];
+
+        if (inView) {
+            const controls = animate(0, endValue, {
+                duration: 2.5,
+                ease: "easeOut",
+                onUpdate(v) {
+                    if (nodeRef.current) {
+                        nodeRef.current.textContent = Math.round(v).toString() + suffix;
+                    }
+                }
+            });
+            return () => controls.stop();
+        }
+    }, [value, inView]);
+
+    const initialMatch = value.match(/^(\d+)(.*)$/);
+    const initialText = initialMatch ? `0${initialMatch[2]}` : value;
+
+    return <span ref={nodeRef}>{initialText}</span>;
+}
 
 export default function HomeAbout({ isAboutPage = false }: { isAboutPage?: boolean }) {
 
@@ -50,7 +84,7 @@ export default function HomeAbout({ isAboutPage = false }: { isAboutPage?: boole
                                 />
                                 
                                 <div className="absolute bottom-0 right-0 bg-[#E5192C] text-white py-3 px-4 sm:py-4 sm:px-6 flex flex-col items-center justify-center z-30">
-                                    <span className="text-3xl sm:text-5xl lg:text-5xl font-black leading-none mb-1">{badge.number}</span>
+                                    <span className="text-3xl sm:text-5xl lg:text-5xl font-black leading-none mb-1"><Counter value={String(badge.number)} /></span>
                                     <span className="text-[9px] sm:text-[11px] font-bold tracking-wider text-center uppercase whitespace-nowrap">
                                         {badge.text}
                                     </span>
