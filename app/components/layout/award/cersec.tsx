@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -11,6 +11,11 @@ const data: CerSecData = site.cerSec;
 
 export default function CerSec({ data: propData, className }: SectionProps<CerSecData> = {}) {
     const data = propData || site.cerSec;
+    const [currentPage, setCurrentPage] = useState(0);
+    const itemsPerPage = 4;
+    const totalPages = Math.ceil(data.rightSection.certificates.length / itemsPerPage);
+    const currentCertificates = data.rightSection.certificates.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
+
     return (
         <section className="relative bg-white w-full mt-6 overflow-hidden">
             <div className="hidden lg:flex absolute inset-0 z-0">
@@ -69,14 +74,14 @@ export default function CerSec({ data: propData, className }: SectionProps<CerSe
 
                     <div className="w-full overflow-x-auto pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                         <div className="flex lg:grid lg:grid-cols-4 gap-4 xl:gap-5 min-w-max lg:min-w-0 px-2 lg:px-0">
-                            {data.rightSection.certificates.map((cert: any, idx: number) => (
+                            {currentCertificates.map((cert: any, idx: number) => (
                                 <motion.div
-                                    key={idx}
+                                    key={`${currentPage}-${idx}`}
                                     initial={{ opacity: 0, x: 20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                    className="w-[260px] sm:w-[280px] lg:w-full shrink-0"
+                                    className="w-[260px] sm:w-[280px] lg:w-full shrink-0 h-full"
                                 >
                                     <div className="bg-white rounded-md border border-gray-200 h-full flex flex-col relative overflow-hidden group">
                                         <div className="absolute top-4 left-0 w-1 h-4 bg-[#E5192C]"></div>
@@ -95,7 +100,7 @@ export default function CerSec({ data: propData, className }: SectionProps<CerSe
                                                 {cert.title}
                                             </h3>
                                             <div className="w-8 h-[2px] bg-[#E5192C] mb-3"></div>
-                                            <p className="text-gray-500 text-[12px] xl:text-[13px] leading-snug px-2">
+                                            <p className="text-gray-500 text-[12px] xl:text-[13px] leading-snug px-2 min-h-[40px] line-clamp-2">
                                                 {cert.desc}
                                             </p>
                                         </div>
@@ -104,7 +109,23 @@ export default function CerSec({ data: propData, className }: SectionProps<CerSe
                             ))}
                         </div>
                     </div>
-
+                    
+                    {totalPages > 1 && (
+                        <div className="flex justify-center items-center gap-2 mt-4 lg:mt-6">
+                            {Array.from({ length: totalPages }).map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setCurrentPage(index)}
+                                    className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                                        currentPage === index
+                                            ? "bg-[#E5192C]"
+                                            : "bg-gray-400 hover:bg-gray-300"
+                                    }`}
+                                    aria-label={`Go to page ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

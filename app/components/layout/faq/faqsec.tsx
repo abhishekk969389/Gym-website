@@ -67,6 +67,7 @@ const AccordionItem = ({ question, index }: { question: FaqQuestion; index: numb
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
                     >
                         <div className="p-4 sm:p-5 pt-0 text-gray-600 text-sm sm:text-base pl-12">
                             {question.a}
@@ -84,14 +85,14 @@ export default function FaqSec({ data: propData, className }: SectionProps<FaqSe
     useEffect(() => {
         const handleScroll = () => {
             const categoryElements = data.categories.map(cat => document.getElementById(cat.id));
-            const scrollPosition = window.scrollY + 200; 
-            for (let i = categoryElements.length - 1; i >= 0; i--) {
+            let current = data.categories[0].id;
+            for (let i = 0; i < categoryElements.length; i++) {
                 const el = categoryElements[i];
-                if (el && el.offsetTop <= scrollPosition) {
-                    setActiveCategory(data.categories[i].id);
-                    break;
+                if (el && el.getBoundingClientRect().top <= 300) {
+                    current = data.categories[i].id;
                 }
             }
+            setActiveCategory(current);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -101,8 +102,9 @@ export default function FaqSec({ data: propData, className }: SectionProps<FaqSe
     const scrollToCategory = (id: string) => {
         const el = document.getElementById(id);
         if (el) {
+            const y = el.getBoundingClientRect().top + window.scrollY - 180;
             window.scrollTo({
-                top: el.offsetTop - 100, 
+                top: y, 
                 behavior: "smooth"
             });
         }
@@ -215,7 +217,7 @@ export default function FaqSec({ data: propData, className }: SectionProps<FaqSe
 
                             return (
                                 <div key={category.id} id={category.id} className="scroll-mt-32">
-                                    <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-4 mb-6 gap-2">
+                                    <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-4 mb-6 gap-2 sticky top-24 bg-[#FAFAFA] z-10 pt-4 -mt-4">
                                         <div className="flex items-center gap-3">
                                             <div className="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center shrink-0">
                                                 {Icon && <Icon className="text-[#E5192C] h-8 w-8" />}

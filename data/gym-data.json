@@ -508,10 +508,10 @@
                 "title": "Personal Training",
                 "description": "One-on-one coaching with customized workout plans to help you achieve your unique goals.",
                 "url": "#",
-                "bgImage": "/program/pg1.jpg",
+                "bgImage": "/program/pg3.jpg",
                 "details": {
                   "sidebar": {
-                    "image": "/program/pg1.jpg",
+                    "image": "/program/pg3.jpg",
                     "textPart1": "STRONGER",
                     "textPart2": "EVERY DAY",
                     "subText": "TRAIN SMART. LIVE BETTER."
@@ -636,10 +636,10 @@
                 "title": "Weight Loss Training",
                 "description": "Effective and sustainable weight loss programs to help you burn fat, boost energy and feel great.",
                 "url": "#",
-                "bgImage": "/program/pg2.jpg",
+                "bgImage": "/program/pg5.jpg",
                 "details": {
                   "sidebar": {
-                    "image": "/program/pg2.jpg",
+                    "image": "/program/pg5.jpg",
                     "textPart1": "STRONGER",
                     "textPart2": "EVERY DAY",
                     "subText": "TRAIN SMART. LIVE BETTER."
@@ -1148,10 +1148,10 @@
                 "title": "Group Training",
                 "description": "Stay motivated with high-energy group sessions designed for all fitness levels.",
                 "url": "#",
-                "bgImage": "/program/pg6.jpg",
+                "bgImage": "/program/pg4.jpg",
                 "details": {
                   "sidebar": {
-                    "image": "/program/pg6.jpg",
+                    "image": "/program/pg4.jpg",
                     "textPart1": "STRONGER",
                     "textPart2": "EVERY DAY",
                     "subText": "TRAIN SMART. LIVE BETTER."
@@ -1630,7 +1630,7 @@
                 }
               },
               {
-                "image": "/blog/blog6.jpg",
+                "image": "/blog/blog2.jpg",
                 "category": "Muscle Stretching",
                 "date": "10 Sep, 2024",
                 "title": "Top 7 Nutrition Tips for Better Workout Results (Part 2)",
@@ -4119,6 +4119,42 @@
                   "title": "Client Satisfaction Award",
                   "year": "2020",
                   "desc": "For Excellence in Customer Experience"
+                },
+                {
+                  "image": "/award/awd1.png",
+                  "title": "Top Personal Trainers",
+                  "year": "2020",
+                  "desc": "Awarded for Having the Best Personal Training Team"
+                },
+                {
+                  "image": "/award/awd1.png",
+                  "title": "Innovative Fitness App",
+                  "year": "2019",
+                  "desc": "For Developing the Most Innovative Fitness Tracking App"
+                },
+                {
+                  "image": "/award/awd1.png",
+                  "title": "Cleanest Facility Award",
+                  "year": "2019",
+                  "desc": "Recognized for Maintaining the Highest Standards of Cleanliness"
+                },
+                {
+                  "image": "/award/awd1.png",
+                  "title": "Best Group Classes",
+                  "year": "2018",
+                  "desc": "Awarded for Offering the Most Engaging Group Fitness Classes"
+                },
+                {
+                  "image": "/award/awd1.png",
+                  "title": "Outstanding Member Support",
+                  "year": "2018",
+                  "desc": "For Providing Exceptional Support and Guidance to Members"
+                },
+                {
+                  "image": "/award/awd1.png",
+                  "title": "Eco-Friendly Gym",
+                  "year": "2017",
+                  "desc": "Recognized for Implementing Sustainable and Eco-Friendly Practices"
                 }
               ]
             }
@@ -4157,6 +4193,36 @@
                   "image": "/certificate/c4.png",
                   "title": "NSCA Certified",
                   "desc": "National Strength and Conditioning Association"
+                },
+                {
+                  "image": "/certificate/c1.png",
+                  "title": "AFAA Certified",
+                  "desc": "Athletics and Fitness Association of America"
+                },
+                {
+                  "image": "/certificate/c2.png",
+                  "title": "CrossFit L1",
+                  "desc": "CrossFit Level 1 Trainer"
+                },
+                {
+                  "image": "/certificate/c3.png",
+                  "title": "TRX Qualified",
+                  "desc": "TRX Suspension Training Course"
+                },
+                {
+                  "image": "/certificate/c4.png",
+                  "title": "Yoga Alliance RYT",
+                  "desc": "Registered Yoga Teacher 200HR"
+                },
+                {
+                  "image": "/certificate/c1.png",
+                  "title": "Kettlebell Level 1",
+                  "desc": "Certified Kettlebell Instructor"
+                },
+                {
+                  "image": "/certificate/c2.png",
+                  "title": "Precision Nutrition",
+                  "desc": "Level 1 Nutrition Coach"
                 }
               ]
             }

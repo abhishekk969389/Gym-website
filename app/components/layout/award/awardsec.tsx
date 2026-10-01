@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -21,6 +21,11 @@ const getIcon = (iconName: string) => {
 
 export default function AwardSec({ data: propData, className }: SectionProps<AwardSecData> = {}) {
     const data = propData || site.awardSec;
+    const [currentPage, setCurrentPage] = useState(0);
+    const itemsPerPage = 4;
+    const totalPages = Math.ceil(data.bottomSection.awards.length / itemsPerPage);
+    const currentAwards = data.bottomSection.awards.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
+
     return (
         <section className="bg-white">
             <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -100,14 +105,14 @@ export default function AwardSec({ data: propData, className }: SectionProps<Awa
                         </div>
                         <div className="w-full lg:w-[75%] xl:w-[78%]">
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-5">
-                                {data.bottomSection.awards.map((award: any, idx: number) => (
+                                {currentAwards.map((award: any, idx: number) => (
                                     <motion.div 
-                                        key={idx}
+                                        key={`${currentPage}-${idx}`}
                                         initial={{ opacity: 0, y: 30 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
                                         transition={{ duration: 0.6, delay: idx * 0.15 }}
-                                        className="group"
+                                        className="group h-full"
                                     >
                                         <div className="text-left h-full flex flex-col justify-end">
                                             <div className="relative w-full h-48 sm:h-56 lg:h-64 z-10 mb-[-10px] pointer-events-none">
@@ -129,7 +134,7 @@ export default function AwardSec({ data: propData, className }: SectionProps<Awa
                                                     {award.year}
                                                 </span>
                                                 <div className="w-8 h-[2px] bg-[#E5192C] opacity-50 mb-2"></div>
-                                                <p className="text-gray-500 text-[13px] sm:text-[14px] leading-snug">
+                                                <p className="text-gray-500 text-[13px] sm:text-[14px] leading-snug min-h-[60px] line-clamp-3">
                                                     {award.desc}
                                                 </p>
                                             </div>
@@ -137,6 +142,23 @@ export default function AwardSec({ data: propData, className }: SectionProps<Awa
                                     </motion.div>
                                 ))}
                             </div>
+                            
+                            {totalPages > 1 && (
+                                <div className="flex justify-center items-center gap-2 mt-8">
+                                    {Array.from({ length: totalPages }).map((_, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setCurrentPage(index)}
+                                            className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                                                currentPage === index
+                                                    ? "bg-[#E5192C]"
+                                                    : "bg-gray-400 hover:bg-gray-300"
+                                            }`}
+                                            aria-label={`Go to page ${index + 1}`}
+                                        />
+                                    ))}
+                                </div>
+                            )}
                         </div>
 
                     </div>

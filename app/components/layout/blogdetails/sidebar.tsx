@@ -41,11 +41,16 @@ export default function BlogSidebar({ data, className }: SectionProps<any> = {})
                             <Link 
                                 href={`/blogdetails?name=${categoryPost.title.replace(/\s+/g, '-').toLowerCase()}`}
                                 key={idx} 
-                                className={`flex items-center gap-3 pb-4 group ${idx !== layout.categories.length - 1 ? 'border-b border-gray-200' : ''}`}
+                                className={`flex items-center justify-between pb-4 group ${idx !== layout.categories.length - 1 ? 'border-b border-gray-200' : ''}`}
                             >
-                                <FaAngleDoubleRight className="text-[#E5192C] text-sm group-hover:translate-x-1 transition-transform" />
-                                <span className="text-[#3a4454] font-bold text-[15px] group-hover:text-[#E5192C] transition-colors">
-                                    {cat.name}
+                                <div className="flex items-center gap-3">
+                                    <FaAngleDoubleRight className="text-[#E5192C] text-sm group-hover:translate-x-1 transition-transform" />
+                                    <span className="text-[#3a4454] font-bold text-[15px] group-hover:text-[#E5192C] transition-colors">
+                                        {cat.name}
+                                    </span>
+                                </div>
+                                <span className="text-gray-500 font-medium text-[15px] group-hover:text-[#E5192C] transition-colors">
+                                    {cat.count}
                                 </span>
                             </Link>
                         );

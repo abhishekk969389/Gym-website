@@ -50,12 +50,12 @@ export default function BlogContent({ data, className }: SectionProps<BlogPost> 
                     <span className="text-sm sm:text-sm md:text-base">{post.category}</span>
                 </div>
             </motion.div>
-            <motion.div variants={itemVariants} className="w-full relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden mb-8">
+            <motion.div variants={itemVariants} className="w-full relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden mb-8 rounded-lg">
                 <Image 
                     src={post.image}
                     alt={post.title}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                 />
             </motion.div>
             <motion.div variants={itemVariants} className="flex flex-col gap-4 text-gray-600 leading-relaxed text-[15px] sm:text-[16px] mb-8">
